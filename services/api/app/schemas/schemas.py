@@ -604,6 +604,30 @@ class CaseWorkspaceSummary(BaseModel):
     analysis_stale_reason: Optional[str] = None
 
 
+class CCTVObservationResponse(BaseModel):
+    id: str
+    case_id: str
+    camera_id: str
+    location: str
+    lat: float
+    lon: float
+    timestamp: str
+    frame_reference: Optional[str] = None
+    signals: dict
+    confidence: str
+    status: str
+    contributing_signals: int
+    created_at: Optional[datetime] = None
+    updated_at: Optional[datetime] = None
+
+    class Config:
+        from_attributes = True
+
+
+class CCTVObservationListResponse(BaseModel):
+    observations: List[CCTVObservationResponse]
+
+
 class EvidenceDetailResponse(BaseModel):
     id: str
     case_id: str

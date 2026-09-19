@@ -21,7 +21,8 @@ import {
   Menu,
   X,
   LogOut,
-  FolderOpen
+  FolderOpen,
+  Video
 } from 'lucide-react';
 import { TerminalAlertProvider } from '../context/TerminalAlertContext';
 
@@ -134,6 +135,7 @@ export default function Layout() {
         { label: 'GRAPH', path: `/cases/${caseId}/graph`, icon: Network, count: graphCount },
         { label: 'MAP', path: `/cases/${caseId}/map`, icon: MapPin },
         { label: 'TIMELINE', path: `/cases/${caseId}/timeline`, icon: Clock, count: timelineCount },
+        { label: 'CCTV & OBSERVATIONS', path: `/cases/${caseId}/cctv`, icon: Video },
       ],
     },
     {
@@ -347,13 +349,14 @@ export default function Layout() {
                     <span className="w-8 h-[1px] bg-amber-500/20" />
                   </div>
                   <div className="space-y-0.5">
-                    {group.items.map((item) => {
-                      const Icon = item.icon;
-                      const isActive = location.pathname === item.path;
-                      return (
-                        <button
-                          key={item.path}
-                          id={`nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+{group.items.map((item, itemIndex) => {
+                const Icon = item.icon;
+                const isActive = location.pathname === item.path;
+                const navKey = `${group.section}:${item.path}:${itemIndex}`;
+                return (
+                  <button
+                    key={navKey}
+                    id={`nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
                           onClick={() => {
                             navigate(item.path);
                             setMobileMenuOpen(false);

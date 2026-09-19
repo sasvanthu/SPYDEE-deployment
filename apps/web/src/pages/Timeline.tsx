@@ -16,7 +16,8 @@ import {
   Eye,
   MapPin,
   CheckCircle2,
-  FileText
+  FileText,
+  Video
 } from 'lucide-react';
 import { TerminalPanel } from '../components/common/TerminalPanel';
 import { StatusBadge } from '../components/common/StatusBadge';
@@ -53,6 +54,12 @@ export default function Timeline() {
     enabled: !!caseId,
   });
 
+  const { data: cctvData } = useQuery({
+    queryKey: ['cctv-observations', caseId],
+    queryFn: () => api.getCCTVObservations(caseId!),
+    enabled: !!caseId,
+  });
+
   const rawEvents = data?.items || [];
 
   const manualMutation = useMutation({
@@ -75,8 +82,29 @@ export default function Timeline() {
     }
   });
 
+  const cctvEvents = cctvData?.map((obs: any) => ({
+    id: `cctv-${obs.id}`,
+    event_type: 'cctv',
+    label: `CCTV: ${obs.id} at ${obs.location}`,
+    start_time: obs.timestamp,
+    end_time: obs.timestamp,
+    time_precision: 'full',
+    location: obs.location,
+    details: { 
+      text: `CCTV observation ${obs.id} from camera ${obs.camera_id}`,
+      camera_id: obs.camera_id,
+      frame_reference: obs.frame_reference,
+      signals: obs.signals,
+      confidence: obs.confidence,
+    },
+    participants: [],
+    source: 'CCTV',
+    is_manual: false,
+  })) || [];
+
   // Filter with client search query
-  const filteredEvents = rawEvents.filter((ev: any) => {
+  const allEvents = [...rawEvents, ...cctvEvents];
+  const filteredEvents = allEvents.filter((ev: any) => {
     if (!searchQuery) return true;
     const q = searchQuery.toLowerCase();
     const labelMatch = ev.label?.toLowerCase().includes(q);
@@ -94,6 +122,7 @@ export default function Timeline() {
       case 'tower_ping':
       case 'device_event': return <Radio className="w-3.5 h-3.5 text-amber-400" />;
       case 'observation': return <Eye className="w-3.5 h-3.5 text-amber-300" />;
+      case 'cctv': return <Video className="w-3.5 h-3.5 text-amber-300" />;
       default: return <Clock className="w-3.5 h-3.5 text-amber-500" />;
     }
   };
@@ -126,7 +155,7 @@ export default function Timeline() {
             INVESTIGATIVE TIMELINE & EVENT SEQUENCER
           </div>
           <div className="text-[10px] text-amber-500/80">
-            TOTAL {data?.total || rawEvents.length} RECORDED TELECOM, TOWER, GEOLOCATION & OBSERVATION EVENTS
+            TOTAL {data?.total || rawEvents.length} RECORDED TELECOM, TOWER, GEOLOCATION, OBSERVATION & CCTV EVENTS
           </div>
         </div>
 
@@ -248,6 +277,7 @@ export default function Timeline() {
             <option value="transaction">TRANSACTIONS</option>
             <option value="device_event">DEVICE EVENTS</option>
             <option value="observation">OBSERVATIONS</option>
+            <option value="cctv">CCTV OBSERVATIONS</option>
           </select>
         </div>
 

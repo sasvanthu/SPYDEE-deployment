@@ -139,6 +139,11 @@ export const api = {
   getAuditLog: (caseId: string) => request<any[]>(`/audit/${caseId}`),
   getJobs: (caseId: string) => request<any[]>(`/jobs/${caseId}`),
 
+  // ── CCTV & Physical Evidence ──────────────────────────────────────────
+  getCCTVObservations: (caseId: string) => request<any>(`/cctv/${caseId}/observations`).then((res: any) => res.observations || []),
+  getCCTVObservation: (caseId: string, obsId: string) => request<any>(`/cctv/${caseId}/observations/${obsId}`),
+  getCCTVFrame: (caseId: string, obsId: string) => request<Blob>(`/cctv/${caseId}/observations/${obsId}/frame`, { headers: { 'Accept': 'image/*' } }),
+  
   // ── Investigation workspace ──────────────────────────────────────────
   getWorkspaceSummary: (caseId: string) => request<any>(`/workspace/${caseId}/summary`),
 

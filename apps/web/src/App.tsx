@@ -11,6 +11,7 @@ import Timeline from './pages/Timeline';
 import IntelligenceWorkbench from './pages/IntelligenceWorkbench';
 import HypothesisList from './pages/HypothesisList';
 import Contradictions from './pages/Contradictions';
+import CCTVModule from './pages/CCTVModule';
 import LeadsPage from './pages/LeadsPage';
 import Copilot from './pages/Copilot';
 import Reports from './pages/Reports';
@@ -58,6 +59,7 @@ export default function App() {
             <Route path="cases/:caseId/graph" element={<InvestigationGraph />} />
             <Route path="cases/:caseId/map" element={<NetworkMap />} />
             <Route path="cases/:caseId/timeline" element={<Timeline />} />
+            <Route path="cases/:caseId/cctv" element={<CCTVModule />} />
             <Route path="cases/:caseId/workbench" element={<IntelligenceWorkbench />} />
             <Route path="cases/:caseId/contradictions" element={<Contradictions />} />
             <Route path="cases/:caseId/hypotheses" element={<HypothesisList />} />

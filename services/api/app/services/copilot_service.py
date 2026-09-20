@@ -19,6 +19,7 @@ from app.models.models import (
     SourceRecord, Event, DocumentChunk, EntityType, EventParticipant,
     HypothesisRecommendation, Contradiction, Lead, InformationGap, InvestigationAction,
 )
+from app.services.national_datasets_service import DATASETS_CATALOG
 
 FORBIDDEN_SQL = re.compile(r"\b(insert|update|delete|drop|alter|truncate|grant|revoke|create)\b", re.I)
 ALLOWED_TABLES = (
@@ -405,7 +406,52 @@ async def answer_copilot_query(
     draft = ""
 
     # ── Intent planning (deterministic) ────────────────────────────────────
-    if "sql" in q or "query the database" in q:
+    matched_ds = [
+        d for d in DATASETS_CATALOG
+        if d["name"].lower() in q or d["code"].lower().replace("_", " ") in q
+        or (len(d["code"].split("_")[0]) > 3 and d["code"].split("_")[0].lower() in q)
+    ]
+    if "dataset" in q or "datasets" in q or matched_ds:
+        if matched_ds:
+            ds = matched_ds[0]
+            draft = (
+                f"**National Intelligence Dataset: {ds['name']}** (#{ds['id']})\n"
+                f"- **Category**: {ds['category']} ({ds['priority']})\n"
+                f"- **Sponsor**: {ds['organization']}\n"
+                f"- **Applied AI & Stack**: {ds['technology']}\n"
+                f"- **Records / Scale**: {ds['records_count']}\n"
+                f"- **Role in Investigation**: {ds['case_usage']}\n"
+                f"- **Official Link**: {ds['url']}\n"
+                f"- **Active Cases**: {', '.join(ds['associated_cases'])}\n\n"
+                f"*Benchmark Telemetry*: {json.dumps(ds.get('benchmark_metrics', {}), indent=2)}"
+            )
+            citations.append({"type": "national_dataset", "id": ds["id"], "name": ds["name"], "url": ds["url"]})
+            links.append({"type": "dataset", "url": ds["url"]})
+            follow_ups = [
+                f"What cases use {ds['name']}?",
+                "List all 25 National Datasets",
+                "Show sample record for " + ds["name"]
+            ]
+        else:
+            draft = (
+                f"**SPYDEE 25 National & Cross-Validation Datasets Framework**\n"
+                f"The system integrates 25 high-priority intelligence datasets across 6 domains:\n"
+                f"1. **Legal NLP & NER (8)**: InLegalNER, Naamapadam, InLegalBERT, ILDC, NyayaAnumana, AWS Open Data SC/HC, LawSum, IndianBailJudgments-1200\n"
+                f"2. **CCTV & Biometrics (4)**: UVH-26 IISc Bengaluru SafeCity, IMFDB, IIITM Face, IIIT-Delhi Disguise/Sketches\n"
+                f"3. **Financial & AML (5)**: UPI Transactions 2024, UPI Fraud Detection, UPI Payment Transactions, IBM AML, Elliptic Bitcoin\n"
+                f"4. **Telecom Mobility (3)**: TRAI Karnataka LSA Subscriptions, TRAI Open Data, Bangalore City Traffic\n"
+                f"5. **Crime Statistics (2)**: NCRB Crime in India, NCRB Structured Tables (dataful.in)\n"
+                f"6. **Synthetic & Resolution (3)**: FEBRL Record Linkage, Faker en_IN, Synthetic Data Vault (SDV)\n\n"
+                f"Visit the **National Datasets Registry** tab (/datasets) to inspect live samples, benchmarks, and citations."
+            )
+            citations.append({"type": "national_datasets_hub", "count": 25})
+            follow_ups = [
+                "Explain InLegalNER",
+                "How does UVH-26 detect vehicles in Bengaluru?",
+                "How does IBM AML detect money mule structuring?"
+            ]
+
+    elif "sql" in q or "query the database" in q:
         sql_match = re.search(r"(select\s.+)$", q, flags=re.I | re.S)
         tool_sql = sql_match.group(1) if sql_match else q
         result = await _exec_tool("sql_query", db, case_id, (tool_sql,))

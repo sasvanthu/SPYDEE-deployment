@@ -8,6 +8,7 @@ from datetime import datetime
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "services", "api"))
 
+from sqlalchemy import select
 from app.config import get_settings
 from app.database import Base, engine, async_session
 from app.models.models import (
@@ -25,6 +26,10 @@ async def seed():
         await conn.run_sync(Base.metadata.create_all)
 
     async with async_session() as db:
+        existing = await db.execute(select(User).where(User.username == "admin"))
+        if existing.scalar_one_or_none():
+            print("Database already seeded. Skipping seed.")
+            return
         admin = User(
             username="admin",
             email="admin@spydee.example",

@@ -142,6 +142,7 @@ export default function Layout() {
       section: '// INTELLIGENCE',
       items: [
         { label: 'WORKBENCH', path: `/cases/${caseId}/workbench`, icon: Sparkles },
+        { label: 'NATIONAL DATASETS', path: `/cases/${caseId}/datasets`, icon: Database, count: 25 },
         { label: 'HYPOTHESES', path: `/cases/${caseId}/hypotheses`, icon: GitFork, count: hypothesisCount },
         { label: 'CONTRADICTIONS', path: `/cases/${caseId}/contradictions`, icon: AlertTriangle, count: contradictionCount },
         { label: 'INFORMATION GAPS', path: `/cases/${caseId}/leads`, icon: HelpCircle, count: gapCount },
@@ -161,6 +162,7 @@ export default function Layout() {
       section: '// CASES DIRECTORY',
       items: [
         { label: 'ALL ACTIVE CASES', path: '/cases', icon: FolderOpen },
+        { label: 'NATIONAL DATASETS (25)', path: '/datasets', icon: Database, count: 25 },
       ],
     },
   ];

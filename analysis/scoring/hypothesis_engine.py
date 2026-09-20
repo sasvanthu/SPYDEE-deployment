@@ -89,7 +89,7 @@ async def generate_hypotheses(
     weights.update(config.get("family_weights", {}) or {})
 
     entity_rows = await load_entities(db, case_id)
-    entity_type_map = {str(e.id): e.entity_type.value for e in entity_rows}
+    entity_type_map = {str(e.id): (e.entity_type.value if hasattr(e.entity_type, "value") else str(e.entity_type)) for e in entity_rows}
 
     pairs = defaultdict(list)
     for s in signals:

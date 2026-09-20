@@ -94,7 +94,7 @@ export default function EvidenceRoom() {
     id: f.id || `DOC-${String(idx + 1).padStart(3, '0')}`,
     file: f.original_filename || f.filename || `ARTIFACT_${idx + 1}`,
     type: (f.source_type || 'CDR').toUpperCase(),
-    source: f.source || 'POLICE STF VAULT',
+    source: f.source_description || f.source || 'POLICE STF VAULT',
     ingested: f.created_at ? new Date(f.created_at).toLocaleDateString('en-GB') : '16 SEP 2026',
     entitiesCount: f.entity_count ?? 0,
     status: (f.status || 'PROCESSED').toUpperCase(),
@@ -140,13 +140,23 @@ export default function EvidenceRoom() {
           </div>
         </div>
 
-        <button
-          onClick={() => setShowIngestModal(true)}
-          className="px-3 py-1.5 bg-amber-500 text-black font-bold hover:bg-amber-400 transition-colors flex items-center gap-1.5 text-xs self-start sm:self-auto shadow-[0_0_10px_rgba(245,158,11,0.4)]"
-        >
-          <Plus className="w-3.5 h-3.5" />
-          <span>+ INGEST EVIDENCE</span>
-        </button>
+        <div className="flex items-center gap-2 self-start sm:self-auto">
+          <button
+            onClick={() => navigate(caseId ? `/cases/${caseId}/datasets` : '/datasets')}
+            className="px-3 py-1.5 bg-black border border-amber-500/40 hover:border-amber-400 text-amber-300 font-bold hover:bg-amber-500/20 transition-colors flex items-center gap-1.5 text-xs uppercase"
+          >
+            <Database className="w-3.5 h-3.5 text-amber-400" />
+            <span>NATIONAL DATASETS (25)</span>
+          </button>
+
+          <button
+            onClick={() => setShowIngestModal(true)}
+            className="px-3 py-1.5 bg-amber-500 text-black font-bold hover:bg-amber-400 transition-colors flex items-center gap-1.5 text-xs shadow-[0_0_10px_rgba(245,158,11,0.4)]"
+          >
+            <Plus className="w-3.5 h-3.5" />
+            <span>+ INGEST EVIDENCE</span>
+          </button>
+        </div>
       </div>
 
       {/* FILTER CONTROLS BAR */}

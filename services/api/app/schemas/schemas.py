@@ -126,6 +126,10 @@ class EvidenceUploadResponse(BaseModel):
     byte_size: int
     status: str
     created_at: datetime
+    source_type: Optional[str] = None
+    source_description: Optional[str] = None
+    sha256: Optional[str] = None
+    accepted_count: Optional[int] = 0
 
     class Config:
         from_attributes = True

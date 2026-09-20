@@ -139,5 +139,5 @@ async def test_data_gap_recommendation_for_missing_family(db_session, make_case)
     signals = [_signal("communication", 0.9, qf=1.0)]
     hypo, links, recs = await generate_hypotheses(db_session, case.id, uuid.uuid4(), signals, {})
     assert hypo
-    data_gaps = [r for r in recs if r.type.value == "book_external_int_desk"]
+    data_gaps = [r for r in recs if r.type.value.lower() == "book_external_int_desk"]
     assert data_gaps, "expected at least one data-gap recommendation"

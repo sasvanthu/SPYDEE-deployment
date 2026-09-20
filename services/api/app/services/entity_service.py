@@ -188,14 +188,14 @@ def parse_datetime(value) -> Optional[datetime]:
     if value is None or value == "":
         return None
     if isinstance(value, datetime):
-        return value
+        return value.replace(tzinfo=None)
     text = str(value).strip().replace("Z", "+00:00")
     if "." in text and "+" in text:
         # Normalize fractional seconds before offset (e.g. 2026-08-01T08:00:00.123+00:00)
         head, _, tail = text.partition("+")
         if head.count(":") == 2 and "." in head:
             try:
-                return datetime.fromisoformat(head)
+                return datetime.fromisoformat(head).replace(tzinfo=None)
             except ValueError:
                 pass
     for fmt in ("%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%d %H:%M:%S%z",
@@ -206,11 +206,11 @@ def parse_datetime(value) -> Optional[datetime]:
                 "%d-%m-%Y %I:%M:%S %p", "%Y-%m-%d %I:%M:%S %p",
                 "%d/%m/%Y", "%d-%m-%Y", "%Y-%m-%d"):
         try:
-            return datetime.strptime(text, fmt)
+            return datetime.strptime(text, fmt).replace(tzinfo=None)
         except ValueError:
             continue
     try:
-        return datetime.fromisoformat(text)
+        return datetime.fromisoformat(text).replace(tzinfo=None)
     except ValueError:
         return None
 

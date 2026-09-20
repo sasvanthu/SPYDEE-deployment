@@ -23,7 +23,8 @@ async def analyze_graph_structure(db, case_id, analysis_run_id, records=None):
 
     G = nx.DiGraph()
     for e in entities:
-        G.add_node(str(e.id), label=e.label, type=e.entity_type.value)
+        etype = e.entity_type.value if hasattr(e.entity_type, "value") else str(e.entity_type)
+        G.add_node(str(e.id), label=e.label, type=etype)
     for r in rels:
         s, t = str(r.source_entity_id), str(r.target_entity_id)
         if s in G and t in G:

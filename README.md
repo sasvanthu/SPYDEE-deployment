@@ -60,15 +60,25 @@ npm run dev
 | investigator  | invest123  | Investigator     |
 | supervisor    | super123   | Case Supervisor  |
 
-## Demo Data
+## Demo Data & National Datasets
 
-Three synthetic cases are pre-seeded:
-
+### Synthetic Benchmark Cases:
 - **BRK-2026-001 - Broken Chain**: Main demo case with alias continuity patterns
 - **HBR-2026-002 - Harbor Ledger**: Financial and infrastructure analysis
 - **QTM-2026-003 - Quiet Market**: Negative control (should not produce strong leads)
 
-All data is fictional. No real personal data is used.
+### National & Cross-Validation Cases (25 Datasets):
+- **IND-2026-004 - Operation Trishul**: Multi-modal fusion with IISc UVH-26 SafeCity CCTV, NPCI UPI 2024 Mule structuring, InLegalNER FIR filings, and Karnataka TRAI CDR mobility.
+- **IND-2026-005 - Hawala & P2P Crypto Laundering**: Financial intelligence benchmarked on IBM AML, Elliptic Bitcoin Graph, and NPCI UPI fraud datasets.
+- **IND-2026-006 - Bengaluru SafeCity Biometrics**: Urban video surveillance powered by IISc UVH-26 SafeCity CCTV, IIIT-Delhi forensic sketch-photo matching, and IMFDB/IIITM facial biometrics.
+- **IND-2026-007 - National Cybercrime FIR Registry**: Legal document intelligence processing FIRs with InLegalNER, Naamapadam multilingual NER, ILDC SC precedents, NyayaAnumana (2.28M cases), AWS Open Data judgments, LawSum, IndianBailJudgments, and NCRB crime statistics.
+- **IND-2026-ALL - Operation Chakra-Vyuh**: Grand Unified National Security Grid interconnecting all 25 National & Global datasets.
+
+To populate or refresh all 25 datasets across all cases:
+```bash
+python demo/generator/seed_all_25_datasets.py
+```
+View the interactive Registry in the web app at `http://localhost:5173/datasets` or via the sidebar: **NATIONAL DATASETS (25)**.
 
 ## Architecture
 

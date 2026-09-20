@@ -15,6 +15,7 @@ import CCTVModule from './pages/CCTVModule';
 import LeadsPage from './pages/LeadsPage';
 import Copilot from './pages/Copilot';
 import Reports from './pages/Reports';
+import NationalDatasets from './pages/NationalDatasets';
 import Layout from './components/Layout';
 
 const queryClient = new QueryClient();
@@ -66,6 +67,8 @@ export default function App() {
             <Route path="cases/:caseId/leads" element={<LeadsPage />} />
             <Route path="cases/:caseId/copilot" element={<Copilot />} />
             <Route path="cases/:caseId/reports" element={<Reports />} />
+            <Route path="cases/:caseId/datasets" element={<NationalDatasets />} />
+            <Route path="datasets" element={<NationalDatasets />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

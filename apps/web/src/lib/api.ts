@@ -184,4 +184,12 @@ export const api = {
     request<any>(`/workspace/${caseId}/actions`, { method: 'POST', body: JSON.stringify(data) }),
   updateAction: (caseId: string, id: string, data: any) =>
     request<any>(`/workspace/${caseId}/actions/${id}`, { method: 'PATCH', body: JSON.stringify(data) }),
+
+  // ── National & Cross-Validation Datasets ─────────────────────────────
+  getDatasets: (category?: string, priority?: string, search?: string) =>
+    request<any[]>(`/datasets${q({ category, priority, search })}`),
+  getDataset: (id: number) => request<any>(`/datasets/${id}`),
+  getDatasetSample: (id: number) => request<any>(`/datasets/${id}/sample`),
+  getDatasetsSummary: () => request<any>('/datasets/summary'),
+  seedAllDatasets: () => request<any>('/datasets/seed-all', { method: 'POST' }),
 };

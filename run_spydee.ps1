@@ -75,6 +75,7 @@ Start-Process powershell.exe -WorkingDirectory "$root" -ArgumentList "-NoExit", 
 
 Write-Host "=========================================" -ForegroundColor Green
 Write-Host " All services have been launched!       " -ForegroundColor Green
-Write-Host " Web UI:    http://localhost:5173        " -ForegroundColor Green
-Write-Host " API Docs:  http://localhost:8000/api/docs" -ForegroundColor Green
+Write-Host " Web UI:        http://localhost:5173    " -ForegroundColor Green
+Write-Host " Datasets Hub:  http://localhost:5173/datasets" -ForegroundColor Cyan
+Write-Host " API Docs:      http://localhost:8000/api/docs" -ForegroundColor Green
 Write-Host "=========================================" -ForegroundColor Green

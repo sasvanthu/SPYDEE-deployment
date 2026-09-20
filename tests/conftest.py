@@ -58,9 +58,11 @@ async def _create_user(db, username=None, role=UserRole.INVESTIGATOR):
     return user
 
 
-async def _create_case(db, status="active", title=None, case_code=None, user_id=None):
+async def _create_case(db, status="ACTIVE", title=None, case_code=None, user_id=None):
     if user_id is None:
         user_id = (await _create_user(db, username=f"owner_{uuid.uuid4().hex[:8]}")).id
+    if isinstance(status, str):
+        status = status.upper()
     case = Case(
         title=title or f"test-case-{uuid.uuid4().hex[:8]}",
         case_code=case_code or f"TC{uuid.uuid4().hex[:10].upper()}",

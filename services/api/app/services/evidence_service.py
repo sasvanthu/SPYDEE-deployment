@@ -578,7 +578,7 @@ async def process_evidence_file(
     parser_version = f"{source_type}_importer_v2"
     evidence_file.parser_version = parser_version
 
-    import_obj.status = "running"
+    import_obj.status = JobStatus.RUNNING
     current_config = import_obj.import_config or {}
     field_mapping = current_config.get("field_mapping")
     
@@ -647,7 +647,7 @@ async def process_evidence_file(
 
     import_obj.accepted_count = accepted
     import_obj.rejected_count = rejected
-    import_obj.status = "completed"
+    import_obj.status = JobStatus.COMPLETED
     import_obj.completed_at = datetime.utcnow()
     if errors:
         import_obj.error_details = errors[:200]

@@ -10,7 +10,7 @@ from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.models.models import (
-    AnalysisRun, Hypothesis, HypothesisSignal, HypothesisRecommendation, Signal,
+    AnalysisRun, Hypothesis, HypothesisSignal, HypothesisRecommendation, Signal, JobStatus,
 )
 from analysis.engines.communication_engine import analyze_communication
 from analysis.engines.graph_engine import analyze_graph_structure
@@ -68,7 +68,7 @@ async def run_analysis(db: AsyncSession, run: AnalysisRun, records: List) -> dic
     are order-stable given the same input ordering.
     """
     await _replace_derived_outputs(db, run.case_id, keep_run_id=run.id)
-    run.status = "running"
+    run.status = JobStatus.RUNNING
     run.started_at = __import__("datetime").datetime.utcnow()
 
     signals = []
@@ -93,7 +93,7 @@ async def run_analysis(db: AsyncSession, run: AnalysisRun, records: List) -> dic
         name: version for name, version, _ in ENGINE_REGISTRY
     }
     run.completed_at = __import__("datetime").datetime.utcnow()
-    run.status = "completed"
+    run.status = JobStatus.COMPLETED
 
     # Connect engine outputs to the investigation workspace (contradictions,
     # leads, information gaps). Investigators still review every record.

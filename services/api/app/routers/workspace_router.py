@@ -10,7 +10,7 @@ from app.models.models import (
     User, Case, Contradiction, ContradictionReview, Lead, LeadReview,
     InformationGap, InvestigationAction, EvidenceFile, AnalysisRun,
     Hypothesis, Signal, Entity, Relationship, Event, Job, AuditEvent,
-    ContradictionStatus, LeadStatus, GapStatus, ActionStatus,
+    ContradictionStatus, LeadStatus, GapStatus, ActionStatus, ReviewState,
 )
 from app.services.case_service import check_case_membership, check_case_write_access, log_audit_event
 from app.schemas.schemas import (
@@ -167,7 +167,7 @@ async def case_workspace_summary(case_id: str, user: User = Depends(get_current_
     )).scalar() or 0
     pending_hypotheses = (await db.execute(
         select(func.count()).select_from(Hypothesis).where(
-            Hypothesis.case_id == cid, Hypothesis.review_state.in_(["new", "needs_verification"])
+            Hypothesis.case_id == cid, Hypothesis.review_state.in_([ReviewState.NEW, ReviewState.NEEDS_VERIFICATION])
         )
     )).scalar() or 0
 

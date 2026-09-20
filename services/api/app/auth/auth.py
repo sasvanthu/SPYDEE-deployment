@@ -11,7 +11,7 @@ from app.database import get_db
 from app.models.models import User, Session
 
 settings = get_settings()
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto", bcrypt__ident="2b")
 security = HTTPBearer()
 
 

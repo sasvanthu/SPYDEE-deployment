@@ -30,7 +30,7 @@ async def seed():
             email="admin@spydee.example",
             hashed_password=hash_password("admin123"),
             display_name="System Administrator",
-            role="administrator",
+            role="ADMINISTRATOR",
         )
         db.add(admin)
 
@@ -39,7 +39,7 @@ async def seed():
             email="investigator@spydee.example",
             hashed_password=hash_password("invest123"),
             display_name="Senior Investigator",
-            role="investigator",
+            role="INVESTIGATOR",
         )
         db.add(inv1)
 
@@ -48,7 +48,7 @@ async def seed():
             email="supervisor@spydee.example",
             hashed_password=hash_password("super123"),
             display_name="Case Supervisor",
-            role="case_supervisor",
+            role="CASE_SUPERVISOR",
         )
         db.add(sup)
         await db.flush()
@@ -57,7 +57,7 @@ async def seed():
             title="Broken Chain - Network Continuity Analysis",
             case_code="BRK-2026-001",
             description="Analysis of alias continuity across devices, locations and communication patterns. Synthetic demonstration case.",
-            status="active",
+            status="ACTIVE",
             is_synthetic=True,
             created_by=admin.id,
         )
@@ -65,7 +65,7 @@ async def seed():
             title="Harbor Ledger - Financial Network Analysis",
             case_code="HBR-2026-002",
             description="Transaction paths and infrastructure relationships. Synthetic demonstration case.",
-            status="active",
+            status="ACTIVE",
             is_synthetic=True,
             created_by=admin.id,
         )
@@ -73,7 +73,7 @@ async def seed():
             title="Quiet Market - Negative Control Case",
             case_code="QTM-2026-003",
             description="Mostly unrelated records with insufficient writing samples. Should not produce strong leads. Synthetic demonstration case.",
-            status="active",
+            status="ACTIVE",
             is_synthetic=True,
             created_by=admin.id,
         )
@@ -82,7 +82,7 @@ async def seed():
 
         for case in [case_a, case_b, case_c]:
             for user in [admin, inv1, sup]:
-                role = "administrator" if user == admin else ("case_supervisor" if user == sup else "investigator")
+                role = "ADMINISTRATOR" if user == admin else ("CASE_SUPERVISOR" if user == sup else "INVESTIGATOR")
                 membership = CaseMembership(
                     case_id=case.id,
                     user_id=user.id,
@@ -102,9 +102,11 @@ async def seed():
                 ("case_a_batch2_messages.json", "messages", "Message records"),
                 ("case_a_batch3_devices_locs.json", "device_sim", "Device and location observations"),
                 ("case_a_batch4_transactions.json", "transactions", "Financial transactions"),
+                ("case_a_batch5_cctv.json", "CCTV", "CCTV camera observations"),
             ],
             case_b.id: [
                 ("case_b_harbor_ledger.json", "transactions", "Financial and infrastructure records"),
+                ("case_b_cctv.json", "CCTV", "Harbor area CCTV observations"),
             ],
             case_c.id: [
                 ("case_c_quiet_market.json", "cdr", "Limited call records"),
@@ -159,7 +161,7 @@ async def seed():
                     evidence_file_id=ev.id,
                     case_id=case_id,
                     import_config={"source_type": source_type, "count": len(records)},
-                    status="completed",
+                    status="COMPLETED",
                     accepted_count=len(records),
                     rejected_count=0,
                     completed_at=datetime.utcnow(),
@@ -188,15 +190,16 @@ async def seed():
                     for field in ["caller_id", "callee_id", "alias_id", "from_account_id", "to_account_id", "entity_or_device_id"]:
                         val = rec.get(field)
                         if val and val not in entity_cache:
-                            etype = "phone_sim" if "phone" in field or "caller" in field or "callee" in field else (
-                                "alias" if "alias" in field else (
-                                    "account" if "account" in field else "device"
+                            etype = "PHONE_SIM" if "phone" in field or "caller" in field or "callee" in field else (
+                                "ALIAS" if "alias" in field else (
+                                    "ACCOUNT" if "account" in field else "DEVICE"
                                 )
                             )
                             entity = Entity(
                                 case_id=case_id,
                                 entity_type=etype,
                                 label=val,
+                                review_state="NEW",
                             )
                             db.add(entity)
                             await db.flush()
@@ -215,6 +218,7 @@ async def seed():
                                 entity_id=entity.id,
                                 identifier_id=ident.id,
                                 confidence=1.0,
+                                review_state="NEW",
                             )
                             db.add(link)
                             entity_counter += 1
@@ -263,7 +267,9 @@ async def seed():
                                 source_entity_id=caller_ent.id,
                                 target_entity_id=callee_ent.id,
                                 relationship_type="CALLED",
+                                direction="DIRECTED",
                                 classification="observed",
+                                review_state="NEW",
                                 evidence_count=1,
                             )
                             db.add(rel)

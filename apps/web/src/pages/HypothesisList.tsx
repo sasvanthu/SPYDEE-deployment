@@ -509,21 +509,21 @@ export default function HypothesisList() {
                     <button
                       onClick={() => reviewMutation.mutate({ decision: 'supported_by_reviewer' })}
                       disabled={reviewMutation.isPending}
-                      className="py-1.5 px-2 bg-emerald-500 text-black font-bold text-[10px] uppercase hover:bg-emerald-400"
+                      className="py-0.5 px-1 bg-emerald-500 text-black font-medium text-[9px] uppercase hover:bg-emerald-400"
                     >
                       [ ACCEPT ]
                     </button>
                     <button
                       onClick={() => reviewMutation.mutate({ decision: 'needs_verification' })}
                       disabled={reviewMutation.isPending}
-                      className="py-1.5 px-2 bg-amber-500 text-black font-bold text-[10px] uppercase hover:bg-amber-400"
+                      className="py-0.5 px-1 bg-amber-500 text-black font-medium text-[9px] uppercase hover:bg-amber-400"
                     >
                       [ NEEDS MORE EVIDENCE ]
                     </button>
                     <button
                       onClick={() => reviewMutation.mutate({ decision: 'rejected' })}
                       disabled={reviewMutation.isPending}
-                      className="py-1.5 px-2 bg-red-500 text-black font-bold text-[10px] uppercase hover:bg-red-400"
+                      className="py-0.5 px-1 bg-red-500 text-black font-medium text-[9px] uppercase hover:bg-red-400"
                     >
                       [ REJECT ]
                     </button>

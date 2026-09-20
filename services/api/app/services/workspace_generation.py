@@ -90,7 +90,7 @@ async def generate_workspace_from_run(
                 Lead.origin_id == hyp.id,
             )
         )).scalar_one_or_none()
-        priority = "critical" if hyp.numeric_value >= 90 else "high"
+        priority = LeadPriority.CRITICAL if hyp.numeric_value >= 90 else LeadPriority.HIGH
         title = (
             f"High-plausibility {hyp.hypothesis_type.replace('_', ' ')} link "
             f"(strength {hyp.numeric_value:.0f}/100)"

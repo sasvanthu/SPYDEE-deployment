@@ -177,7 +177,7 @@ export default function NetworkMap() {
     if (title.includes('delhi')) return [28.6139, 77.2090];
     if (title.includes('jamtara')) return [23.9625, 86.8014];
     return [12.9716, 77.5946]; // Bangalore SafeCity default
-  }, [caseData]);
+  }, [caseData?.title]);
 
   // CCTV observations with fallback
   const cctvObservations = useMemo(() => {
@@ -230,9 +230,17 @@ export default function NetworkMap() {
   const timeSteps = [0, 1, 2, 3, 4, 5];
   const timeLabels = ['T-30', 'T-7', 'T-1', 'INC', 'T+1', 'T+7'];
 
-  // Initialize Map
+  // Initialize Map safely ONCE on component mount
   useEffect(() => {
-    if (!mapRef.current || mapInstance.current) return;
+    if (!mapRef.current) return;
+
+    if (mapInstance.current) {
+      mapInstance.current.remove();
+      mapInstance.current = null;
+    }
+    if ((mapRef.current as any)._leaflet_id) {
+      delete (mapRef.current as any)._leaflet_id;
+    }
 
     const map = L.map(mapRef.current, {
       zoomControl: false,
@@ -247,27 +255,35 @@ export default function NetworkMap() {
 
     L.control.zoom({ position: 'bottomright' }).addTo(map);
 
-    setTimeout(() => {
+    mapInstance.current = map;
+
+    const timer1 = setTimeout(() => {
       map.invalidateSize();
     }, 150);
 
-    mapInstance.current = map;
+    const timer2 = setTimeout(() => {
+      map.invalidateSize();
+    }, 600);
 
     return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
       if (mapInstance.current) {
         mapInstance.current.remove();
         mapInstance.current = null;
       }
     };
-  }, [defaultCenter]);
+  }, []);
 
-  // Update center when defaultCenter changes
+  // Update map view when defaultCenter updates from loaded case data
   useEffect(() => {
     if (mapInstance.current) {
       mapInstance.current.setView(defaultCenter, 12);
-      mapInstance.current.invalidateSize();
+      setTimeout(() => {
+        mapInstance.current?.invalidateSize();
+      }, 100);
     }
-  }, [defaultCenter]);
+  }, [defaultCenter[0], defaultCenter[1]]);
 
   // Render all markers and layers
   useEffect(() => {
@@ -769,7 +785,7 @@ export default function NetworkMap() {
 
         {/* LEAFLET MAP CANVAS */}
         <div className={`${showSidePanel ? 'lg:col-span-6 xl:col-span-7' : 'lg:col-span-9 xl:col-span-10'} relative bg-[#060a06] border border-amber-500/35 overflow-hidden h-full min-h-[520px]`}>
-          <div ref={mapRef} className="w-full h-full min-h-[520px] select-none relative z-0" />
+          <div ref={mapRef} style={{ width: '100%', height: '100%', minHeight: '520px' }} className="w-full h-full min-h-[520px] select-none relative z-0" />
 
           {/* FLOATING TOP-LEFT TELEMETRY HUD */}
           <div className="absolute top-3 left-3 z-[400] p-2.5 bg-black/90 border border-amber-500/40 text-[10px] space-y-1 shadow-lg pointer-events-none">

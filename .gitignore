@@ -8,7 +8,7 @@ node_modules/
 dist/
 .vite/
 *.log
-data/uploads/
+
 .DS_Store
 services/worker/venv/Include/site/python3.11/greenlet/greenlet.h
 services/worker/venv/Lib/site-packages/_cffi_backend.cp311-win_amd64.pyd

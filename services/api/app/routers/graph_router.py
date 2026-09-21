@@ -14,6 +14,41 @@ from app.services.graph_service import build_case_graph, find_shortest_path, get
 router = APIRouter(prefix="/api/v1/graph", tags=["graph"])
 
 
+@router.get("/{case_id}/edges")
+async def get_case_edges(
+    case_id: uuid.UUID,
+    limit: int = 200,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    await check_case_membership(db, user.id, case_id)
+    result = await db.execute(
+        select(Relationship)
+        .where(Relationship.case_id == case_id)
+        .limit(limit)
+    )
+    edges = result.scalars().all()
+    return {
+        "edges": [
+            {
+                "id": str(e.id),
+                "source": str(e.source_entity_id),
+                "target": str(e.target_entity_id),
+                "relationship_type": e.relationship_type,
+                "classification": e.classification,
+                "label": e.relationship_type,
+                "properties": {
+                    "evidence_count": e.evidence_count,
+                    "valid_from": e.valid_from.isoformat() if e.valid_from else None,
+                    "valid_to": e.valid_to.isoformat() if e.valid_to else None,
+                    "review_state": e.review_state,
+                }
+            }
+            for e in edges
+        ]
+    }
+
+
 @router.post("/{case_id}", response_model=GraphResponse)
 async def get_graph(
     case_id: uuid.UUID,

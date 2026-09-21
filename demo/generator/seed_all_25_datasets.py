@@ -318,7 +318,7 @@ async def seed_all_25():
                     title=case_info["title"],
                     case_code=code,
                     description=case_info["description"],
-                    status="ACTIVE",
+                    status="active",
                     is_synthetic=False,
                     created_by=admin.id,
                 )
@@ -327,7 +327,7 @@ async def seed_all_25():
                 print(f"\n  [OK] Created Case {code}: {case_info['title']} (ID: {case_obj.id})")
 
                 for u in users_list:
-                    role = "ADMINISTRATOR" if u == admin else ("CASE_SUPERVISOR" if u == sup else "INVESTIGATOR")
+                    role = "administrator" if u == admin else ("case_supervisor" if u == sup else "investigator")
                     db.add(CaseMembership(
                         case_id=case_obj.id,
                         user_id=u.id,
@@ -383,7 +383,7 @@ async def seed_all_25():
                     evidence_file_id=ev.id,
                     case_id=case_obj.id,
                     import_config={"source_type": source_type, "count": len(records), "dataset": desc},
-                    status="COMPLETED",
+                    status="completed",
                     accepted_count=len(records),
                     rejected_count=0,
                     completed_at=datetime.utcnow(),
@@ -519,9 +519,9 @@ async def seed_all_25():
                                 source_entity_id=s_ent.id,
                                 target_entity_id=t_ent.id,
                                 relationship_type="TRANSFERRED",
-                                direction="DIRECTED",
+                                direction="directed",
                                 classification="observed",
-                                review_state="NEW",
+                                review_state="new",
                                 evidence_count=1,
                             ))
                             rel_count += 1
@@ -537,9 +537,9 @@ async def seed_all_25():
                                 source_entity_id=s_ent.id,
                                 target_entity_id=t_ent.id,
                                 relationship_type="CALLED",
-                                direction="DIRECTED",
+                                direction="directed",
                                 classification="observed",
-                                review_state="NEW",
+                                review_state="new",
                                 evidence_count=1,
                             ))
                             rel_count += 1
@@ -555,9 +555,9 @@ async def seed_all_25():
                                 source_entity_id=s_ent.id,
                                 target_entity_id=t_ent.id,
                                 relationship_type="MESSAGED",
-                                direction="DIRECTED",
+                                direction="directed",
                                 classification="observed",
-                                review_state="NEW",
+                                review_state="new",
                                 evidence_count=1,
                             ))
                             rel_count += 1
@@ -573,9 +573,9 @@ async def seed_all_25():
                                 source_entity_id=s_ent.id,
                                 target_entity_id=t_ent.id,
                                 relationship_type="USES_ALIAS",
-                                direction="DIRECTED",
+                                direction="directed",
                                 classification="observed",
-                                review_state="NEW",
+                                review_state="new",
                                 evidence_count=1,
                             ))
                             rel_count += 1
@@ -591,9 +591,9 @@ async def seed_all_25():
                                         source_entity_id=entity_cache[accused].id,
                                         target_entity_id=c_ent.id,
                                         relationship_type="CO_CONSPIRATOR",
-                                        direction="UNDIRECTED",
+                                        direction="undirected",
                                         classification="inferred",
-                                        review_state="NEW",
+                                        review_state="new",
                                         evidence_count=1,
                                     ))
                                     rel_count += 1
@@ -609,9 +609,9 @@ async def seed_all_25():
                                 source_entity_id=s_ent.id,
                                 target_entity_id=t_ent.id,
                                 relationship_type="SIGHTED_AT",
-                                direction="DIRECTED",
+                                direction="directed",
                                 classification="observed",
-                                review_state="NEW",
+                                review_state="new",
                                 evidence_count=1,
                             ))
                             rel_count += 1
@@ -625,9 +625,9 @@ async def seed_all_25():
                                 source_entity_id=s_ent.id,
                                 target_entity_id=t_ent.id,
                                 relationship_type="OPERATES_VEHICLE",
-                                direction="DIRECTED",
+                                direction="directed",
                                 classification="inferred",
-                                review_state="NEW",
+                                review_state="new",
                                 evidence_count=1,
                             ))
                             rel_count += 1

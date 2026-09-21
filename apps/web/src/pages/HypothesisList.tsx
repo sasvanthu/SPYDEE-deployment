@@ -144,9 +144,9 @@ export default function HypothesisList() {
     }
   });
 
-  const newCount = hypotheses.filter((h: any) => h.state === 'new' || !h.state).length;
-  const supportedCount = hypotheses.filter((h: any) => h.state === 'supported_by_reviewer' || h.state === 'supported').length;
-  const rejectedCount = hypotheses.filter((h: any) => h.state === 'rejected').length;
+  const newCount = hypotheses.filter((h: any) => h.state === 'new' || h.state === 'candidate' || h.review_state === 'new' || !h.state).length;
+  const supportedCount = hypotheses.filter((h: any) => h.state === 'supported_by_reviewer' || h.state === 'supported' || h.review_state === 'supported').length;
+  const rejectedCount = hypotheses.filter((h: any) => h.state === 'rejected' || h.review_state === 'rejected').length;
 
   const filteredHypotheses = useMemo(() => {
     return hypotheses.filter((h: any) => {
@@ -206,12 +206,12 @@ export default function HypothesisList() {
           <span className="px-2 py-0.5 bg-red-950/80 border border-red-500 text-red-300 font-bold text-[10px]">
             REJECTED ({rejectedCount})
           </span>
-          {['', 'new', 'needs_verification', 'supported_by_reviewer', 'rejected'].map((st) => (
+          {['', 'new', 'needs_verification', 'supported', 'rejected'].map((st) => (
             <button
               key={st}
               onClick={() => setStateFilter(st)}
               className={`px-2 py-0.5 text-[10px] uppercase border transition-colors ${
-                stateFilter === st
+                stateFilter === st || (st === 'supported' && stateFilter === 'supported_by_reviewer')
                   ? 'bg-amber-500 text-black font-bold border-amber-400'
                   : 'bg-black/80 border-amber-500/30 text-amber-400 hover:bg-amber-500/20'
               }`}
@@ -507,7 +507,7 @@ export default function HypothesisList() {
 
                   <div className="grid grid-cols-3 gap-1.5 pt-1">
                     <button
-                      onClick={() => reviewMutation.mutate({ decision: 'supported_by_reviewer' })}
+                      onClick={() => reviewMutation.mutate({ decision: 'supported' })}
                       disabled={reviewMutation.isPending}
                       className="py-0.5 px-1 bg-emerald-500 text-black font-medium text-[9px] uppercase hover:bg-emerald-400"
                     >

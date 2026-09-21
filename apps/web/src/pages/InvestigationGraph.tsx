@@ -119,8 +119,22 @@ export default function InvestigationGraph() {
   const [minConfidence, setMinConfidence] = useState(0.5);
   const [hiddenLinkActive, setHiddenLinkActive] = useState(false);
   const [nodeDetail, setNodeDetail] = useState<any>(null);
-  const [showReasoningPanel, setShowReasoningPanel] = useState(false);
+  const [showSidePanel, setShowSidePanel] = useState(false);
   const [showFilterPanel, setShowFilterPanel] = useState(true);
+
+  const caseIdRef = useRef(caseId);
+  useEffect(() => {
+    caseIdRef.current = caseId;
+  }, [caseId]);
+
+  useEffect(() => {
+    if (cyInstance.current) {
+      const timer = setTimeout(() => {
+        cyInstance.current?.resize();
+      }, 60);
+      return () => clearTimeout(timer);
+    }
+  }, [showSidePanel, showFilterPanel]);
   const [showTimeSlider, setShowTimeSlider] = useState(false);
   const [timeRange, setTimeRange] = useState<[number, number]>([0, 100]);
   const [contextMenu, setContextMenu] = useState<{ x: number; y: number; nodeId?: string; edgeId?: string } | null>(null);
@@ -320,22 +334,56 @@ export default function InvestigationGraph() {
 
     const cy = cyInstance.current;
 
+    cy.on('tap', 'node', (evt: any) => {
+      const node = evt.target;
+      const data = node.data();
+      const nodeId = data?.id || node.id();
+      // Skip cluster label nodes
+      if (!nodeId || nodeId.startsWith('cluster-')) return;
+
+      setSelectedEdge(null);
+      setSelectedNode(data);
+      setShowSidePanel(true);
+      setContextMenu(null);
+
+      // Fetch neighbourhood details for real entities
+      if (!nodeId.startsWith('cctv-') && caseIdRef.current) {
+        api.getNeighbourhood(caseIdRef.current, nodeId, 1)
+          .then((d) => setNodeDetail(d))
+          .catch(() => {});
+      }
+    });
+
+    cy.on('tap', 'edge', (evt: any) => {
+      const edge = evt.target;
+      setSelectedNode(null);
+      setSelectedEdge(edge.data());
+      setShowSidePanel(true);
+      setContextMenu(null);
+    });
+
+    cy.on('tap', (evt: any) => {
+      if (evt.target === cy) {
+        setSelectedNode(null);
+        setSelectedEdge(null);
+        setShowSidePanel(false);
+        setContextMenu(null);
+      }
+    });
+
     cy.on('cxttap', 'node', (evt: any) => {
       const node = evt.target;
+      const nodeId = node.id();
+      // Skip context menu for cluster label nodes (non-UUID IDs)
+      if (nodeId.startsWith('cluster-')) return;
       const pos = evt.position || evt.renderedPosition;
-      setContextMenu({ x: pos.x, y: pos.y, nodeId: node.id() });
+      setContextMenu({ x: pos.x, y: pos.y, nodeId: nodeId });
     });
 
     cy.on('cxttap', 'edge', (evt: any) => {
       const edge = evt.target;
       const pos = evt.position || evt.renderedPosition;
       setContextMenu({ x: pos.x, y: pos.y, edgeId: edge.id() });
-    });
-
-    cy.on('tap', (evt: any) => {
-      if (evt.target === cy) {
-        setContextMenu(null);
-      }
     });
 
     cy.on('mouseover', 'node', (evt: any) => {
@@ -493,43 +541,6 @@ export default function InvestigationGraph() {
   }, [graphData, layoutMode, showEdgeLabels]);
 
   useEffect(() => {
-    if (!cyInstance.current) return;
-    const cy = cyInstance.current;
-
-    const onNodeTap = (evt: any) => {
-      const node = evt.target;
-      setSelectedEdge(null);
-      setSelectedNode(node.data());
-      setShowReasoningPanel(true);
-      api.getNeighbourhood(caseId!, node.data('id'), 1).then((d) => setNodeDetail(d)).catch(() => {});
-    };
-
-    const onEdgeTap = (evt: any) => {
-      const edge = evt.target;
-      setSelectedNode(null);
-      setSelectedEdge(edge.data());
-      setShowReasoningPanel(true);
-    };
-
-    const onBackgroundTap = () => {
-      setSelectedNode(null);
-      setSelectedEdge(null);
-      setShowReasoningPanel(false);
-      setContextMenu(null);
-    };
-
-    cy.on('tap', 'node', onNodeTap);
-    cy.on('tap', 'edge', onEdgeTap);
-    cy.on('tap', onBackgroundTap);
-
-    return () => {
-      cy.off('tap', 'node', onNodeTap);
-      cy.off('tap', 'edge', onEdgeTap);
-      cy.off('tap', onBackgroundTap);
-    };
-  }, [caseId]);
-
-  useEffect(() => {
     document.addEventListener('click', () => setContextMenu(null));
     return () => document.removeEventListener('click', () => setContextMenu(null));
   }, []);
@@ -543,7 +554,7 @@ export default function InvestigationGraph() {
     setSelectedEdge(null);
     setHiddenLinkActive(false);
     setSearchQuery('');
-    setShowReasoningPanel(false);
+    setShowSidePanel(false);
   };
 
   const runLayout = (name: typeof layoutMode) => {
@@ -567,26 +578,31 @@ export default function InvestigationGraph() {
       const node = cy.getElementById(contextMenu.nodeId);
       switch (action) {
         case 'expand':
-          api.getNeighbourhood(caseId!, contextMenu.nodeId, 2).then((d) => {
-            if (d.nodes) {
-              const newNodes = d.nodes.filter((n: any) => !cy.getElementById(n.id).length);
-              newNodes.forEach((n: any) => {
-                cy.add({ data: n, classes: n.entity_type.toLowerCase() });
-              });
-              if (cy.elements().length > 0) {
-                cy.layout({ name: 'cose', animate: true, fit: false }).run();
+          // Skip API call for cluster label nodes
+          if (!contextMenu.nodeId.startsWith('cluster-')) {
+            api.getNeighbourhood(caseId!, contextMenu.nodeId, 2).then((d) => {
+              if (d.nodes) {
+                const newNodes = d.nodes.filter((n: any) => !cy.getElementById(n.id).length);
+                newNodes.forEach((n: any) => {
+                  cy.add({ data: n, classes: n.entity_type.toLowerCase() });
+                });
+                if (cy.elements().length > 0) {
+                  cy.layout({ name: 'cose', animate: true, fit: false }).run();
+                }
               }
-            }
-          });
+            });
+          }
           break;
         case 'focus':
           cy.fit(node.closedNeighborhood(), 80);
           break;
         case 'compare':
-          navigate(`/cases/${caseId}/entities?compare=${contextMenu.nodeId}`);
+          if (!contextMenu.nodeId.startsWith('cluster-')) {
+            navigate(`/cases/${caseId}/entities?compare=${contextMenu.nodeId}`);
+          }
           break;
         case 'path':
-          if (selectedNode && selectedNode.id !== contextMenu.nodeId) {
+          if (selectedNode && selectedNode.id !== contextMenu.nodeId && !contextMenu.nodeId.startsWith('cluster-')) {
             api.getPath(caseId!, selectedNode.id, contextMenu.nodeId).then((d) => {
               if (d.path) {
                 d.path.forEach((pid: string, i: number) => {
@@ -760,7 +776,7 @@ export default function InvestigationGraph() {
       )}
 
       {/* MAIN GRAPH WORKSPACE */}
-      <div className="flex-1 min-h-[500px] grid grid-cols-1 lg:grid-cols-12 gap-3 relative">
+      <div className="w-full flex-1 min-h-[500px] grid grid-cols-1 lg:grid-cols-12 gap-3 relative">
         {/* FILTER PANEL */}
         {showFilterPanel && (
           <div className="lg:col-span-3 xl:col-span-2 space-y-3 overflow-y-auto">
@@ -825,7 +841,11 @@ export default function InvestigationGraph() {
         )}
 
         {/* GRAPH CANVAS AREA */}
-        <div className={`${(selectedNode || selectedEdge || hiddenLinkActive || showReasoningPanel) ? 'lg:col-span-7 xl:col-span-6' : showFilterPanel ? 'lg:col-span-9 xl:col-span-8' : 'lg:col-span-12'} relative bg-[#060a06] border border-amber-500/35 overflow-hidden flex flex-col`}>
+        <div className={`${
+          showSidePanel && (selectedNode || selectedEdge)
+            ? showFilterPanel ? 'lg:col-span-6 xl:col-span-7' : 'lg:col-span-9 xl:col-span-9'
+            : showFilterPanel ? 'lg:col-span-9 xl:col-span-10' : 'lg:col-span-12'
+        } relative bg-[#060a06] border border-amber-500/35 overflow-hidden flex flex-col`}>
           <div
             className="absolute inset-0 opacity-10 pointer-events-none"
             style={{
@@ -892,77 +912,98 @@ export default function InvestigationGraph() {
           </div>
         </div>
 
-        {/* RIGHT SIDE PANEL: REASONING / ENTITY PROFILE / EDGE DETAIL */}
-        {(selectedNode || selectedEdge || hiddenLinkActive) && (
-          <div className="lg:col-span-5 xl:col-span-4 space-y-3 overflow-y-auto">
-            {/* HIDDEN LINK INTELLIGENCE BANNER */}
-            {hiddenLinkActive && (
-              <div className="p-3 bg-amber-950/40 border-2 border-amber-500 text-xs font-mono space-y-2 shadow-[0_0_15px_rgba(245,158,11,0.4)]">
-                <div className="flex items-center justify-between pb-1 border-b border-amber-500/40">
-                  <span className="font-bold text-amber-300 text-xs flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 animate-pulse" />
-                    HIDDEN LINK DETECTED
-                  </span>
-                  <button onClick={() => setHiddenLinkActive(false)} className="text-amber-500 hover:text-amber-300"><X className="w-3 h-3" /></button>
-                </div>
-                <div className="p-2 bg-black/60 border border-amber-500/30 text-center font-bold text-sm text-amber-300">
-                  RAVI KUMAR <span className="text-amber-500 font-normal">↝</span> SURESH
-                </div>
-                <div className="flex justify-between items-center py-1 border-b border-amber-500/20 text-[11px]">
-                  <span className="text-amber-500/80">CONFIDENCE:</span>
-                  <span className="text-amber-300 font-bold text-sm">67% [MEDIUM]</span>
-                </div>
-                <div className="text-[11px] space-y-1">
-                  <span className="text-amber-500/80 font-bold block">EVIDENCE:</span>
-                  <div className="text-emerald-400 pl-1">+ repeated tower co-location (14 times)</div>
-                  <div className="text-emerald-400 pl-1">+ shared vehicle Scorpio V-12</div>
-                  <div className="text-emerald-400 pl-1">+ synchronized communication burst</div>
-                  <div className="text-red-400 pl-1">- no direct calls between phones</div>
-                  <div className="text-red-400 pl-1">- no direct financial transaction</div>
-                </div>
-                <div className="flex justify-between text-[10px] pt-1">
-                  <span className="text-amber-500/70">EVIDENCE TYPE:</span>
-                  <span className="font-bold text-amber-300">DERIVED + INFERRED</span>
-                </div>
-                <div className="p-1.5 bg-black/80 border border-amber-500/40 text-[9px] text-amber-400 leading-tight">
-                  CLASSIFICATION: <span className="font-bold text-amber-200">HYPOTHESIS // UNCONFIRMED</span>.<br />
-                  AI correlation only. Physical verification required.
-                </div>
-                <button onClick={() => navigate(`/cases/${caseId}/hypotheses`)} className="w-full py-1.5 bg-amber-500 text-black font-bold hover:bg-amber-400 transition-colors text-center text-xs block">EXPAND IN HYPOTHESES TAB [→]</button>
-              </div>
-            )}
-
-            {/* SELECTED NODE PANEL - ENTITY PROFILE */}
+        {/* SIDE DETAIL DRAWER */}
+        {showSidePanel && (selectedNode || selectedEdge) && (
+          <div className="lg:col-span-3 xl:col-span-3 bg-[#0a0f0a] border border-amber-500/40 p-3 space-y-3 overflow-y-auto max-h-[calc(100vh-220px)] min-h-[520px] w-full justify-self-end">
             {selectedNode && (
-              <TerminalPanel
-                title={`ENTITY PROFILE // ${selectedNode.id?.slice(0, 10)}`}
-                subtitle={selectedNode.entity_type}
-                headerRight={
-                  <button onClick={() => { setSelectedNode(null); setShowReasoningPanel(false); }} className="text-amber-500 hover:text-amber-300">
-                    <X className="w-3.5 h-3.5" />
+              <>
+                <div className="flex items-center justify-between border-b border-amber-500/30 pb-2">
+                  <span className="font-bold text-amber-300 text-xs uppercase flex items-center gap-1.5">
+                    {ENTITY_TYPE_CONFIG[selectedNode.entity_type]?.icon || <Target className="w-3.5 h-3.5 text-amber-400" />}
+                    <span>{(selectedNode.entity_type || 'ENTITY').toUpperCase()} NODE DOSSIER</span>
+                  </span>
+                  <button
+                    onClick={() => {
+                      setShowSidePanel(false);
+                      setSelectedNode(null);
+                      setSelectedEdge(null);
+                    }}
+                    className="text-amber-500 hover:text-amber-300 text-xs font-bold px-1"
+                  >
+                    ✕
                   </button>
-                }
-              >
-                <div className="space-y-2.5 text-xs">
-                  <div className="flex justify-between items-center pb-2 border-b border-amber-500/20">
+                </div>
+
+                <div className="space-y-2 text-[11px]">
+                  <div>
+                    <div className="text-[9px] text-amber-500/60 uppercase">LABEL / IDENTIFIER:</div>
+                    <div className="font-bold text-amber-200 text-xs">{selectedNode.label || selectedNode.id}</div>
+                    <div className="text-[9px] text-amber-500/70 font-mono mt-0.5 truncate">{selectedNode.id}</div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-2 p-1.5 bg-black/60 border border-amber-500/20 text-[10px]">
                     <div>
-                      <div className="font-bold text-amber-300 text-sm truncate max-w-[180px]">{selectedNode.label}</div>
-                      <div className="text-[10px] text-amber-500/80">Type: {selectedNode.entity_type} | Cluster: {selectedNode.cluster || 'unknown'}</div>
+                      <span className="text-amber-500/70">ENTITY TYPE:</span>
+                      <div className="text-amber-300 font-bold uppercase">{selectedNode.entity_type || 'UNKNOWN'}</div>
                     </div>
-                    <StatusBadge status={selectedNode.review_state || 'ACTIVE'} size="sm" />
+                    <div>
+                      <span className="text-amber-500/70">CLUSTER:</span>
+                      <div className="text-amber-300 font-bold uppercase">{selectedNode.cluster || 'COMMUNICATION'}</div>
+                    </div>
+                    <div>
+                      <span className="text-amber-500/70">REVIEW STATE:</span>
+                      <div className="text-emerald-400 font-bold uppercase">{selectedNode.review_state || 'ACTIVE'}</div>
+                    </div>
+                    <div>
+                      <span className="text-amber-500/70">CONFIDENCE:</span>
+                      <div className="text-amber-300 font-bold">{Math.round((selectedNode.confidence || 0.85) * 100)}%</div>
+                    </div>
                   </div>
 
                   <ConfidenceMeter value={selectedNode.confidence || 0.85} label="INTELLIGENCE CONFIDENCE" />
 
-                  <div className="p-2 bg-black/60 border border-amber-500/20 space-y-1 text-[11px]">
-                    <div className="flex justify-between"><span className="text-amber-500/70">IDENTIFIER:</span><span className="text-amber-300 font-mono">{selectedNode.id}</span></div>
-                    <div className="flex justify-between"><span className="text-amber-500/70">JURISDICTION:</span><span className="text-amber-300">Maharashtra / Pune STF</span></div>
-                    <div className="flex justify-between"><span className="text-amber-500/70">DEGREE:</span><span className="text-amber-300">{selectedNode.raw?.properties?.degree || 0}</span></div>
-                  </div>
+                  {/* CCTV observation details */}
+                  {selectedNode.entity_type === 'cctv' && (
+                    <div className="space-y-1.5 border-t border-amber-500/20 pt-2 text-[10px]">
+                      <div className="flex justify-between">
+                        <span className="text-amber-500/70">CAMERA ID:</span>
+                        <span className="text-amber-300 font-bold">{selectedNode.camera_id || selectedNode.id}</span>
+                      </div>
+                      {selectedNode.location && (
+                        <div>
+                          <span className="text-amber-500/70">LOCATION:</span>
+                          <div className="text-amber-300">{selectedNode.location}</div>
+                        </div>
+                      )}
+                      {selectedNode.timestamp && (
+                        <div className="flex justify-between">
+                          <span className="text-amber-500/70">TIMESTAMP:</span>
+                          <span className="text-amber-300">{selectedNode.timestamp}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
 
-                  <div>
-                    <div className="text-[10px] text-amber-500/80 font-bold uppercase mb-1">DIRECT CONNECTIONS:</div>
-                    <div className="space-y-1 max-h-40 overflow-y-auto">
+                  {/* Raw telemetry attributes if present */}
+                  {selectedNode.raw?.properties && Object.keys(selectedNode.raw.properties).length > 0 && (
+                    <div className="space-y-1 border-t border-amber-500/20 pt-2 text-[10px]">
+                      <div className="text-[9px] text-amber-500/60 uppercase">TELEMETRY & ATTRIBUTES:</div>
+                      {Object.entries(selectedNode.raw.properties)
+                        .filter(([k]) => !['degree'].includes(k))
+                        .slice(0, 6)
+                        .map(([k, v]: [string, any]) => (
+                          <div key={k} className="flex justify-between text-[10px]">
+                            <span className="text-amber-500/70 uppercase">{k.replace(/_/g, ' ')}:</span>
+                            <span className="text-amber-300 font-mono truncate max-w-[140px]">{String(v)}</span>
+                          </div>
+                        ))}
+                    </div>
+                  )}
+
+                  {/* DIRECT CONNECTIONS */}
+                  <div className="space-y-1.5 border-t border-amber-500/20 pt-2 text-[10px]">
+                    <div className="text-amber-500/70 uppercase font-bold">DIRECT CONNECTIONS:</div>
+                    <div className="space-y-1 max-h-36 overflow-y-auto pr-1">
                       {nodeDetail?.nodes?.length > 1 ? (
                         nodeDetail.nodes
                           .filter((n: any) => n.id !== selectedNode.id)
@@ -976,79 +1017,105 @@ export default function InvestigationGraph() {
                                   cyInstance.current?.elements().unselect();
                                   target.select();
                                   setSelectedNode(target.data());
+                                  if (!r.id.startsWith('cctv-') && caseIdRef.current) {
+                                    api.getNeighbourhood(caseIdRef.current, r.id, 1).then((d) => setNodeDetail(d)).catch(() => {});
+                                  }
                                 }
                               }}
-                              className="p-1.5 bg-black/60 border border-amber-500/20 hover:border-amber-400 cursor-pointer flex justify-between items-center text-[10px]"
+                              className="p-1.5 bg-black/60 border border-amber-500/20 hover:border-amber-400 cursor-pointer flex justify-between items-center text-[10px] transition-colors"
                             >
                               <span className="text-amber-300 font-bold truncate max-w-[130px]">{r.label}</span>
-                              <span className="text-amber-500/70 uppercase">{r.entity_type}</span>
+                              <span className="text-amber-500/70 uppercase text-[9px]">{r.entity_type}</span>
                             </div>
                           ))
                       ) : (
                         <div className="p-1.5 bg-black/60 border border-amber-500/20 text-[10px] text-amber-500/60">
-                          Tap adjacent nodes to inspect connections.
+                          No adjacent connections recorded.
                         </div>
                       )}
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-1">
-                    <button onClick={() => navigate(`/cases/${caseId}/entities`)} className="py-1.5 bg-black border border-amber-500/50 hover:bg-amber-500/20 text-amber-300 font-bold text-center text-xs flex items-center justify-center gap-1"><span>OPEN DOSSIER</span><ArrowRight className="w-3 h-3" /></button>
-                    <button onClick={() => navigate(`/cases/${caseId}/timeline?entity=${selectedNode.id}`)} className="py-1.5 bg-black border border-amber-500/50 hover:bg-amber-500/20 text-amber-300 font-bold text-center text-xs flex items-center justify-center gap-1"><span>VIEW TIMELINE</span><Clock className="w-3 h-3" /></button>
-                  </div>
-                </div>
-              </TerminalPanel>
-            )}
-
-            {/* SELECTED EDGE PANEL - EDGE DETAIL */}
-            {selectedEdge && (
-              <TerminalPanel
-                title={`EDGE DETAIL // ${selectedEdge.id?.slice(0, 10)}`}
-                subtitle={selectedEdge.classification?.toUpperCase() || 'OBSERVED'}
-                headerRight={
-                  <button onClick={() => { setSelectedEdge(null); setShowReasoningPanel(false); }} className="text-amber-500 hover:text-amber-300"><X className="w-3.5 h-3.5" /></button>
-                }
-              >
-                <div className="space-y-2.5 text-xs">
-                  <div className="flex justify-between items-center pb-2 border-b border-amber-500/20">
-                    <div>
-                      <div className="font-bold text-amber-300 text-sm truncate max-w-[180px]">{selectedEdge.label}</div>
-                      <div className="text-[10px] text-amber-500/80">Relationship: {selectedEdge.relationship_type}</div>
+                  {/* ACTION BUTTONS */}
+                  <div className="space-y-1.5 pt-2 border-t border-amber-500/20">
+                    <div className="grid grid-cols-2 gap-1.5">
+                      <button
+                        onClick={() => navigate(`/cases/${caseId}/entities`)}
+                        className="py-1.5 px-2 bg-black border border-amber-500/50 hover:bg-amber-500/20 text-amber-300 font-bold text-center text-[10px] flex items-center justify-center gap-1 uppercase"
+                      >
+                        <span>DOSSIER</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </button>
+                      <button
+                        onClick={() => navigate(`/cases/${caseId}/timeline?entity=${selectedNode.id}`)}
+                        className="py-1.5 px-2 bg-black border border-amber-500/50 hover:bg-amber-500/20 text-amber-300 font-bold text-center text-[10px] flex items-center justify-center gap-1 uppercase"
+                      >
+                        <span>TIMELINE</span>
+                        <Clock className="w-3 h-3" />
+                      </button>
                     </div>
-                    <StatusBadge status={selectedEdge.classification?.toUpperCase() || 'OBSERVED'} size="sm" />
-                  </div>
-
-                  <div className="p-2 bg-black/60 border border-amber-500/20 space-y-1 text-[11px]">
-                    <div className="flex justify-between"><span className="text-amber-500/70">SOURCE:</span><span className="text-amber-300 font-mono">{selectedEdge.source?.slice(0, 12)}...</span></div>
-                    <div className="flex justify-between"><span className="text-amber-500/70">TARGET:</span><span className="text-amber-300 font-mono">{selectedEdge.target?.slice(0, 12)}...</span></div>
-                    <div className="flex justify-between"><span className="text-amber-500/70">EVIDENCE COUNT:</span><span className="text-amber-300 font-bold">{selectedEdge.raw?.properties?.evidence_count || 1}</span></div>
-                    <div className="flex justify-between"><span className="text-amber-500/70">VALID FROM:</span><span className="text-amber-300">{selectedEdge.raw?.properties?.valid_from || 'N/A'}</span></div>
-                    <div className="flex justify-between"><span className="text-amber-500/70">VALID TO:</span><span className="text-amber-300">{selectedEdge.raw?.properties?.valid_to || 'N/A'}</span></div>
-                  </div>
-
-                  <div>
-                    <div className="text-[10px] text-amber-500/80 font-bold uppercase mb-1">SUPPORTING EVIDENCE:</div>
                     <button
-                      onClick={() => api.getRelEvidence(caseId!, selectedEdge.id).then((d) => console.log('Evidence:', d))}
-                      className="w-full py-1.5 bg-black border border-amber-500/50 hover:bg-amber-500/20 text-amber-300 font-bold text-center text-xs flex items-center justify-center gap-1"
+                      onClick={() => navigate(`/cases/${caseId}/map`)}
+                      className="w-full py-1.5 bg-amber-500 text-black font-bold hover:bg-amber-400 text-center text-[10px] uppercase flex items-center justify-center gap-1"
                     >
-                      <span>VIEW EVIDENCE CHAIN</span>
-                      <ArrowRight className="w-3 h-3" />
+                      <MapPin className="w-3 h-3" />
+                      <span>VIEW ON NETWORK MAP [→]</span>
                     </button>
                   </div>
                 </div>
-              </TerminalPanel>
+              </>
             )}
 
-            {/* REASONING PANEL - when nothing selected but panel open */}
-            {showReasoningPanel && !selectedNode && !selectedEdge && !hiddenLinkActive && (
-              <TerminalPanel title="REASONING PANEL" subtitle="SELECT NODE OR EDGE">
-                <div className="text-xs text-amber-500/60 text-center py-8">
-                  Click a node to view entity profile<br />
-                  Click an edge to view relationship detail<br />
-                  Right-click for context actions
+            {selectedEdge && (
+              <>
+                <div className="flex items-center justify-between border-b border-amber-500/30 pb-2">
+                  <span className="font-bold text-amber-300 text-xs uppercase flex items-center gap-1.5">
+                    <Link className="w-3.5 h-3.5 text-amber-400" />
+                    <span>EDGE LINK DOSSIER</span>
+                  </span>
+                  <button
+                    onClick={() => {
+                      setShowSidePanel(false);
+                      setSelectedEdge(null);
+                      setSelectedNode(null);
+                    }}
+                    className="text-amber-500 hover:text-amber-300 text-xs font-bold px-1"
+                  >
+                    ✕
+                  </button>
                 </div>
-              </TerminalPanel>
+
+                <div className="space-y-2 text-[11px]">
+                  <div>
+                    <div className="text-[9px] text-amber-500/60 uppercase">RELATIONSHIP:</div>
+                    <div className="font-bold text-amber-200 text-xs">{selectedEdge.label || selectedEdge.relationship_type || 'LINKED'}</div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-2 p-1.5 bg-black/60 border border-amber-500/20 text-[10px]">
+                    <div>
+                      <span className="text-amber-500/70">CLASS:</span>
+                      <div className="text-amber-300 font-bold uppercase">{selectedEdge.classification || 'OBSERVED'}</div>
+                    </div>
+                    <div>
+                      <span className="text-amber-500/70">EVIDENCE:</span>
+                      <div className="text-emerald-400 font-bold">{selectedEdge.raw?.properties?.evidence_count || 1} hits</div>
+                    </div>
+                  </div>
+
+                  <div className="p-1.5 bg-black/60 border border-amber-500/20 space-y-1 text-[10px]">
+                    <div className="flex justify-between"><span className="text-amber-500/70">SOURCE:</span><span className="text-amber-300 font-mono truncate max-w-[140px]">{selectedEdge.source}</span></div>
+                    <div className="flex justify-between"><span className="text-amber-500/70">TARGET:</span><span className="text-amber-300 font-mono truncate max-w-[140px]">{selectedEdge.target}</span></div>
+                  </div>
+
+                  <button
+                    onClick={() => api.getRelEvidence(caseId!, selectedEdge.id).then((d) => console.log('Evidence:', d))}
+                    className="w-full py-1.5 bg-black border border-amber-500/50 hover:bg-amber-500/20 text-amber-300 font-bold text-center text-xs flex items-center justify-center gap-1 uppercase"
+                  >
+                    <span>VIEW EVIDENCE CHAIN</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </button>
+                </div>
+              </>
             )}
           </div>
         )}

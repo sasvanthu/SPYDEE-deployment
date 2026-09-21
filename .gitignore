@@ -10415,3 +10415,4 @@ services/worker/venv/Scripts/pythonw.exe
 services/worker/venv/Scripts/uvicorn.exe
 services/worker/venv/Scripts/watchfiles.exe
 services/worker/venv/Scripts/websockets.exe
+.env.local

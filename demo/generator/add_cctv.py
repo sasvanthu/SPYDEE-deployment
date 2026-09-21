@@ -94,7 +94,7 @@ async def add_cctv():
                     evidence_file_id=ev.id,
                     case_id=case_id,
                     import_config={"source_type": source_type, "count": len(records)},
-                    status="COMPLETED",
+                    status="completed",
                     accepted_count=len(records),
                     rejected_count=0,
                     completed_at=datetime.utcnow(),

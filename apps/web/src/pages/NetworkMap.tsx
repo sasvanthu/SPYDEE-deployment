@@ -150,6 +150,8 @@ export default function NetworkMap() {
   const [selectedEntityId, setSelectedEntityId] = useState<string | null>(null);
   const [dateRange, setDateRange] = useState<[string, string]>(['', '']);
   const [showSidePanel, setShowSidePanel] = useState(false);
+  const [showConnections, setShowConnections] = useState(true);
+  const [showOnlyConnected, setShowOnlyConnected] = useState(true);
 
   const { data: entities = [] } = useQuery({
     queryKey: ['entities', caseId],
@@ -168,6 +170,44 @@ export default function NetworkMap() {
     queryFn: () => api.getCase(caseId!).catch(() => null),
     enabled: !!caseId,
   });
+
+  // Fetch entity connections for map visualization
+  const { data: entityConnections = [] } = useQuery({
+    queryKey: ['entity-connections', caseId],
+    queryFn: async () => {
+      if (!caseId) return [];
+      try {
+        // Get all edges for this case to build connections
+        const apiBase = (typeof import.meta !== 'undefined' && (import.meta as any).env?.VITE_API_BASE) || '/api/v1';
+        const res = await fetch(`${apiBase}/graph/${caseId}/edges?limit=500`, {
+          headers: { 'Authorization': `Bearer ${localStorage.getItem('spydee_token') || localStorage.getItem('access_token') || ''}` }
+        });
+        if (!res.ok) return [];
+        const data = await res.json();
+        return data.edges || data || [];
+      } catch (e) {
+        console.warn('Failed to fetch entity connections:', e);
+        return [];
+      }
+    },
+    enabled: !!caseId,
+  });
+
+  // Compute connected entity IDs from edges
+  const connectedEntityIds = useMemo(() => {
+    const ids = new Set<string>();
+    entityConnections.forEach((edge: any) => {
+      ids.add(edge.source);
+      ids.add(edge.target);
+    });
+    return ids;
+  }, [entityConnections]);
+
+  // Filter entities to only those with connections when showOnlyConnected is true
+  const displayEntities = useMemo(() => {
+    if (!showOnlyConnected) return entities;
+    return (entities || []).filter((e: any) => connectedEntityIds.has(e.id));
+  }, [entities, connectedEntityIds, showOnlyConnected]);
 
   // Default coordinate center based on case title
   const defaultCenter = useMemo<[number, number]>(() => {
@@ -246,11 +286,10 @@ export default function NetworkMap() {
       zoomControl: false,
     }).setView(defaultCenter, 12);
 
-    // Free, open CartoDB Dark Matter tiles (requires no API key)
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-      maxZoom: 19,
-      subdomains: 'abcd',
-      attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    // Free, open Stadia Maps Alidade Smooth Dark (requires no API key)
+    L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+      maxZoom: 20,
+      attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     }).addTo(map);
 
     L.control.zoom({ position: 'bottomright' }).addTo(map);
@@ -301,7 +340,7 @@ export default function NetworkMap() {
 
     // 1. CELL TOWER MARKERS
     if (showTowers) {
-      const towerEntities = (entities || []).filter((e: any) => {
+      const towerEntities = (displayEntities || []).filter((e: any) => {
         const type = (e.entity_type || '').toLowerCase();
         return type === 'tower' || type === 'location';
       });
@@ -396,7 +435,7 @@ export default function NetworkMap() {
 
     // 3. PERSON/SUSPECT LOCATION MARKERS
     if (showPersons) {
-      const personEntities = (entities || []).filter((e: any) => {
+      const personEntities = (displayEntities || []).filter((e: any) => {
         const type = (e.entity_type || '').toLowerCase();
         return type === 'person' || type === 'alias';
       });
@@ -434,9 +473,169 @@ export default function NetworkMap() {
       });
     }
 
+    // 3b. PHONE/SIM MARKERS
+    if (showPersons) {
+      const phoneEntities = (displayEntities || []).filter((e: any) => {
+        const type = (e.entity_type || '').toLowerCase();
+        return type === 'phone_sim' || type === 'sim';
+      });
+
+      phoneEntities.forEach((p: any) => {
+        const [lat, lon] = getValidCoordinates(p, defaultCenter);
+        if (Number.isNaN(lat) || Number.isNaN(lon)) return;
+        bounds.push([lat, lon]);
+
+        const config = ENTITY_MARKER_CONFIG.phone_sim;
+        const icon = createCustomIcon(
+          `<div style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;border:2px solid ${config.color};background:#060a06;color:${config.color};font-family:monospace;font-size:9px;font-weight:bold;box-shadow:0 0 10px ${config.color}80;border-radius:3px;">◆</div>`,
+          [22, 22],
+          [11, 11]
+        );
+
+        const marker = L.marker([lat, lon], { icon }).addTo(map);
+
+        marker.on('click', () => {
+          setSelectedMarker({
+            type: 'entity',
+            id: p.id,
+            label: p.label,
+            lat,
+            lon,
+            entity_type: p.entity_type,
+            review_state: p.review_state,
+            confidence: p.confidence || 0.8,
+            last_seen: 'ACTIVE CDR OBSERVATION',
+            evidence_type: 'Telecom CDR + Tower Triangulation',
+          });
+          setSelectedEntityId(p.id);
+          setShowSidePanel(true);
+        });
+      });
+    }
+
+    // 3c. DEVICE MARKERS
+    if (showPersons) {
+      const deviceEntities = (displayEntities || []).filter((e: any) => {
+        const type = (e.entity_type || '').toLowerCase();
+        return type === 'device';
+      });
+
+      deviceEntities.forEach((p: any) => {
+        const [lat, lon] = getValidCoordinates(p, defaultCenter);
+        if (Number.isNaN(lat) || Number.isNaN(lon)) return;
+        bounds.push([lat, lon]);
+
+        const config = ENTITY_MARKER_CONFIG.device;
+        const icon = createCustomIcon(
+          `<div style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;border:2px solid ${config.color};background:#060a06;color:${config.color};font-family:monospace;font-size:9px;font-weight:bold;box-shadow:0 0 10px ${config.color}80;border-radius:3px;">▣</div>`,
+          [22, 22],
+          [11, 11]
+        );
+
+        const marker = L.marker([lat, lon], { icon }).addTo(map);
+
+        marker.on('click', () => {
+          setSelectedMarker({
+            type: 'entity',
+            id: p.id,
+            label: p.label,
+            lat,
+            lon,
+            entity_type: p.entity_type,
+            review_state: p.review_state,
+            confidence: p.confidence || 0.75,
+            last_seen: 'DEVICE FORENSIC HORIZON',
+            evidence_type: 'IMEI Registry + App Analysis',
+          });
+          setSelectedEntityId(p.id);
+          setShowSidePanel(true);
+        });
+      });
+    }
+
+    // 3d. ACCOUNT MARKERS
+    if (showPersons) {
+      const accountEntities = (displayEntities || []).filter((e: any) => {
+        const type = (e.entity_type || '').toLowerCase();
+        return type === 'account';
+      });
+
+      accountEntities.forEach((p: any) => {
+        const [lat, lon] = getValidCoordinates(p, defaultCenter);
+        if (Number.isNaN(lat) || Number.isNaN(lon)) return;
+        bounds.push([lat, lon]);
+
+        const config = ENTITY_MARKER_CONFIG.account;
+        const icon = createCustomIcon(
+          `<div style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;border:2px solid ${config.color};background:#060a06;color:${config.color};font-family:monospace;font-size:9px;font-weight:bold;box-shadow:0 0 10px ${config.color}80;border-radius:50%;">$</div>`,
+          [22, 22],
+          [11, 11]
+        );
+
+        const marker = L.marker([lat, lon], { icon }).addTo(map);
+
+        marker.on('click', () => {
+          setSelectedMarker({
+            type: 'entity',
+            id: p.id,
+            label: p.label,
+            lat,
+            lon,
+            entity_type: p.entity_type,
+            review_state: p.review_state,
+            confidence: p.confidence || 0.9,
+            last_seen: 'FINANCIAL INTEL HORIZON',
+            evidence_type: 'UPI Transaction Graph + Bank Records',
+          });
+          setSelectedEntityId(p.id);
+          setShowSidePanel(true);
+        });
+      });
+    }
+
+    // 3e. VEHICLE MARKERS
+    if (showPersons) {
+      const vehicleEntities = (displayEntities || []).filter((e: any) => {
+        const type = (e.entity_type || '').toLowerCase();
+        return type === 'vehicle';
+      });
+
+      vehicleEntities.forEach((p: any) => {
+        const [lat, lon] = getValidCoordinates(p, defaultCenter);
+        if (Number.isNaN(lat) || Number.isNaN(lon)) return;
+        bounds.push([lat, lon]);
+
+        const config = ENTITY_MARKER_CONFIG.vehicle;
+        const icon = createCustomIcon(
+          `<div style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;border:2px solid ${config.color};background:#060a06;color:${config.color};font-family:monospace;font-size:10px;font-weight:bold;box-shadow:0 0 10px ${config.color}80;border-radius:2px;">▲</div>`,
+          [24, 24],
+          [12, 12]
+        );
+
+        const marker = L.marker([lat, lon], { icon }).addTo(map);
+
+        marker.on('click', () => {
+          setSelectedMarker({
+            type: 'entity',
+            id: p.id,
+            label: p.label,
+            lat,
+            lon,
+            entity_type: p.entity_type,
+            review_state: p.review_state,
+            confidence: p.confidence || 0.85,
+            last_seen: 'ANPR / TOLL OBSERVATION',
+            evidence_type: 'ANPR Camera + Toll Plaza + Fastag',
+          });
+          setSelectedEntityId(p.id);
+          setShowSidePanel(true);
+        });
+      });
+    }
+
     // 4. EVENT MARKERS
     if (showEvents) {
-      const eventEntities = (entities || []).filter((e: any) => {
+      const eventEntities = (displayEntities || []).filter((e: any) => {
         const type = (e.entity_type || '').toLowerCase();
         return type === 'event';
       });
@@ -544,6 +743,44 @@ export default function NetworkMap() {
       });
     }
 
+    // 7. ENTITY CONNECTIONS (Network Links)
+    if (showConnections && entityConnections.length > 0) {
+      // Build a map of entity ID to coordinates
+      const entityCoords: Record<string, [number, number]> = {};
+      
+      // Add all rendered entities to coordinate map
+      const allEntities = [
+        ...(displayEntities || []),
+        ...cctvObservations.map((c: any) => ({ id: c.id, lat: c.lat, lon: c.lon })),
+        ...colocationEvents.map((c: any) => ({ id: c.id, lat: c.lat, lon: c.lon })),
+      ];
+      
+      allEntities.forEach((e: any) => {
+        const [lat, lon] = getValidCoordinates(e, defaultCenter);
+        if (!Number.isNaN(lat) && !Number.isNaN(lon)) {
+          entityCoords[e.id] = [lat, lon];
+        }
+      });
+
+      entityConnections.forEach((edge: any) => {
+        const sourceCoords = entityCoords[edge.source];
+        const targetCoords = entityCoords[edge.target];
+        
+        if (sourceCoords && targetCoords) {
+          const color = edge.classification === 'hypothesis' ? '#f59e0b' : 
+                       edge.classification === 'inferred' ? '#06b6d4' :
+                       edge.classification === 'contradicted' ? '#ef4444' : '#22c55e';
+          
+          L.polyline([sourceCoords, targetCoords], {
+            color,
+            weight: 1.5,
+            opacity: 0.6,
+            dashArray: edge.classification === 'hypothesis' ? '5, 5' : undefined,
+          }).addTo(map);
+        }
+      });
+    }
+
     // Fit bounds safely
     if (bounds.length > 0) {
       try {
@@ -552,7 +789,7 @@ export default function NetworkMap() {
         console.warn('fitBounds error', err);
       }
     }
-  }, [entities, showTowers, showPersons, showCCTV, showEvents, showTrajectories, showColocations, cctvObservations, colocationEvents, trajectories, defaultCenter]);
+  }, [displayEntities, showTowers, showPersons, showCCTV, showEvents, showTrajectories, showColocations, showConnections, showOnlyConnected, cctvObservations, colocationEvents, trajectories, entityConnections, defaultCenter]);
 
   // Timeline playback loop
   useEffect(() => {
@@ -566,12 +803,12 @@ export default function NetworkMap() {
   }, [isPlaying, playbackSpeed]);
 
   const activeEntities = useMemo(() => {
-    if (!entities) return [];
-    return (entities || []).filter((e: any) => {
+    if (!displayEntities) return [];
+    return (displayEntities || []).filter((e: any) => {
       const type = (e.entity_type || '').toLowerCase();
       return ['person', 'phone_sim', 'sim', 'device', 'vehicle', 'location'].includes(type);
     }).slice(0, 12);
-  }, [entities]);
+  }, [displayEntities]);
 
   const toggleLayer = (layer: string) => {
     switch (layer) {
@@ -581,6 +818,8 @@ export default function NetworkMap() {
       case 'events': setShowEvents(!showEvents); break;
       case 'colocations': setShowColocations(!showColocations); break;
       case 'trajectories': setShowTrajectories(!showTrajectories); break;
+      case 'connections': setShowConnections(!showConnections); break;
+      case 'onlyConnected': setShowOnlyConnected(!showOnlyConnected); break;
     }
   };
 
@@ -609,6 +848,8 @@ export default function NetworkMap() {
             { key: 'events', label: 'EVENTS', active: showEvents, activeClass: 'bg-red-500 text-black font-bold border-red-400', inactiveClass: 'bg-red-500/20 border-red-500/40 text-red-300 hover:bg-red-500/30 hover:text-red-200' },
             { key: 'colocations', label: 'CO-LOCATIONS', active: showColocations, activeClass: 'bg-amber-500 text-black font-bold border-amber-400', inactiveClass: 'bg-amber-500/20 border-amber-500/40 text-amber-300 hover:bg-amber-500/30 hover:text-amber-200' },
             { key: 'trajectories', label: 'CORRIDORS', active: showTrajectories, activeClass: 'bg-violet-500 text-black font-bold border-violet-400', inactiveClass: 'bg-violet-500/20 border-violet-500/40 text-violet-300 hover:bg-violet-500/30 hover:text-violet-200' },
+            { key: 'connections', label: 'LINKS', active: showConnections, activeClass: 'bg-emerald-500 text-black font-bold border-emerald-400', inactiveClass: 'bg-emerald-500/20 border-emerald-500/40 text-emerald-300 hover:bg-emerald-500/30 hover:text-emerald-200' },
+            { key: 'onlyConnected', label: 'CONNECTED ONLY', active: showOnlyConnected, activeClass: 'bg-indigo-500 text-black font-bold border-indigo-400', inactiveClass: 'bg-indigo-500/20 border-indigo-500/40 text-indigo-300 hover:bg-indigo-500/30 hover:text-indigo-200' },
           ].map(({ key, label, active, activeClass, inactiveClass }) => (
             <button
               key={key}
@@ -911,6 +1152,65 @@ export default function NetworkMap() {
                   <div className="flex justify-between pt-1">
                     <span className="text-amber-500/70">OBSERVATIONS:</span>
                     <span className="text-red-400 font-bold">{selectedMarker.count} concurrent hits</span>
+                  </div>
+                </div>
+              )}
+
+              {selectedMarker.type === 'person' && (
+                <div className="space-y-1.5 border-t border-amber-500/20 pt-2 text-[10px]">
+                  <div className="flex justify-between">
+                    <span className="text-amber-500/70">ENTITY TYPE:</span>
+                    <span className="text-amber-300 font-bold">{selectedMarker.entity_type?.toUpperCase() || 'PERSON'}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-amber-500/70">REVIEW STATE:</span>
+                    <span className="text-emerald-400 font-bold">{selectedMarker.review_state?.toUpperCase() || 'NEW'}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-amber-500/70">CONFIDENCE:</span>
+                    <span className="text-emerald-400 font-bold">{(selectedMarker.confidence * 100).toFixed(0)}%</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-amber-500/70">LAST SEEN:</span>
+                    <span className="text-amber-300">{selectedMarker.last_seen}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-amber-500/70">EVIDENCE TYPE:</span>
+                    <span className="text-amber-300">{selectedMarker.evidence_type}</span>
+                  </div>
+                </div>
+              )}
+
+              {selectedMarker.type === 'entity' && (
+                <div className="space-y-1.5 border-t border-amber-500/20 pt-2 text-[10px]">
+                  <div className="flex justify-between">
+                    <span className="text-amber-500/70">ENTITY TYPE:</span>
+                    <span className="text-amber-300 font-bold">{selectedMarker.entity_type?.toUpperCase() || 'ENTITY'}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-amber-500/70">REVIEW STATE:</span>
+                    <span className="text-emerald-400 font-bold">{selectedMarker.review_state?.toUpperCase() || 'NEW'}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-amber-500/70">CONFIDENCE:</span>
+                    <span className="text-emerald-400 font-bold">{(selectedMarker.confidence * 100).toFixed(0)}%</span>
+                  </div>
+                </div>
+              )}
+
+              {selectedMarker.type === 'event' && (
+                <div className="space-y-1.5 border-t border-amber-500/20 pt-2 text-[10px]">
+                  <div>
+                    <span className="text-amber-500/70">TIMESTAMP:</span>
+                    <div className="text-amber-300">{selectedMarker.timestamp}</div>
+                  </div>
+                  <div>
+                    <span className="text-amber-500/70">DETAILS:</span>
+                    <div className="text-amber-300">{selectedMarker.details}</div>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-amber-500/70">EVENT TYPE:</span>
+                    <span className="text-emerald-400 font-bold">{selectedMarker.event_type?.toUpperCase() || 'INCIDENT'}</span>
                   </div>
                 </div>
               )}

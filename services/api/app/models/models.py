@@ -21,76 +21,76 @@ def gen_uuid():
 
 
 class UserRole(str, enum.Enum):
-    INVESTIGATOR = "INVESTIGATOR"
-    CASE_SUPERVISOR = "CASE_SUPERVISOR"
-    ADMINISTRATOR = "ADMINISTRATOR"
+    INVESTIGATOR = "investigator"
+    CASE_SUPERVISOR = "case_supervisor"
+    ADMINISTRATOR = "administrator"
 
 
 class CaseStatus(str, enum.Enum):
-    DRAFT = "DRAFT"
-    ACTIVE = "ACTIVE"
-    UNDER_REVIEW = "UNDER_REVIEW"
-    ARCHIVED = "ARCHIVED"
+    DRAFT = "draft"
+    ACTIVE = "active"
+    UNDER_REVIEW = "under_review"
+    ARCHIVED = "archived"
 
 
 class JobStatus(str, enum.Enum):
-    QUEUED = "QUEUED"
-    RUNNING = "RUNNING"
-    COMPLETED = "COMPLETED"
-    FAILED = "FAILED"
-    CANCELLED = "CANCELLED"
+    QUEUED = "queued"
+    RUNNING = "running"
+    COMPLETED = "completed"
+    FAILED = "failed"
+    CANCELLED = "cancelled"
 
 
 class EntityType(str, enum.Enum):
-    PERSON = "PERSON"
-    ALIAS = "ALIAS"
-    PHONE_SIM = "PHONE_SIM"
-    DEVICE = "DEVICE"
-    ACCOUNT = "ACCOUNT"
-    LOCATION = "LOCATION"
-    ORGANIZATION = "ORGANIZATION"
-    DOMAIN_IP = "DOMAIN_IP"
-    EVENT = "EVENT"
-    DOCUMENT = "DOCUMENT"
-    VEHICLE = "VEHICLE"
+    PERSON = "person"
+    ALIAS = "alias"
+    PHONE_SIM = "phone_sim"
+    DEVICE = "device"
+    ACCOUNT = "account"
+    LOCATION = "location"
+    ORGANIZATION = "organization"
+    DOMAIN_IP = "domain_ip"
+    EVENT = "event"
+    DOCUMENT = "document"
+    VEHICLE = "vehicle"
 
 
 class ReviewState(str, enum.Enum):
-    NEW = "NEW"
-    NEEDS_VERIFICATION = "NEEDS_VERIFICATION"
-    SUPPORTED = "SUPPORTED"
-    REJECTED = "REJECTED"
-    ARCHIVED = "ARCHIVED"
+    NEW = "new"
+    NEEDS_VERIFICATION = "needs_verification"
+    SUPPORTED = "supported"
+    REJECTED = "rejected"
+    ARCHIVED = "archived"
 
 
 class RelationshipDirection(str, enum.Enum):
-    DIRECTED = "DIRECTED"
-    UNDIRECTED = "UNDIRECTED"
+    DIRECTED = "directed"
+    UNDIRECTED = "undirected"
 
 
 class HypothesisState(str, enum.Enum):
-    CANDIDATE = "CANDIDATE"
-    NEEDS_VERIFICATION = "NEEDS_VERIFICATION"
-    SUPPORTED = "SUPPORTED"
-    REJECTED = "REJECTED"
+    CANDIDATE = "candidate"
+    NEEDS_VERIFICATION = "needs_verification"
+    SUPPORTED = "supported"
+    REJECTED = "rejected"
 
 
 class RecommendationType(str, enum.Enum):
-    FLAG_SUBVERSIVE_ACTIVITY = "FLAG_SUBVERSIVE_ACTIVITY"
-    FLAG_TERROR_LINK = "FLAG_TERROR_LINK"
-    FLAG_FORGED_DOCUMENTS = "FLAG_FORGED_DOCUMENTS"
-    FLAG_SOCIAL_NETWORK = "FLAG_SOCIAL_NETWORK"
-    FLAG_CREDENTIAL_INCONSISTENCY = "FLAG_CREDENTIAL_INCONSISTENCY"
-    FLAG_FINANCIAL_ANOMALY = "FLAG_FINANCIAL_ANOMALY"
-    BOOK_EXTERNAL_INT_DESK = "BOOK_EXTERNAL_INT_DESK"
-    COLLECT_HUMAN_INTEL = "COLLECT_HUMAN_INTEL"
+    FLAG_SUBVERSIVE_ACTIVITY = "flag_subversive_activity"
+    FLAG_TERROR_LINK = "flag_terror_link"
+    FLAG_FORGED_DOCUMENTS = "flag_forged_documents"
+    FLAG_SOCIAL_NETWORK = "flag_social_network"
+    FLAG_CREDENTIAL_INCONSISTENCY = "flag_credential_inconsistency"
+    FLAG_FINANCIAL_ANOMALY = "flag_financial_anomaly"
+    BOOK_EXTERNAL_INT_DESK = "book_external_int_desk"
+    COLLECT_HUMAN_INTEL = "collect_human_intel"
 
 
 class RecommendationStatus(str, enum.Enum):
-    PENDING = "PENDING"
-    IN_PROGRESS = "IN_PROGRESS"
-    COMPLETED = "COMPLETED"
-    CANCELLED = "CANCELLED"
+    PENDING = "pending"
+    IN_PROGRESS = "in_progress"
+    COMPLETED = "completed"
+    CANCELLED = "cancelled"
 
 
 # ─── Users & Auth ────────────────────────────────────────────────────

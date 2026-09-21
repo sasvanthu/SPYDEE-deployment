@@ -213,7 +213,7 @@ class TimelineEvent(BaseModel):
 class HypothesisResponse(BaseModel):
     id: UUID
     case_id: UUID
-    analysis_run_id: UUID
+    analysis_run_id: Optional[UUID] = None
     stable_key: str
     hypothesis_type: Optional[str]
     entity_pair: Optional[dict]
@@ -248,7 +248,7 @@ class HypothesisSignalResponse(BaseModel):
 
 class HypothesisReviewRequest(BaseModel):
     decision: str
-    note: str
+    note: Optional[str] = None
 
 
 class SignalResponse(BaseModel):

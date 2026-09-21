@@ -5,7 +5,7 @@ from sqlalchemy import select
 from app.database import get_db
 from app.models.models import (
     Hypothesis, HypothesisSignal, HypothesisRecommendation,
-    ReviewAction, User, HypothesisState,
+    ReviewAction, User, HypothesisState, ReviewState,
 )
 from app.auth.auth import get_current_user
 from app.schemas.schemas import (
@@ -28,7 +28,11 @@ async def list_hypotheses(
     await check_case_membership(db, user.id, case_id)
     query = select(Hypothesis).where(Hypothesis.case_id == case_id)
     if review_state:
-        query = query.where(Hypothesis.review_state == review_state)
+        _state_alias = {
+            "supported_by_reviewer": "supported",
+        }
+        mapped_state = _state_alias.get(review_state, review_state)
+        query = query.where(Hypothesis.review_state == mapped_state)
     if min_strength is not None:
         query = query.where(Hypothesis.numeric_value >= min_strength)
     query = query.order_by(Hypothesis.numeric_value.desc())
@@ -88,8 +92,28 @@ async def get_hypothesis(
         "rationale": r.rationale,
     } for r in rec_result.scalars().all()]
 
+    # Defensive serialization - handle potential null values
+    hyp_dict = {
+        "id": str(hyp.id),
+        "case_id": str(hyp.case_id),
+        "analysis_run_id": str(hyp.analysis_run_id) if hyp.analysis_run_id else None,
+        "stable_key": hyp.stable_key,
+        "entity_pair": hyp.entity_pair,
+        "notes": hyp.notes,
+        "timestamp_hypothesis_generated": hyp.timestamp_hypothesis_generated.isoformat() if hyp.timestamp_hypothesis_generated else None,
+        "contributing_signal_highlights": hyp.contributing_signal_highlights,
+        "state": hyp.state.value if hyp.state else None,
+        "review_state": hyp.review_state.value if hyp.review_state else None,
+        "numeric_value": float(hyp.numeric_value) if hyp.numeric_value is not None else 0.0,
+        "quality_factor": float(hyp.quality_factor) if hyp.quality_factor is not None else 1.0,
+        "engine_version": hyp.engine_version,
+        "hypothesis_type": hyp.hypothesis_type,
+        "created_at": hyp.created_at.isoformat() if hyp.created_at else None,
+        "updated_at": hyp.updated_at.isoformat() if hyp.updated_at else None,
+    }
+
     return {
-        "hypothesis": HypothesisResponse.model_validate(hyp),
+        "hypothesis": hyp_dict,
         "signals": signals,
         "recommendations": recommendations,
     }
@@ -111,26 +135,41 @@ async def review_hypothesis(
     if not hyp:
         raise HTTPException(status_code=404, detail="Hypothesis not found")
 
-    hyp.review_state = req.decision
-    decision_map = {
-        "supported_by_reviewer": HypothesisState.SUPPORTED,
-        "rejected": HypothesisState.REJECTED,
-        "needs_verification": HypothesisState.NEEDS_VERIFICATION,
-    }
-    if req.decision in decision_map:
-        hyp.state = decision_map[req.decision]
+    try:
+        review_state_map = {
+            "supported_by_reviewer": ReviewState.SUPPORTED,
+            "supported": ReviewState.SUPPORTED,
+            "rejected": ReviewState.REJECTED,
+            "needs_verification": ReviewState.NEEDS_VERIFICATION,
+        }
+        if req.decision in review_state_map:
+            hyp.review_state = review_state_map[req.decision]
+        decision_map = {
+            "supported_by_reviewer": HypothesisState.SUPPORTED,
+            "supported": HypothesisState.SUPPORTED,
+            "rejected": HypothesisState.REJECTED,
+            "needs_verification": HypothesisState.NEEDS_VERIFICATION,
+        }
+        if req.decision in decision_map:
+            hyp.state = decision_map[req.decision]
 
-    action = ReviewAction(
-        case_id=case_id,
-        hypothesis_id=hyp.id,
-        reviewer_id=user.id,
-        action=req.decision,
-        note=req.note,
-    )
-    db.add(action)
-    await log_audit_event(
-        db, case_id, user.id, "hypothesis_reviewed", "hypothesis", hyp.id,
-        {"decision": req.decision, "note": req.note},
-    )
-    await db.commit()
-    return {"message": "Review recorded", "new_state": req.decision}
+        action = ReviewAction(
+            case_id=case_id,
+            hypothesis_id=hyp.id,
+            reviewer_id=user.id,
+            action=req.decision,
+            note=req.note,
+        )
+        db.add(action)
+        await log_audit_event(
+            db, case_id, user.id, "hypothesis_reviewed", "hypothesis", hyp.id,
+            {"decision": req.decision, "note": req.note},
+        )
+        await db.commit()
+        return {"message": "Review recorded", "new_state": req.decision}
+    except HTTPException:
+        raise
+    except Exception as e:
+        await db.rollback()
+        import traceback
+        raise HTTPException(status_code=422, detail=f"Review failed: {str(e)} | {traceback.format_exc()}")

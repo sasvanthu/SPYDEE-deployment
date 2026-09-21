@@ -636,6 +636,34 @@ async def answer_copilot_query(
             draft = "No hypotheses yet — run analysis on this case first."
             follow_ups = ["Run analysis"]
 
+    elif any(k in q for k in ("how many", "count", "statistic", "breakdown", "metrics", "summary")):
+        from collections import Counter
+        type_counts = Counter(str(e.entity_type.value) for e in all_entities)
+        type_str = ", ".join(f"{cnt} {t.lower()}" for t, cnt in type_counts.most_common(6))
+
+        count_result = await db.execute(select(SourceRecord).where(SourceRecord.case_id == case_id))
+        rec_count = len(count_result.scalars().all())
+
+        rel_result = await db.execute(select(Relationship).where(Relationship.case_id == case_id))
+        rel_count = len(rel_result.scalars().all())
+
+        sig_result = await db.execute(select(Signal).where(Signal.case_id == case_id))
+        sig_count = len(sig_result.scalars().all())
+
+        hyp_result = await db.execute(select(Hypothesis).where(Hypothesis.case_id == case_id))
+        hyp_count = len(hyp_result.scalars().all())
+
+        draft = (
+            f"Case Metrics Summary for case {case_id}:\n"
+            f"- Total Entities: {len(all_entities)}" + (f" ({type_str})" if type_str else "") + "\n"
+            f"- Ingested Source Records: {rec_count}\n"
+            f"- Graph Relationships: {rel_count}\n"
+            f"- Intelligence Signals: {sig_count}\n"
+            f"- Working Hypotheses: {hyp_count}"
+        )
+        citations.append({"type": "case_summary", "entities": len(all_entities), "records": rec_count})
+        follow_ups = ["List all entities", "Show top hypotheses", "What are the contradictions?"]
+
     elif "list" in q or "all entities" in q:
         lst = await _exec_tool("list_entities", db, case_id, ())
         draft = "Entities: " + ", ".join(f"{e['label']} ({e['type']})" for e in lst[:25]) if lst else "No entities yet."

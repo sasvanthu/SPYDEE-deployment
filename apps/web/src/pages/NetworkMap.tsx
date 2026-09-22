@@ -133,6 +133,8 @@ export default function NetworkMap() {
   const navigate = useNavigate();
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstance = useRef<L.Map | null>(null);
+  const tileLayerRef = useRef<L.TileLayer | null>(null);
+  const [mapTheme, setMapTheme] = useState<'tactical' | 'satellite'>('tactical');
 
   // Layer toggles
   const [showTowers, setShowTowers] = useState(true);
@@ -286,10 +288,11 @@ export default function NetworkMap() {
       zoomControl: false,
     }).setView(defaultCenter, 12);
 
-    // Free, open Stadia Maps Alidade Smooth Dark (requires no API key)
-    L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-      maxZoom: 20,
-      attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    // Tactical Dark tile layer (OpenStreetMap with high-contrast tactical filter, No API keys, No Carto, No Stadia)
+    tileLayerRef.current = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      className: 'map-tiles-tactical-dark',
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
 
     L.control.zoom({ position: 'bottomright' }).addTo(map);
@@ -313,6 +316,36 @@ export default function NetworkMap() {
       }
     };
   }, []);
+
+  // Switch between Tactical Dark and Satellite Intel modes safely
+  useEffect(() => {
+    if (!mapInstance.current) return;
+    const map = mapInstance.current;
+
+    if (tileLayerRef.current) {
+      map.removeLayer(tileLayerRef.current);
+      tileLayerRef.current = null;
+    }
+
+    if (mapTheme === 'satellite') {
+      tileLayerRef.current = L.tileLayer(
+        'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+        {
+          maxZoom: 19,
+          attribution: 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics',
+        }
+      ).addTo(map);
+    } else {
+      tileLayerRef.current = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+          maxZoom: 19,
+          className: 'map-tiles-tactical-dark',
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        }
+      ).addTo(map);
+    }
+  }, [mapTheme]);
 
   // Update map view when defaultCenter updates from loaded case data
   useEffect(() => {
@@ -1020,6 +1053,37 @@ export default function NetworkMap() {
                   </span>
                 </label>
               ))}
+
+              <div className="pt-2 mt-2 border-t border-amber-500/20">
+                <div className="text-[10px] text-amber-400 font-bold uppercase tracking-wider mb-1.5 flex items-center justify-between">
+                  <span>BASEMAP MODE</span>
+                  <span className="text-emerald-400 text-[9px]">ONLINE</span>
+                </div>
+                <div className="grid grid-cols-2 gap-1 font-mono text-[10px]">
+                  <button
+                    type="button"
+                    onClick={() => setMapTheme('tactical')}
+                    className={`py-1 px-1.5 border text-center transition-colors ${
+                      mapTheme === 'tactical'
+                        ? 'border-amber-400 bg-amber-500/25 text-amber-300 font-bold shadow-[0_0_8px_rgba(245,158,11,0.3)]'
+                        : 'border-amber-500/30 text-amber-500/60 hover:text-amber-300 hover:border-amber-500/60'
+                    }`}
+                  >
+                    TACTICAL
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setMapTheme('satellite')}
+                    className={`py-1 px-1.5 border text-center transition-colors ${
+                      mapTheme === 'satellite'
+                        ? 'border-cyan-400 bg-cyan-500/25 text-cyan-300 font-bold shadow-[0_0_8px_rgba(6,182,212,0.3)]'
+                        : 'border-amber-500/30 text-amber-500/60 hover:text-amber-300 hover:border-amber-500/60'
+                    }`}
+                  >
+                    SATELLITE
+                  </button>
+                </div>
+              </div>
             </div>
           </TerminalPanel>
         </div>
@@ -1047,6 +1111,10 @@ export default function NetworkMap() {
                 {showEvents ? 'EVT ' : ''}
                 {showColocations ? 'COL' : ''}
               </span>
+            </div>
+            <div className="flex justify-between gap-4 text-amber-400/90">
+              <span>BASE GRID:</span>
+              <span className="text-amber-300 font-mono uppercase">{mapTheme} INTEL</span>
             </div>
           </div>
 

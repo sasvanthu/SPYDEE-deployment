@@ -1,3 +1,5 @@
+import { executeCopilotIntelligence, getCopilotStoredHistory } from './copilotIntelligence';
+
 const API_BASE = '/api/v1';
 
 // In-memory cache for loaded case bundles
@@ -326,16 +328,26 @@ async function handleDemoFallback<T>(path: string, options: RequestInit): Promis
   }
 
   // Copilot Query
-  if (cleanPath.includes('/copilot/') && cleanPath.endsWith('/query')) {
+  const copilotQueryMatch = cleanPath.match(/\/copilot\/([^\/]+)\/query/);
+  if (copilotQueryMatch && method === 'POST') {
+    const cid = copilotQueryMatch[1];
     let q = 'query';
     try {
       const b = JSON.parse(options.body as string);
       if (b.query) q = b.query;
     } catch {}
-    return {
-      response: `[SPYDEE Intelligence Copilot]: Analysis completed for inquiry "${q}". All correlation signals cross-referenced against the National Security Grid and active case registry. Confidence index: HIGH.`,
-      context_used: ["National Datasets Grid", "Alias Continuum", "Cellular Mobility"],
-    } as unknown as T;
+    const bundle = await fetchCaseBundle(cid);
+    const datasets = await fetchDemoDatasets();
+    const result = await executeCopilotIntelligence(cid, q, bundle, datasets);
+    return result as unknown as T;
+  }
+
+  // Copilot History
+  const copilotHistoryMatch = cleanPath.match(/\/copilot\/([^\/]+)\/history/);
+  if (copilotHistoryMatch && method === 'GET') {
+    const cid = copilotHistoryMatch[1];
+    const history = getCopilotStoredHistory(cid);
+    return history as unknown as T;
   }
 
   // For any write operations or state updates in demo mode

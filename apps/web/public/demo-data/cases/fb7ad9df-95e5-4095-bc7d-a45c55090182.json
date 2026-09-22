@@ -1,0 +1,1380 @@
+{
+  "case": {
+    "id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+    "title": "Operation DarkEscrow - Hawala & P2P Crypto Laundering Syndicate",
+    "case_code": "IND-2026-005",
+    "description": "Cross-border financial crime investigation benchmarked on IBM AML, Elliptic Bitcoin Graph, and NPCI UPI fraud datasets, tracking multi-hop laundering, shell firms, and OTC crypto escrow exits.",
+    "status": "active",
+    "is_synthetic": false,
+    "created_by": "5aefa310-2f5f-4ba8-bf37-fcf969fa8f55",
+    "created_at": "2026-09-22T07:43:51.057212",
+    "updated_at": "2026-09-22T07:43:51.057212",
+    "entity_count": 14,
+    "event_count": 5,
+    "evidence_count": 1,
+    "hypothesis_count": 15,
+    "relationship_count": 5
+  },
+  "entities": [
+    {
+      "id": "ad5a290e-3400-4e98-a417-ef1b31f6ba87",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "entity_type": "account",
+      "label": "rajesh.hawala@okhdfcbank",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:51.098302",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "9bd67a33-b485-4c6e-b70e-d171137f97db",
+          "id_type": "account",
+          "id_value": "rajesh.hawala@okhdfcbank",
+          "normalized_value": "rajesh.hawala@okhdfcbank",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "289fd5b1-d1f3-423a-8658-40434a25b040",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "entity_type": "account",
+      "label": "chandni.trading@ybl",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:51.102546",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "f43e92b3-99f1-4270-b125-c39caa273ad1",
+          "id_type": "account",
+          "id_value": "chandni.trading@ybl",
+          "normalized_value": "chandni.trading@ybl",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "269dc72c-dce0-42fc-9a26-3085273bcb2b",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "entity_type": "account",
+      "label": "ACCT-DELHI-HAWALA-01",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:51.107598",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "2746be77-e8d5-4e7e-869a-1fd1e7320c80",
+          "id_type": "account",
+          "id_value": "ACCT-DELHI-HAWALA-01",
+          "normalized_value": "acct-delhi-hawala-01",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "d00aa43e-5a86-4780-b4ac-bb1ea6ed45e7",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "entity_type": "account",
+      "label": "ACCT-MULE-CHANDNI-02",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:51.111600",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "950ee58b-b21b-48ad-b3e2-48f326c8f309",
+          "id_type": "account",
+          "id_value": "ACCT-MULE-CHANDNI-02",
+          "normalized_value": "acct-mule-chandni-02",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "113f6a15-e600-4e4a-8d6d-f8a65b529831",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "entity_type": "account",
+      "label": "apex.export.mumbai@icici",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:51.125200",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "1d0a66bf-9d79-4b93-a305-53b941fd5a59",
+          "id_type": "account",
+          "id_value": "apex.export.mumbai@icici",
+          "normalized_value": "apex.export.mumbai@icici",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "232ddaa6-6262-466c-b099-815a0866143c",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "entity_type": "account",
+      "label": "ACCT-SHELL-MUMBAI-03",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:51.128331",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "4a0a4f86-147e-4ceb-8ff0-b2737096fb82",
+          "id_type": "account",
+          "id_value": "ACCT-SHELL-MUMBAI-03",
+          "normalized_value": "acct-shell-mumbai-03",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "085a501f-52d0-46ae-9d5a-75a683e274d0",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "entity_type": "account",
+      "label": "trishul.fintech@axisbank",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:51.141331",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "d7df3188-ff24-4916-a6df-bc0924f84a64",
+          "id_type": "account",
+          "id_value": "trishul.fintech@axisbank",
+          "normalized_value": "trishul.fintech@axisbank",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "a76a1c31-ef7e-4c69-8950-8307b6193e79",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "entity_type": "account",
+      "label": "ACCT-SHELL-BLR-04",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:51.144842",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "56f43d6c-60f7-4965-9039-a489978fd643",
+          "id_type": "account",
+          "id_value": "ACCT-SHELL-BLR-04",
+          "normalized_value": "acct-shell-blr-04",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "a13d12c7-9230-4ec1-91f7-b2a6d95ee342",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "entity_type": "account",
+      "label": "otc.desk.binance@upi",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:51.161138",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "ce88ec85-ce04-4b43-a59a-bf420503f4ea",
+          "id_type": "account",
+          "id_value": "otc.desk.binance@upi",
+          "normalized_value": "otc.desk.binance@upi",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "8c9663c3-dd10-48c0-b74e-163240f4e429",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "entity_type": "account",
+      "label": "WALLET-BTC-OTC-01",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:51.167964",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "9c508c67-fcb7-41a6-bda6-ed8726f093de",
+          "id_type": "account",
+          "id_value": "WALLET-BTC-OTC-01",
+          "normalized_value": "wallet-btc-otc-01",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "543d826b-acf8-4c81-b564-323de69b5424",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "entity_type": "account",
+      "label": "bc1q9x4h2kl8m3nv5pq7rs9tu1vw3xy5za7bc9de",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:51.172493",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "78d2b90a-6d24-425d-94c2-083e0d140109",
+          "id_type": "account",
+          "id_value": "bc1q9x4h2kl8m3nv5pq7rs9tu1vw3xy5za7bc9de",
+          "normalized_value": "bc1q9x4h2kl8m3nv5pq7rs9tu1vw3xy5za7bc9de",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "32192568-5e7d-45a3-b5e3-b7e15eeaa93c",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "entity_type": "account",
+      "label": "3a8f1b2c4e5d6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:51.175005",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "b2b1802b-57cf-42b2-b093-4041b993f4b3",
+          "id_type": "account",
+          "id_value": "3a8f1b2c4e5d6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b",
+          "normalized_value": "3a8f1b2c4e5d6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "30540c8c-da24-4a38-910c-48b4ae2f737b",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "entity_type": "account",
+      "label": "bc1qmixer7darknode89illicit2026hop3",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:51.186957",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "c89cc3e4-32ee-4a95-a3ab-b93347707157",
+          "id_type": "account",
+          "id_value": "bc1qmixer7darknode89illicit2026hop3",
+          "normalized_value": "bc1qmixer7darknode89illicit2026hop3",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "14e8f183-851c-4b25-ae57-b8bd019045b9",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "entity_type": "account",
+      "label": "WALLET-DARKNET-MIXER-02",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:51.189926",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "899d14ef-55ae-4bd4-8c4c-3839554d491f",
+          "id_type": "account",
+          "id_value": "WALLET-DARKNET-MIXER-02",
+          "normalized_value": "wallet-darknet-mixer-02",
+          "review_state": "new"
+        }
+      ]
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": "ad5a290e-3400-4e98-a417-ef1b31f6ba87",
+        "label": "rajesh.hawala@okhdfcbank",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      },
+      {
+        "id": "289fd5b1-d1f3-423a-8658-40434a25b040",
+        "label": "chandni.trading@ybl",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 3
+        }
+      },
+      {
+        "id": "269dc72c-dce0-42fc-9a26-3085273bcb2b",
+        "label": "ACCT-DELHI-HAWALA-01",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "d00aa43e-5a86-4780-b4ac-bb1ea6ed45e7",
+        "label": "ACCT-MULE-CHANDNI-02",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "113f6a15-e600-4e4a-8d6d-f8a65b529831",
+        "label": "apex.export.mumbai@icici",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 2
+        }
+      },
+      {
+        "id": "232ddaa6-6262-466c-b099-815a0866143c",
+        "label": "ACCT-SHELL-MUMBAI-03",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "085a501f-52d0-46ae-9d5a-75a683e274d0",
+        "label": "trishul.fintech@axisbank",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      },
+      {
+        "id": "a76a1c31-ef7e-4c69-8950-8307b6193e79",
+        "label": "ACCT-SHELL-BLR-04",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "a13d12c7-9230-4ec1-91f7-b2a6d95ee342",
+        "label": "otc.desk.binance@upi",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      },
+      {
+        "id": "8c9663c3-dd10-48c0-b74e-163240f4e429",
+        "label": "WALLET-BTC-OTC-01",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "543d826b-acf8-4c81-b564-323de69b5424",
+        "label": "bc1q9x4h2kl8m3nv5pq7rs9tu1vw3xy5za7bc9de",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      },
+      {
+        "id": "32192568-5e7d-45a3-b5e3-b7e15eeaa93c",
+        "label": "3a8f1b2c4e5d6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "30540c8c-da24-4a38-910c-48b4ae2f737b",
+        "label": "bc1qmixer7darknode89illicit2026hop3",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      },
+      {
+        "id": "14e8f183-851c-4b25-ae57-b8bd019045b9",
+        "label": "WALLET-DARKNET-MIXER-02",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "ae0b5b90-cb0c-4071-b4be-ce45da566ca8",
+        "source": "ad5a290e-3400-4e98-a417-ef1b31f6ba87",
+        "target": "289fd5b1-d1f3-423a-8658-40434a25b040",
+        "relationship_type": "TRANSFERRED",
+        "classification": "observed",
+        "label": "Transferred",
+        "properties": {
+          "valid_from": null,
+          "valid_to": null,
+          "evidence_count": 1,
+          "review_state": "new"
+        }
+      },
+      {
+        "id": "8ff39eb5-bf95-4f34-8bc0-76eea18b3821",
+        "source": "289fd5b1-d1f3-423a-8658-40434a25b040",
+        "target": "113f6a15-e600-4e4a-8d6d-f8a65b529831",
+        "relationship_type": "TRANSFERRED",
+        "classification": "observed",
+        "label": "Transferred",
+        "properties": {
+          "valid_from": null,
+          "valid_to": null,
+          "evidence_count": 1,
+          "review_state": "new"
+        }
+      },
+      {
+        "id": "87a80b36-9a14-4836-b4be-3194dbcc82c5",
+        "source": "289fd5b1-d1f3-423a-8658-40434a25b040",
+        "target": "085a501f-52d0-46ae-9d5a-75a683e274d0",
+        "relationship_type": "TRANSFERRED",
+        "classification": "observed",
+        "label": "Transferred",
+        "properties": {
+          "valid_from": null,
+          "valid_to": null,
+          "evidence_count": 1,
+          "review_state": "new"
+        }
+      },
+      {
+        "id": "e517ab54-ef84-4c9c-b1aa-ddf15bbed623",
+        "source": "113f6a15-e600-4e4a-8d6d-f8a65b529831",
+        "target": "a13d12c7-9230-4ec1-91f7-b2a6d95ee342",
+        "relationship_type": "TRANSFERRED",
+        "classification": "observed",
+        "label": "Transferred",
+        "properties": {
+          "valid_from": null,
+          "valid_to": null,
+          "evidence_count": 1,
+          "review_state": "new"
+        }
+      },
+      {
+        "id": "26e05942-785a-49ab-822a-efa780e12763",
+        "source": "543d826b-acf8-4c81-b564-323de69b5424",
+        "target": "30540c8c-da24-4a38-910c-48b4ae2f737b",
+        "relationship_type": "TRANSFERRED",
+        "classification": "observed",
+        "label": "Transferred",
+        "properties": {
+          "valid_from": null,
+          "valid_to": null,
+          "evidence_count": 1,
+          "review_state": "new"
+        }
+      }
+    ],
+    "truncated": false,
+    "total_nodes": 14,
+    "total_edges": 5
+  },
+  "hypotheses": [
+    {
+      "id": "908a6479-2196-5190-9d57-befd5a32b61c",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "analysis_run_id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+      "stable_key": "908a6479-2196-5190-9d57-befd5a32b61c",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "085a501f-52d0-46ae-9d5a-75a683e274d0",
+        "target": "289fd5b1-d1f3-423a-8658-40434a25b040",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 38.8/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.69"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 38.8,
+      "quality_factor": 0.5655,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:51.261356"
+    },
+    {
+      "id": "beea9150-56ea-5ede-a48d-01760962912b",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "analysis_run_id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+      "stable_key": "beea9150-56ea-5ede-a48d-01760962912b",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "085a501f-52d0-46ae-9d5a-75a683e274d0",
+        "target": "289fd5b1-d1f3-423a-8658-40434a25b040",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 38.8/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.69"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 38.8,
+      "quality_factor": 0.5655,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:51.261356"
+    },
+    {
+      "id": "ccfefe2a-7be3-52e7-a253-300798a3f2f6",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "analysis_run_id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+      "stable_key": "ccfefe2a-7be3-52e7-a253-300798a3f2f6",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "085a501f-52d0-46ae-9d5a-75a683e274d0",
+        "target": "289fd5b1-d1f3-423a-8658-40434a25b040",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 38.8/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.69"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 38.8,
+      "quality_factor": 0.5655,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:51.261356"
+    },
+    {
+      "id": "0af57e51-28ee-5bfa-96f7-1961b22b60ab",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "analysis_run_id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+      "stable_key": "0af57e51-28ee-5bfa-96f7-1961b22b60ab",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "289fd5b1-d1f3-423a-8658-40434a25b040",
+        "target": "ad5a290e-3400-4e98-a417-ef1b31f6ba87",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 37.1/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.66"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 37.1,
+      "quality_factor": 0.5613,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:51.261356"
+    },
+    {
+      "id": "9dcdc5b3-0db8-5a10-ba38-ac769617673c",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "analysis_run_id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+      "stable_key": "9dcdc5b3-0db8-5a10-ba38-ac769617673c",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "113f6a15-e600-4e4a-8d6d-f8a65b529831",
+        "target": "a13d12c7-9230-4ec1-91f7-b2a6d95ee342",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 37.1/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.67"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 37.1,
+      "quality_factor": 0.5575,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:51.261356"
+    },
+    {
+      "id": "6285faa3-0a3c-584b-ba86-59fbd244675a",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "analysis_run_id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+      "stable_key": "6285faa3-0a3c-584b-ba86-59fbd244675a",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "289fd5b1-d1f3-423a-8658-40434a25b040",
+        "target": "ad5a290e-3400-4e98-a417-ef1b31f6ba87",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 37.1/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.66"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 37.1,
+      "quality_factor": 0.5613,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:51.261356"
+    },
+    {
+      "id": "11a1f47e-b92a-5dff-838e-7e24243e2561",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "analysis_run_id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+      "stable_key": "11a1f47e-b92a-5dff-838e-7e24243e2561",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "289fd5b1-d1f3-423a-8658-40434a25b040",
+        "target": "ad5a290e-3400-4e98-a417-ef1b31f6ba87",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 37.1/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.66"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 37.1,
+      "quality_factor": 0.5613,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:51.261356"
+    },
+    {
+      "id": "ee76e3d8-d89d-5f5f-ad18-4d37d586594e",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "analysis_run_id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+      "stable_key": "ee76e3d8-d89d-5f5f-ad18-4d37d586594e",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "113f6a15-e600-4e4a-8d6d-f8a65b529831",
+        "target": "a13d12c7-9230-4ec1-91f7-b2a6d95ee342",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 37.1/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.67"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 37.1,
+      "quality_factor": 0.5575,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:51.261356"
+    },
+    {
+      "id": "f0fb8da0-760c-5212-899a-bf3fd75f331a",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "analysis_run_id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+      "stable_key": "f0fb8da0-760c-5212-899a-bf3fd75f331a",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "113f6a15-e600-4e4a-8d6d-f8a65b529831",
+        "target": "a13d12c7-9230-4ec1-91f7-b2a6d95ee342",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 37.1/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.67"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 37.1,
+      "quality_factor": 0.5575,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:51.261356"
+    },
+    {
+      "id": "d91b2f37-0c1b-5452-8ff3-30a487efef6d",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "analysis_run_id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+      "stable_key": "d91b2f37-0c1b-5452-8ff3-30a487efef6d",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "30540c8c-da24-4a38-910c-48b4ae2f737b",
+        "target": "543d826b-acf8-4c81-b564-323de69b5424",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 17.3/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.32"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 17.3,
+      "quality_factor": 0.5382,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:51.261356"
+    },
+    {
+      "id": "3a101adf-52b8-56f9-a503-454278902b23",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "analysis_run_id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+      "stable_key": "3a101adf-52b8-56f9-a503-454278902b23",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "30540c8c-da24-4a38-910c-48b4ae2f737b",
+        "target": "543d826b-acf8-4c81-b564-323de69b5424",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 17.3/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.32"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 17.3,
+      "quality_factor": 0.5382,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:51.261356"
+    },
+    {
+      "id": "f1e4a024-f44a-52bf-979e-b10272164042",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "analysis_run_id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+      "stable_key": "f1e4a024-f44a-52bf-979e-b10272164042",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "30540c8c-da24-4a38-910c-48b4ae2f737b",
+        "target": "543d826b-acf8-4c81-b564-323de69b5424",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 17.3/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.32"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 17.3,
+      "quality_factor": 0.5382,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:51.261356"
+    },
+    {
+      "id": "5d086363-50c0-56a1-80ac-c8586780f71f",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "analysis_run_id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+      "stable_key": "5d086363-50c0-56a1-80ac-c8586780f71f",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "085a501f-52d0-46ae-9d5a-75a683e274d0",
+        "target": "ad5a290e-3400-4e98-a417-ef1b31f6ba87",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 17.2/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.32"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 17.2,
+      "quality_factor": 0.5379,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:51.261356"
+    },
+    {
+      "id": "bad3e9ef-4860-5ab6-8482-4628c64b3418",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "analysis_run_id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+      "stable_key": "bad3e9ef-4860-5ab6-8482-4628c64b3418",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "085a501f-52d0-46ae-9d5a-75a683e274d0",
+        "target": "ad5a290e-3400-4e98-a417-ef1b31f6ba87",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 17.2/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.32"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 17.2,
+      "quality_factor": 0.5379,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:51.261356"
+    },
+    {
+      "id": "5b3dca8b-2985-5d09-9d74-4ad58c2c02f9",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "analysis_run_id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+      "stable_key": "5b3dca8b-2985-5d09-9d74-4ad58c2c02f9",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "085a501f-52d0-46ae-9d5a-75a683e274d0",
+        "target": "ad5a290e-3400-4e98-a417-ef1b31f6ba87",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 17.2/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.32"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 17.2,
+      "quality_factor": 0.5379,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:51.261356"
+    }
+  ],
+  "signals": {
+    "run_id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+    "run_version": 1,
+    "status": "completed",
+    "counts_by_family": {
+      "network_topology": 5
+    },
+    "signals": [
+      {
+        "id": "2f76794e-3106-4a05-8312-dcaa534a62d0",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "085a501f-52d0-46ae-9d5a-75a683e274d0",
+          "target": "289fd5b1-d1f3-423a-8658-40434a25b040"
+        },
+        "numeric_value": 0.6863,
+        "quality_factor": 0.5655,
+        "explanation": "Entities share community C0 with combined centrality 0.154; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0769,
+          "degree_centrality_tgt": 0.2308,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0192,
+          "pagerank_src": 0.0951,
+          "pagerank_tgt": 0.0985,
+          "eigenvector_src": 0.3536,
+          "eigenvector_tgt": 0.6533,
+          "same_community": true,
+          "community_id": 0,
+          "articulation_point": true,
+          "bridge_edge": true
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "9411bbbe-725a-4faf-9f42-c6bee72a9133",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "113f6a15-e600-4e4a-8d6d-f8a65b529831",
+          "target": "a13d12c7-9230-4ec1-91f7-b2a6d95ee342"
+        },
+        "numeric_value": 0.6662,
+        "quality_factor": 0.5575,
+        "explanation": "Entities share community C3 with combined centrality 0.115; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0769,
+          "degree_centrality_tgt": 0.1538,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0128,
+          "pagerank_src": 0.134,
+          "pagerank_tgt": 0.0951,
+          "eigenvector_src": 0.2706,
+          "eigenvector_tgt": 0.5,
+          "same_community": true,
+          "community_id": 3,
+          "articulation_point": true,
+          "bridge_edge": true
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "c52e87cf-2eb0-41a6-8c5f-269241ffc23c",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "289fd5b1-d1f3-423a-8658-40434a25b040",
+          "target": "ad5a290e-3400-4e98-a417-ef1b31f6ba87"
+        },
+        "numeric_value": 0.6602,
+        "quality_factor": 0.5613,
+        "explanation": "Entities share community C0 with combined centrality 0.154; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0769,
+          "degree_centrality_tgt": 0.2308,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0192,
+          "pagerank_src": 0.0532,
+          "pagerank_tgt": 0.0985,
+          "eigenvector_src": 0.3536,
+          "eigenvector_tgt": 0.6533,
+          "same_community": true,
+          "community_id": 0,
+          "articulation_point": true,
+          "bridge_edge": true
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "5f8b28dc-1f13-4574-9eec-501306a921be",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "30540c8c-da24-4a38-910c-48b4ae2f737b",
+          "target": "543d826b-acf8-4c81-b564-323de69b5424"
+        },
+        "numeric_value": 0.3217,
+        "quality_factor": 0.5382,
+        "explanation": "Entities share community C7 with combined centrality 0.077; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0769,
+          "degree_centrality_tgt": 0.0769,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.0985,
+          "pagerank_tgt": 0.0532,
+          "eigenvector_src": 0.0,
+          "eigenvector_tgt": 0.0,
+          "same_community": true,
+          "community_id": 7,
+          "articulation_point": false,
+          "bridge_edge": true
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "5296663c-f2d8-4978-a097-a56d8e0509a6",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "085a501f-52d0-46ae-9d5a-75a683e274d0",
+          "target": "ad5a290e-3400-4e98-a417-ef1b31f6ba87"
+        },
+        "numeric_value": 0.3196,
+        "quality_factor": 0.5379,
+        "explanation": "Entities share community C0 with combined centrality 0.077; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0769,
+          "degree_centrality_tgt": 0.0769,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.0532,
+          "pagerank_tgt": 0.0951,
+          "eigenvector_src": 0.3536,
+          "eigenvector_tgt": 0.3536,
+          "same_community": true,
+          "community_id": 0,
+          "articulation_point": false,
+          "bridge_edge": false
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      }
+    ]
+  },
+  "timeline": {
+    "items": [
+      {
+        "id": "62be21fb-e90d-46fc-83b3-7258dcc08234",
+        "event_type": "transaction",
+        "start_time": "2026-08-12T11:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-12T11:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "rajesh.hawala@okhdfcbank",
+          "chandni.trading@ybl",
+          "ACCT-DELHI-HAWALA-01"
+        ],
+        "participant_ids": [
+          "ad5a290e-3400-4e98-a417-ef1b31f6ba87",
+          "289fd5b1-d1f3-423a-8658-40434a25b040",
+          "269dc72c-dce0-42fc-9a26-3085273bcb2b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "AML-TXN-001",
+          "from_account_id": "ACCT-DELHI-HAWALA-01",
+          "to_account_id": "ACCT-MULE-CHANDNI-02",
+          "from_upi": "rajesh.hawala@okhdfcbank",
+          "to_upi": "chandni.trading@ybl",
+          "amount": 195000.0,
+          "currency": "INR",
+          "bank_source": "HDFC Bank",
+          "bank_destination": "YES Bank",
+          "timestamp": "2026-08-12T11:00:00",
+          "dataset_source": "IBM AML & UPI Fraud Detection",
+          "laundering_stage": "PLACEMENT",
+          "description": "Structuring cash deposit into Chandler Chowk trade mule account just under \u20b92 Lakh threshold"
+        },
+        "source_record_id": "fb3ec1b2-0b1a-4baa-8813-0e1aa74f0fcc"
+      },
+      {
+        "id": "45bffc9b-add5-4013-ac85-dedfe4d10707",
+        "event_type": "transaction",
+        "start_time": "2026-08-12T11:45:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-12T11:45:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "chandni.trading@ybl",
+          "apex.export.mumbai@icici",
+          "ACCT-MULE-CHANDNI-02"
+        ],
+        "participant_ids": [
+          "289fd5b1-d1f3-423a-8658-40434a25b040",
+          "113f6a15-e600-4e4a-8d6d-f8a65b529831",
+          "d00aa43e-5a86-4780-b4ac-bb1ea6ed45e7"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "AML-TXN-002",
+          "from_account_id": "ACCT-MULE-CHANDNI-02",
+          "to_account_id": "ACCT-SHELL-MUMBAI-03",
+          "from_upi": "chandni.trading@ybl",
+          "to_upi": "apex.export.mumbai@icici",
+          "amount": 98000.0,
+          "currency": "INR",
+          "bank_source": "YES Bank",
+          "bank_destination": "ICICI Bank",
+          "timestamp": "2026-08-12T11:45:00",
+          "dataset_source": "IBM AML & UPI Fraud Detection",
+          "laundering_stage": "LAYERING_HOP_1",
+          "description": "Rapid inter-state transfer to Mumbai shell export entity"
+        },
+        "source_record_id": "6e6b359a-65c0-460b-b9df-47dfba0c1ee3"
+      },
+      {
+        "id": "9f6f3969-7735-4eb1-bd61-f956b909185d",
+        "event_type": "transaction",
+        "start_time": "2026-08-12T11:50:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-12T11:50:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "chandni.trading@ybl",
+          "trishul.fintech@axisbank",
+          "ACCT-MULE-CHANDNI-02"
+        ],
+        "participant_ids": [
+          "289fd5b1-d1f3-423a-8658-40434a25b040",
+          "085a501f-52d0-46ae-9d5a-75a683e274d0",
+          "d00aa43e-5a86-4780-b4ac-bb1ea6ed45e7"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "AML-TXN-003",
+          "from_account_id": "ACCT-MULE-CHANDNI-02",
+          "to_account_id": "ACCT-SHELL-BLR-04",
+          "from_upi": "chandni.trading@ybl",
+          "to_upi": "trishul.fintech@axisbank",
+          "amount": 95000.0,
+          "currency": "INR",
+          "bank_source": "YES Bank",
+          "bank_destination": "Axis Bank",
+          "timestamp": "2026-08-12T11:50:00",
+          "dataset_source": "IBM AML & UPI Fraud Detection",
+          "laundering_stage": "LAYERING_HOP_1",
+          "description": "Second structured fan-out to Bengaluru shell firm"
+        },
+        "source_record_id": "3194fc09-f035-4082-bd1e-6e6c93de413a"
+      },
+      {
+        "id": "1fd1c8ee-faaf-41fa-80e3-0e6fa8f9b930",
+        "event_type": "transaction",
+        "start_time": "2026-08-12T12:30:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-12T12:30:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "apex.export.mumbai@icici",
+          "otc.desk.binance@upi",
+          "ACCT-SHELL-MUMBAI-03"
+        ],
+        "participant_ids": [
+          "113f6a15-e600-4e4a-8d6d-f8a65b529831",
+          "a13d12c7-9230-4ec1-91f7-b2a6d95ee342",
+          "232ddaa6-6262-466c-b099-815a0866143c"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "AML-TXN-004",
+          "from_account_id": "ACCT-SHELL-MUMBAI-03",
+          "to_account_id": "WALLET-BTC-OTC-01",
+          "from_upi": "apex.export.mumbai@icici",
+          "to_upi": "otc.desk.binance@upi",
+          "amount": 96500.0,
+          "currency": "INR",
+          "bank_source": "ICICI Bank",
+          "bank_destination": "P2P Crypto Escrow",
+          "timestamp": "2026-08-12T12:30:00",
+          "dataset_source": "Elliptic Bitcoin Graph & UPI Fraud",
+          "crypto_tx_hash": "3a8f1b2c4e5d6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b",
+          "btc_address": "bc1q9x4h2kl8m3nv5pq7rs9tu1vw3xy5za7bc9de",
+          "laundering_stage": "CRYPTO_CONVERSION",
+          "description": "Purchase of 0.015 BTC via P2P escrow to off-ramp INR into un-hosted crypto wallet"
+        },
+        "source_record_id": "dbb1cc2f-2091-4ebb-8a44-a90c581acc6d"
+      },
+      {
+        "id": "14d89943-a532-4d87-97f0-a274b8dd306c",
+        "event_type": "transaction",
+        "start_time": "2026-08-12T13:15:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-12T13:15:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "bc1q9x4h2kl8m3nv5pq7rs9tu1vw3xy5za7bc9de",
+          "bc1qmixer7darknode89illicit2026hop3",
+          "WALLET-BTC-OTC-01"
+        ],
+        "participant_ids": [
+          "543d826b-acf8-4c81-b564-323de69b5424",
+          "30540c8c-da24-4a38-910c-48b4ae2f737b",
+          "8c9663c3-dd10-48c0-b74e-163240f4e429"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "AML-TXN-005",
+          "from_account_id": "WALLET-BTC-OTC-01",
+          "to_account_id": "WALLET-DARKNET-MIXER-02",
+          "from_upi": "bc1q9x4h2kl8m3nv5pq7rs9tu1vw3xy5za7bc9de",
+          "to_upi": "bc1qmixer7darknode89illicit2026hop3",
+          "amount": 94000.0,
+          "currency": "INR",
+          "timestamp": "2026-08-12T13:15:00",
+          "dataset_source": "Elliptic Bitcoin Dataset (Illicit Node Label)",
+          "elliptic_label": "2 (illicit)",
+          "laundering_stage": "MIXING_SERVICE",
+          "description": "Elliptic labeled illicit mixing transaction obfuscating coin provenance"
+        },
+        "source_record_id": "9ef0636e-6faa-44c5-bae9-7968c6c9aa04"
+      }
+    ],
+    "total": 5,
+    "page": 1,
+    "page_size": 500
+  },
+  "workspace_summary": {
+    "case": {
+      "id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "title": "Operation DarkEscrow - Hawala & P2P Crypto Laundering Syndicate",
+      "case_code": "IND-2026-005",
+      "description": "Cross-border financial crime investigation benchmarked on IBM AML, Elliptic Bitcoin Graph, and NPCI UPI fraud datasets, tracking multi-hop laundering, shell firms, and OTC crypto escrow exits.",
+      "status": "active",
+      "is_synthetic": false,
+      "created_by": "5aefa310-2f5f-4ba8-bf37-fcf969fa8f55",
+      "created_at": "2026-09-22T07:43:51.057212",
+      "updated_at": "2026-09-22T07:43:51.057212",
+      "entity_count": 14,
+      "event_count": 5,
+      "evidence_count": 1,
+      "hypothesis_count": 15,
+      "relationship_count": 5
+    },
+    "evidence_processing": {
+      "total_files": 1,
+      "awaiting_upload_status": 0,
+      "ready": 1,
+      "failed": 0
+    },
+    "entity_count": 14,
+    "relationship_count": 5,
+    "event_count": 5,
+    "signal_count": 5,
+    "hypothesis_count": 15,
+    "open_contradictions": 0,
+    "open_leads": 0,
+    "open_gaps": 3,
+    "open_actions": 0,
+    "findings_awaiting_review": 15,
+    "recent_evidence": [
+      {
+        "id": "212463ac-9a32-49ac-97aa-6136f1756b7b",
+        "original_filename": "case_ind_batch5_aml_crypto.json",
+        "source_type": "transactions",
+        "status": "imported",
+        "byte_size": 2672,
+        "created_at": "2026-09-22T07:43:51.091101",
+        "accepted_count": 5,
+        "rejected_count": 0
+      }
+    ],
+    "recent_activity": [],
+    "latest_run": {
+      "id": "601260e9-2a4d-4fda-83b9-873f9e12e34e",
+      "version": 1,
+      "status": "completed",
+      "started_at": "2026-09-22T07:43:51.208069",
+      "completed_at": "2026-09-22T07:43:51.273045",
+      "failure_details": null,
+      "signal_count": 5,
+      "hypothesis_count": 15
+    },
+    "analysis_stale": false,
+    "analysis_stale_reason": null
+  },
+  "leads": [],
+  "contradictions": [],
+  "gaps": [
+    {
+      "id": "d1134c8b-2257-485c-9d26-d69f6c83b410",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "lead_id": null,
+      "title": "Data gap: communication, writing_style for social_network",
+      "description": "Families communication, writing_style carry no supportive evidence for social_network between 30540c8c-da24-4a38-910c-48b4ae2f737b, 543d826b-acf8-4c81-b564-323de69b5424. Hypothesis: Unusual or operationally significant social network concentration. Strength 17.3/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "30540c8c-da24-4a38-910c-48b4ae2f737b",
+        "543d826b-acf8-4c81-b564-323de69b5424"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:51.288594",
+      "updated_at": "2026-09-22T07:43:51.327996"
+    },
+    {
+      "id": "0a91e170-47cf-41da-a142-4e7836f5d5e3",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "lead_id": null,
+      "title": "Data gap: communication, spatial_temporal for terror_link",
+      "description": "Families communication, spatial_temporal carry no supportive evidence for terror_link between 30540c8c-da24-4a38-910c-48b4ae2f737b, 543d826b-acf8-4c81-b564-323de69b5424. Hypothesis: Possible nexus to proscribed entity. Strength 17.3/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "30540c8c-da24-4a38-910c-48b4ae2f737b",
+        "543d826b-acf8-4c81-b564-323de69b5424"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:51.285561",
+      "updated_at": "2026-09-22T07:43:51.325987"
+    },
+    {
+      "id": "a454d3d6-2179-4c04-ba74-2764dab1d03a",
+      "case_id": "fb7ad9df-95e5-4095-bc7d-a45c55090182",
+      "lead_id": null,
+      "title": "Data gap: communication, device_sim for subversive_activity",
+      "description": "Families communication, device_sim carry no supportive evidence for subversive_activity between 30540c8c-da24-4a38-910c-48b4ae2f737b, 543d826b-acf8-4c81-b564-323de69b5424. Hypothesis: Subversive or unlawful activity indicated. Strength 17.3/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "30540c8c-da24-4a38-910c-48b4ae2f737b",
+        "543d826b-acf8-4c81-b564-323de69b5424"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:51.278436",
+      "updated_at": "2026-09-22T07:43:51.322476"
+    }
+  ],
+  "actions": [],
+  "cctv": [],
+  "files": [
+    {
+      "id": "212463ac-9a32-49ac-97aa-6136f1756b7b",
+      "original_filename": "case_ind_batch5_aml_crypto.json",
+      "media_type": "application/json",
+      "byte_size": 2672,
+      "status": "imported",
+      "created_at": "2026-09-22T07:43:51.091101",
+      "source_type": "transactions",
+      "source_description": "IBM AML & Elliptic Bitcoin Labeled Graph Transactions (Datasets 14, 21, 22)",
+      "sha256": "d03830b88e97d28de47097254c0b301164fd4f11d701dcc7af4854ff47122666",
+      "accepted_count": 5
+    }
+  ],
+  "imports": [
+    {
+      "id": "b7c405cf-a030-476b-baae-9aabf25ff80c",
+      "evidence_file_id": "212463ac-9a32-49ac-97aa-6136f1756b7b",
+      "status": "completed",
+      "accepted_count": 5,
+      "rejected_count": 0,
+      "created_at": "2026-09-22T07:43:51.094102"
+    }
+  ],
+  "merge_suggestions": [],
+  "reports": []
+}

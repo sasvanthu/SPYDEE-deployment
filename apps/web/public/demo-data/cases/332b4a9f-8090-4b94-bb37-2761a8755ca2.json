@@ -1,0 +1,2531 @@
+{
+  "case": {
+    "id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+    "title": "Operation Vahan-Chor - Interstate Stolen Vehicle & Cargo Tracking Racket",
+    "case_code": "IND-2026-013",
+    "description": "Interstate commercial truck/tempo syndicate stealing high-value electronics and transporting them via NH-44 using cloned HSRP number plates and toll plaza chokepoint evasion.",
+    "status": "active",
+    "is_synthetic": false,
+    "created_by": "5aefa310-2f5f-4ba8-bf37-fcf969fa8f55",
+    "created_at": "2026-09-22T07:43:55.631251",
+    "updated_at": "2026-09-22T07:43:55.631251",
+    "entity_count": 14,
+    "event_count": 10,
+    "evidence_count": 1,
+    "hypothesis_count": 38,
+    "relationship_count": 9
+  },
+  "entities": [
+    {
+      "id": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "entity_type": "vehicle",
+      "label": "KA-53-M-1102",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:55.661635",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "a43be8cf-d4f8-4050-8fd9-d0abbb9488c6",
+          "id_type": "vehicle",
+          "id_value": "KA-53-M-1102",
+          "normalized_value": "KA-53-M-1102",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "c68a0e41-34bf-40f9-813b-d471819bebd8",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "entity_type": "organization",
+      "label": "Peenya Police Station, Bengaluru City",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:55.673322",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "a85f3ae1-f488-4681-92d9-f384b3c91409",
+          "id_type": "organization",
+          "id_value": "Peenya Police Station, Bengaluru City",
+          "normalized_value": "PEENYA POLICE STATION, BENGALURU CITY",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "entity_type": "device",
+      "label": "CAM-BLR-PEENYA-01",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:55.693031",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "14700136-ed7f-4871-a012-286d8813b6f6",
+          "id_type": "device",
+          "id_value": "CAM-BLR-PEENYA-01",
+          "normalized_value": "CABEEA01",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "01786a49-190d-4035-8ba1-b812ef82603c",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "entity_type": "device",
+      "label": "CAM-BLR-HEBBAL-02",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:55.704258",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "a65ca0c5-4f60-405c-9c55-8a279a992fd7",
+          "id_type": "device",
+          "id_value": "CAM-BLR-HEBBAL-02",
+          "normalized_value": "CABEBBA02",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "dfe7b986-da07-43a5-b1a7-07000c509cea",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "entity_type": "vehicle",
+      "label": "TN-02-AK-9812",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:55.707087",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "d3dd843e-3493-4c73-b305-2970293eddb3",
+          "id_type": "vehicle",
+          "id_value": "TN-02-AK-9812",
+          "normalized_value": "TN-02-AK-9812",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "94dda80f-3b39-42a5-ae85-773096b287fd",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "entity_type": "device",
+      "label": "CAM-BLR-SILKBOARD-03",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:55.716380",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "7cc220af-3251-4bf2-9198-7c1b1412f005",
+          "id_type": "device",
+          "id_value": "CAM-BLR-SILKBOARD-03",
+          "normalized_value": "CABBAD03",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "entity_type": "device",
+      "label": "CAM-BLR-ECITY-04",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:55.724392",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "c25f62b4-ada8-4ac6-a74a-76ec0200e9b5",
+          "id_type": "device",
+          "id_value": "CAM-BLR-ECITY-04",
+          "normalized_value": "CABEC04",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "entity_type": "device",
+      "label": "CAM-NH44-HOSUR-BORDER-05",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:55.735311",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "91085439-2331-4097-9c45-9f7bcb65a5c7",
+          "id_type": "device",
+          "id_value": "CAM-NH44-HOSUR-BORDER-05",
+          "normalized_value": "CA44BDE05",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "e7b68821-e750-49d3-a866-f9e8dd0255de",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "entity_type": "phone_sim",
+      "label": "+919845881122",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:55.745711",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "350a0e47-987b-4275-afd7-bef961b569d9",
+          "id_type": "phone",
+          "id_value": "+919845881122",
+          "normalized_value": "9845881122",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "entity_type": "phone_sim",
+      "label": "+919844773344",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:55.748722",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "5bf85b9f-ab72-421f-a324-24ae08287f4e",
+          "id_type": "phone",
+          "id_value": "+919844773344",
+          "normalized_value": "9844773344",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "b6bd4184-d5dc-4486-b1cf-23e7ce9906ea",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "entity_type": "location",
+      "label": "TOWER-KA-BLR-PEENYA-01",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:55.752730",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "3d6b4c26-4d29-45bd-8604-6efda7260dd9",
+          "id_type": "tower",
+          "id_value": "TOWER-KA-BLR-PEENYA-01",
+          "normalized_value": "TOWER-KA-BLR-PEENYA-01",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "57e39111-bf10-4e51-a163-70d65c42bc50",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "entity_type": "location",
+      "label": "TOWER-KA-BLR-HEBBAL-02",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:55.762259",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "233d72ed-1474-4a12-9b5e-cc7675c63f28",
+          "id_type": "tower",
+          "id_value": "TOWER-KA-BLR-HEBBAL-02",
+          "normalized_value": "TOWER-KA-BLR-HEBBAL-02",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "e6d412b0-088c-47d0-aaa6-ae3fbe202ab2",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "entity_type": "location",
+      "label": "TOWER-KA-BLR-SILKBOARD-03",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:55.771621",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "b9e16d52-ed2a-440b-a00f-5711713965f6",
+          "id_type": "tower",
+          "id_value": "TOWER-KA-BLR-SILKBOARD-03",
+          "normalized_value": "TOWER-KA-BLR-SILKBOARD-03",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "7bf442ba-6e9b-4b26-b5aa-5bb0d7d27a99",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "entity_type": "location",
+      "label": "TOWER-KA-BLR-ATTIBELE-05",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:55.780446",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "0dd7bf8d-ead7-4fe8-8eac-4175441b6b19",
+          "id_type": "tower",
+          "id_value": "TOWER-KA-BLR-ATTIBELE-05",
+          "normalized_value": "TOWER-KA-BLR-ATTIBELE-05",
+          "review_state": "new"
+        }
+      ]
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "label": "KA-53-M-1102",
+        "entity_type": "vehicle",
+        "review_state": "new",
+        "properties": {
+          "degree": 4
+        }
+      },
+      {
+        "id": "c68a0e41-34bf-40f9-813b-d471819bebd8",
+        "label": "Peenya Police Station, Bengaluru City",
+        "entity_type": "organization",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+        "label": "CAM-BLR-PEENYA-01",
+        "entity_type": "device",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      },
+      {
+        "id": "01786a49-190d-4035-8ba1-b812ef82603c",
+        "label": "CAM-BLR-HEBBAL-02",
+        "entity_type": "device",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      },
+      {
+        "id": "dfe7b986-da07-43a5-b1a7-07000c509cea",
+        "label": "TN-02-AK-9812",
+        "entity_type": "vehicle",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      },
+      {
+        "id": "94dda80f-3b39-42a5-ae85-773096b287fd",
+        "label": "CAM-BLR-SILKBOARD-03",
+        "entity_type": "device",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      },
+      {
+        "id": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0",
+        "label": "CAM-BLR-ECITY-04",
+        "entity_type": "device",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      },
+      {
+        "id": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+        "label": "CAM-NH44-HOSUR-BORDER-05",
+        "entity_type": "device",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      },
+      {
+        "id": "e7b68821-e750-49d3-a866-f9e8dd0255de",
+        "label": "+919845881122",
+        "entity_type": "phone_sim",
+        "review_state": "new",
+        "properties": {
+          "degree": 2
+        }
+      },
+      {
+        "id": "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+        "label": "+919844773344",
+        "entity_type": "phone_sim",
+        "review_state": "new",
+        "properties": {
+          "degree": 2
+        }
+      },
+      {
+        "id": "b6bd4184-d5dc-4486-b1cf-23e7ce9906ea",
+        "label": "TOWER-KA-BLR-PEENYA-01",
+        "entity_type": "location",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "57e39111-bf10-4e51-a163-70d65c42bc50",
+        "label": "TOWER-KA-BLR-HEBBAL-02",
+        "entity_type": "location",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "e6d412b0-088c-47d0-aaa6-ae3fbe202ab2",
+        "label": "TOWER-KA-BLR-SILKBOARD-03",
+        "entity_type": "location",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "7bf442ba-6e9b-4b26-b5aa-5bb0d7d27a99",
+        "label": "TOWER-KA-BLR-ATTIBELE-05",
+        "entity_type": "location",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edf6a7ed-3494-4659-ad88-1e458698d626",
+        "source": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "target": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+        "relationship_type": "SIGHTED_AT",
+        "classification": "observed",
+        "label": "Sighted At",
+        "properties": {
+          "valid_from": null,
+          "valid_to": null,
+          "evidence_count": 1,
+          "review_state": "new"
+        }
+      },
+      {
+        "id": "8c2c67d0-24d8-4a7e-9d26-6ad9d3bff744",
+        "source": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "target": "01786a49-190d-4035-8ba1-b812ef82603c",
+        "relationship_type": "SIGHTED_AT",
+        "classification": "observed",
+        "label": "Sighted At",
+        "properties": {
+          "valid_from": null,
+          "valid_to": null,
+          "evidence_count": 1,
+          "review_state": "new"
+        }
+      },
+      {
+        "id": "b7c122ed-7e7a-4f82-9c5a-e0464be9e6b4",
+        "source": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0",
+        "relationship_type": "SIGHTED_AT",
+        "classification": "observed",
+        "label": "Sighted At",
+        "properties": {
+          "valid_from": null,
+          "valid_to": null,
+          "evidence_count": 1,
+          "review_state": "new"
+        }
+      },
+      {
+        "id": "7c199d26-fb94-437e-a2dc-1b9f6329cff9",
+        "source": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "target": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+        "relationship_type": "SIGHTED_AT",
+        "classification": "observed",
+        "label": "Sighted At",
+        "properties": {
+          "valid_from": null,
+          "valid_to": null,
+          "evidence_count": 1,
+          "review_state": "new"
+        }
+      },
+      {
+        "id": "e978a7fb-64ef-47fc-aaf4-7e9a96471956",
+        "source": "dfe7b986-da07-43a5-b1a7-07000c509cea",
+        "target": "94dda80f-3b39-42a5-ae85-773096b287fd",
+        "relationship_type": "SIGHTED_AT",
+        "classification": "observed",
+        "label": "Sighted At",
+        "properties": {
+          "valid_from": null,
+          "valid_to": null,
+          "evidence_count": 1,
+          "review_state": "new"
+        }
+      },
+      {
+        "id": "7363ad73-60bd-4147-b183-d8995b8b25f1",
+        "source": "e7b68821-e750-49d3-a866-f9e8dd0255de",
+        "target": "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+        "relationship_type": "CALLED",
+        "classification": "observed",
+        "label": "Called",
+        "properties": {
+          "valid_from": null,
+          "valid_to": null,
+          "evidence_count": 2,
+          "review_state": "new"
+        }
+      },
+      {
+        "id": "53e8e3d1-73e4-41be-8001-2cf36bd7db5a",
+        "source": "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+        "target": "e7b68821-e750-49d3-a866-f9e8dd0255de",
+        "relationship_type": "CALLED",
+        "classification": "observed",
+        "label": "Called",
+        "properties": {
+          "valid_from": null,
+          "valid_to": null,
+          "evidence_count": 2,
+          "review_state": "new"
+        }
+      }
+    ],
+    "truncated": false,
+    "total_nodes": 14,
+    "total_edges": 7
+  },
+  "hypotheses": [
+    {
+      "id": "47a010b7-3c69-5582-b06d-951a46c8c54c",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "47a010b7-3c69-5582-b06d-951a46c8c54c",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+        "target": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "types": {
+          "source": "device",
+          "target": "vehicle"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 36.4/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.64"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 36.4,
+      "quality_factor": 0.5659,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "2aa48fbc-78fb-5eb9-948a-616476bef302",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "2aa48fbc-78fb-5eb9-948a-616476bef302",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+        "target": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "types": {
+          "source": "device",
+          "target": "vehicle"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 36.4/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.64"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 36.4,
+      "quality_factor": 0.5659,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "1eb41e03-4f15-5a62-ba96-d72ed576a8b1",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "1eb41e03-4f15-5a62-ba96-d72ed576a8b1",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+        "target": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "types": {
+          "source": "device",
+          "target": "vehicle"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 36.4/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.64"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 36.4,
+      "quality_factor": 0.5659,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "03692e0f-2c7f-5ce2-945d-29f52c6422c2",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "03692e0f-2c7f-5ce2-945d-29f52c6422c2",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+        "target": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "types": {
+          "source": "device",
+          "target": "vehicle"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 36.4/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.64"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 36.4,
+      "quality_factor": 0.5659,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "21548f9e-2911-5240-aed2-d653b2ce0ebb",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "21548f9e-2911-5240-aed2-d653b2ce0ebb",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+        "target": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "types": {
+          "source": "device",
+          "target": "vehicle"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 36.4/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.64"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 36.4,
+      "quality_factor": 0.5659,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "991fd81b-a295-5a0d-a8c1-f1bbd1cac4ff",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "991fd81b-a295-5a0d-a8c1-f1bbd1cac4ff",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+        "target": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "types": {
+          "source": "device",
+          "target": "vehicle"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 36.4/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.64"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 36.4,
+      "quality_factor": 0.5659,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "b7ddd9fc-7534-5786-88a4-b36a7547f5ee",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "b7ddd9fc-7534-5786-88a4-b36a7547f5ee",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0",
+        "types": {
+          "source": "vehicle",
+          "target": "device"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 36.4/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.64"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 36.4,
+      "quality_factor": 0.5659,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "131e3690-a687-5c92-8767-73cbfa59109c",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "131e3690-a687-5c92-8767-73cbfa59109c",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0",
+        "types": {
+          "source": "vehicle",
+          "target": "device"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 36.4/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.64"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 36.4,
+      "quality_factor": 0.5659,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "38021402-b73a-5397-abda-b96598f8f175",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "38021402-b73a-5397-abda-b96598f8f175",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0",
+        "types": {
+          "source": "vehicle",
+          "target": "device"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 36.4/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.64"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 36.4,
+      "quality_factor": 0.5659,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "370c1a60-4438-54f5-aac7-b5d5c60df7e1",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "370c1a60-4438-54f5-aac7-b5d5c60df7e1",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "01786a49-190d-4035-8ba1-b812ef82603c",
+        "target": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "types": {
+          "source": "device",
+          "target": "vehicle"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 36.4/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.64"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 36.4,
+      "quality_factor": 0.5659,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "d288280f-aa1d-5cff-8484-143b86eadd48",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "d288280f-aa1d-5cff-8484-143b86eadd48",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "01786a49-190d-4035-8ba1-b812ef82603c",
+        "target": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "types": {
+          "source": "device",
+          "target": "vehicle"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 36.4/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.64"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 36.4,
+      "quality_factor": 0.5659,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "76abc794-e6eb-5f9c-b5de-57970727163a",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "76abc794-e6eb-5f9c-b5de-57970727163a",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "01786a49-190d-4035-8ba1-b812ef82603c",
+        "target": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+        "types": {
+          "source": "device",
+          "target": "vehicle"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 36.4/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.64"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 36.4,
+      "quality_factor": 0.5659,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "14482260-164c-5888-b200-cbb3543fa970",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "14482260-164c-5888-b200-cbb3543fa970",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+        "target": "e7b68821-e750-49d3-a866-f9e8dd0255de",
+        "types": {
+          "source": "phone_sim",
+          "target": "phone_sim"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 25.9/100 (Low Plausibility).  Data gaps: spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20), network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "communication@0.37",
+        "network_topology@0.55"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 25.9,
+      "quality_factor": 0.5978,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "da3ba98a-1f8a-5872-9a2d-cc838ec172de",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "da3ba98a-1f8a-5872-9a2d-cc838ec172de",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+        "target": "e7b68821-e750-49d3-a866-f9e8dd0255de",
+        "types": {
+          "source": "phone_sim",
+          "target": "phone_sim"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 25.9/100 (Low Plausibility).  Data gaps: writing_style. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20), network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "communication@0.37",
+        "network_topology@0.55"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 25.9,
+      "quality_factor": 0.5978,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "9bbcba22-70c2-52c1-a568-489962dd1ed2",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "9bbcba22-70c2-52c1-a568-489962dd1ed2",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+        "target": "e7b68821-e750-49d3-a866-f9e8dd0255de",
+        "types": {
+          "source": "phone_sim",
+          "target": "phone_sim"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 25.9/100 (Low Plausibility).  Data gaps: device_sim. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20), network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "communication@0.37",
+        "network_topology@0.55"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 25.9,
+      "quality_factor": 0.5978,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "d1bc06ae-6a47-5247-b907-8083de22f4e6",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "d1bc06ae-6a47-5247-b907-8083de22f4e6",
+      "hypothesis_type": "credential_inconsistency",
+      "entity_pair": {
+        "source": "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+        "target": "e7b68821-e750-49d3-a866-f9e8dd0255de",
+        "types": {
+          "source": "phone_sim",
+          "target": "phone_sim"
+        }
+      },
+      "notes": "Alias/credential data inconsistency requiring further verification. Strength 22.4/100 (Low Plausibility).  Data gaps: writing_style. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "communication@0.37"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 22.4,
+      "quality_factor": 0.6,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "d4574f5e-5d93-5864-82a8-7e44aa175e23",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "d4574f5e-5d93-5864-82a8-7e44aa175e23",
+      "hypothesis_type": "financial_anomaly",
+      "entity_pair": {
+        "source": "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+        "target": "e7b68821-e750-49d3-a866-f9e8dd0255de",
+        "types": {
+          "source": "phone_sim",
+          "target": "phone_sim"
+        }
+      },
+      "notes": "Financial transaction pattern anomaly detected. Strength 22.4/100 (Low Plausibility).  Data gaps: financial. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "communication@0.37"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 22.4,
+      "quality_factor": 0.6,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "0baa6bf6-7458-517b-8234-21216411a423",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "0baa6bf6-7458-517b-8234-21216411a423",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "94dda80f-3b39-42a5-ae85-773096b287fd",
+        "target": "dfe7b986-da07-43a5-b1a7-07000c509cea",
+        "types": {
+          "source": "device",
+          "target": "vehicle"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 15.6/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.29"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.6,
+      "quality_factor": 0.5336,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.874511"
+    },
+    {
+      "id": "85bfa903-d31e-57dd-96cf-d017020ead82",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "85bfa903-d31e-57dd-96cf-d017020ead82",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "94dda80f-3b39-42a5-ae85-773096b287fd",
+        "target": "dfe7b986-da07-43a5-b1a7-07000c509cea",
+        "types": {
+          "source": "device",
+          "target": "vehicle"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 15.6/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.29"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.6,
+      "quality_factor": 0.5336,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "d86c5a9a-95d1-5f18-b920-38834bc23a71",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "d86c5a9a-95d1-5f18-b920-38834bc23a71",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "94dda80f-3b39-42a5-ae85-773096b287fd",
+        "target": "dfe7b986-da07-43a5-b1a7-07000c509cea",
+        "types": {
+          "source": "device",
+          "target": "vehicle"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 15.6/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.29"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.6,
+      "quality_factor": 0.5336,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "8d224ee8-7bd7-5b6c-92e6-0c5a52457ef2",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "8d224ee8-7bd7-5b6c-92e6-0c5a52457ef2",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+        "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "74d91932-c358-5100-95ff-8abeddcf791d",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "74d91932-c358-5100-95ff-8abeddcf791d",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+        "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "0102766e-33c8-5660-a6f5-9095beff84c0",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "0102766e-33c8-5660-a6f5-9095beff84c0",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+        "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "ef5f2b06-bdae-5087-aa1b-7515cd58aeab",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "ef5f2b06-bdae-5087-aa1b-7515cd58aeab",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "01786a49-190d-4035-8ba1-b812ef82603c",
+        "target": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "a13833df-f8e0-5ce4-8fac-201e429e6ed5",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "a13833df-f8e0-5ce4-8fac-201e429e6ed5",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+        "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "bf56666f-aa8a-5a20-8976-1614894f5900",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "bf56666f-aa8a-5a20-8976-1614894f5900",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+        "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "d03b7f07-a11c-5237-a82d-a4dcf765ff27",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "d03b7f07-a11c-5237-a82d-a4dcf765ff27",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "01786a49-190d-4035-8ba1-b812ef82603c",
+        "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "147023f1-7390-5865-bc50-d25c558d4584",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "147023f1-7390-5865-bc50-d25c558d4584",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "01786a49-190d-4035-8ba1-b812ef82603c",
+        "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "24af7dae-dba7-5b7c-86ea-ebcffe254e80",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "24af7dae-dba7-5b7c-86ea-ebcffe254e80",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "01786a49-190d-4035-8ba1-b812ef82603c",
+        "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "d586cbc2-b005-528d-9575-e3ff884e232b",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "d586cbc2-b005-528d-9575-e3ff884e232b",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+        "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "8499ff64-8c7b-5112-a8be-01eb9b36fd33",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "8499ff64-8c7b-5112-a8be-01eb9b36fd33",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "01786a49-190d-4035-8ba1-b812ef82603c",
+        "target": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "303009d3-1ba1-5cc0-9645-d03b2a5e90e6",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "303009d3-1ba1-5cc0-9645-d03b2a5e90e6",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "01786a49-190d-4035-8ba1-b812ef82603c",
+        "target": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "1196d567-e14e-5ac8-8df0-d76a4d0808d6",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "1196d567-e14e-5ac8-8df0-d76a4d0808d6",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "01786a49-190d-4035-8ba1-b812ef82603c",
+        "target": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "108aeb56-1016-5cff-a3d5-bec7439d4155",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "108aeb56-1016-5cff-a3d5-bec7439d4155",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+        "target": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "10d45a19-a472-55fe-b49b-066d440f0150",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "10d45a19-a472-55fe-b49b-066d440f0150",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+        "target": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "1721b3f3-7608-5ac9-a459-ddebdd51f4a2",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "1721b3f3-7608-5ac9-a459-ddebdd51f4a2",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+        "target": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "0d00c308-0c38-5214-90b2-9c6f7bc9ec37",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "0d00c308-0c38-5214-90b2-9c6f7bc9ec37",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "01786a49-190d-4035-8ba1-b812ef82603c",
+        "target": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    },
+    {
+      "id": "9e59b8f7-b2f0-531b-92ad-71b396dd8392",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "analysis_run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "stable_key": "9e59b8f7-b2f0-531b-92ad-71b396dd8392",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "01786a49-190d-4035-8ba1-b812ef82603c",
+        "target": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+        "types": {
+          "source": "device",
+          "target": "device"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 15.1/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.28"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 15.1,
+      "quality_factor": 0.532,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:55.873428"
+    }
+  ],
+  "signals": {
+    "run_id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+    "run_version": 1,
+    "status": "completed",
+    "counts_by_family": {
+      "communication": 2,
+      "network_topology": 12
+    },
+    "signals": [
+      {
+        "id": "c5487756-9440-47d6-aaf9-4290ce5a1194",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+          "target": "d04d1015-bf2a-4061-944b-24a8c7c2c735"
+        },
+        "numeric_value": 0.6435,
+        "quality_factor": 0.5659,
+        "explanation": "Entities share community C0 with combined centrality 0.192; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0769,
+          "degree_centrality_tgt": 0.3077,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.0449,
+          "pagerank_tgt": 0.037,
+          "eigenvector_src": 0.3536,
+          "eigenvector_tgt": 0.7071,
+          "same_community": true,
+          "community_id": 0,
+          "articulation_point": true,
+          "bridge_edge": true
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "227d230c-c0f2-4d05-8080-280559c5acf7",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+          "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0"
+        },
+        "numeric_value": 0.6435,
+        "quality_factor": 0.5659,
+        "explanation": "Entities share community C0 with combined centrality 0.192; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0769,
+          "degree_centrality_tgt": 0.3077,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.0449,
+          "pagerank_tgt": 0.037,
+          "eigenvector_src": 0.3536,
+          "eigenvector_tgt": 0.7071,
+          "same_community": true,
+          "community_id": 0,
+          "articulation_point": true,
+          "bridge_edge": true
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "0315bbad-da15-4c92-a105-d4261806cfb0",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "01786a49-190d-4035-8ba1-b812ef82603c",
+          "target": "d04d1015-bf2a-4061-944b-24a8c7c2c735"
+        },
+        "numeric_value": 0.6435,
+        "quality_factor": 0.5659,
+        "explanation": "Entities share community C0 with combined centrality 0.192; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0769,
+          "degree_centrality_tgt": 0.3077,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.0449,
+          "pagerank_tgt": 0.037,
+          "eigenvector_src": 0.3536,
+          "eigenvector_tgt": 0.7071,
+          "same_community": true,
+          "community_id": 0,
+          "articulation_point": true,
+          "bridge_edge": true
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "ab56d2c9-479c-43f2-8dff-9fdf328df82b",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+          "target": "d04d1015-bf2a-4061-944b-24a8c7c2c735"
+        },
+        "numeric_value": 0.6435,
+        "quality_factor": 0.5659,
+        "explanation": "Entities share community C0 with combined centrality 0.192; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0769,
+          "degree_centrality_tgt": 0.3077,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.0449,
+          "pagerank_tgt": 0.037,
+          "eigenvector_src": 0.3536,
+          "eigenvector_tgt": 0.7071,
+          "same_community": true,
+          "community_id": 0,
+          "articulation_point": true,
+          "bridge_edge": true
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "224f34db-1faa-4558-9dee-ea81d0d0b4df",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+          "target": "e7b68821-e750-49d3-a866-f9e8dd0255de"
+        },
+        "numeric_value": 0.5538,
+        "quality_factor": 0.5955,
+        "explanation": "Entities share community C3 with combined centrality 0.154; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.1538,
+          "degree_centrality_tgt": 0.1538,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.2466,
+          "pagerank_tgt": 0.2466,
+          "eigenvector_src": 0.0,
+          "eigenvector_tgt": 0.0,
+          "same_community": true,
+          "community_id": 3,
+          "articulation_point": false,
+          "bridge_edge": true
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "b399214d-9d18-4936-88d3-e61410c27908",
+        "engine_name": "communication",
+        "engine_version": "v2.1",
+        "family": "communication",
+        "entity_pair": {
+          "source": "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+          "target": "e7b68821-e750-49d3-a866-f9e8dd0255de"
+        },
+        "numeric_value": 0.3739,
+        "quality_factor": 0.6,
+        "explanation": "Pair contacted 2 times (400s total). Peak burst 2/2h, 2 night calls.",
+        "contributing_record_count": 2,
+        "feature_details": {
+          "call_count": 2,
+          "total_duration_seconds": 400.0,
+          "max_burst_in_2h": 2,
+          "night_call_count": 2,
+          "long_call_count": 2,
+          "burner_lifecycle": false
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "5aadfb90-c2cb-4834-9c6c-f25c74531c5b",
+        "engine_name": "communication",
+        "engine_version": "v2.1",
+        "family": "communication",
+        "entity_pair": {
+          "source": "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+          "target": "e7b68821-e750-49d3-a866-f9e8dd0255de"
+        },
+        "numeric_value": 0.3678,
+        "quality_factor": 0.6,
+        "explanation": "Pair contacted 2 times (290s total). Peak burst 2/2h, 2 night calls.",
+        "contributing_record_count": 2,
+        "feature_details": {
+          "call_count": 2,
+          "total_duration_seconds": 290.0,
+          "max_burst_in_2h": 2,
+          "night_call_count": 2,
+          "long_call_count": 2,
+          "burner_lifecycle": false
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "94d69e3c-5b77-4b76-85ce-a97e57c4e5ad",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "94dda80f-3b39-42a5-ae85-773096b287fd",
+          "target": "dfe7b986-da07-43a5-b1a7-07000c509cea"
+        },
+        "numeric_value": 0.2928,
+        "quality_factor": 0.5336,
+        "explanation": "Entities share community C2 with combined centrality 0.077; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0769,
+          "degree_centrality_tgt": 0.0769,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.037,
+          "pagerank_tgt": 0.0684,
+          "eigenvector_src": 0.0,
+          "eigenvector_tgt": 0.0,
+          "same_community": true,
+          "community_id": 2,
+          "articulation_point": false,
+          "bridge_edge": true
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "d3d455da-7c0f-484d-938f-9c4e203c64e4",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "01786a49-190d-4035-8ba1-b812ef82603c",
+          "target": "3df4fa0a-e904-4822-acd9-88f628f448c5"
+        },
+        "numeric_value": 0.283,
+        "quality_factor": 0.532,
+        "explanation": "Entities share community C0 with combined centrality 0.077; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0769,
+          "degree_centrality_tgt": 0.0769,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.0449,
+          "pagerank_tgt": 0.0449,
+          "eigenvector_src": 0.3536,
+          "eigenvector_tgt": 0.3536,
+          "same_community": true,
+          "community_id": 0,
+          "articulation_point": false,
+          "bridge_edge": false
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "529d033b-3a08-40e9-8a75-6de4322663c6",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "01786a49-190d-4035-8ba1-b812ef82603c",
+          "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0"
+        },
+        "numeric_value": 0.283,
+        "quality_factor": 0.532,
+        "explanation": "Entities share community C0 with combined centrality 0.077; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0769,
+          "degree_centrality_tgt": 0.0769,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.0449,
+          "pagerank_tgt": 0.0449,
+          "eigenvector_src": 0.3536,
+          "eigenvector_tgt": 0.3536,
+          "same_community": true,
+          "community_id": 0,
+          "articulation_point": false,
+          "bridge_edge": false
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "4462b5bc-cae9-4e7e-ab3c-e17d67ec55bd",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+          "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0"
+        },
+        "numeric_value": 0.283,
+        "quality_factor": 0.532,
+        "explanation": "Entities share community C0 with combined centrality 0.077; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0769,
+          "degree_centrality_tgt": 0.0769,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.0449,
+          "pagerank_tgt": 0.0449,
+          "eigenvector_src": 0.3536,
+          "eigenvector_tgt": 0.3536,
+          "same_community": true,
+          "community_id": 0,
+          "articulation_point": false,
+          "bridge_edge": false
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "325cacd8-1847-424e-bac2-1ef4e2691a89",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "01786a49-190d-4035-8ba1-b812ef82603c",
+          "target": "4f7ab032-b51a-4c1f-a928-4d88abc19468"
+        },
+        "numeric_value": 0.283,
+        "quality_factor": 0.532,
+        "explanation": "Entities share community C0 with combined centrality 0.077; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0769,
+          "degree_centrality_tgt": 0.0769,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.0449,
+          "pagerank_tgt": 0.0449,
+          "eigenvector_src": 0.3536,
+          "eigenvector_tgt": 0.3536,
+          "same_community": true,
+          "community_id": 0,
+          "articulation_point": false,
+          "bridge_edge": false
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "aafea0b9-0d4b-4da9-8030-476edcc88cff",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "3df4fa0a-e904-4822-acd9-88f628f448c5",
+          "target": "4f7ab032-b51a-4c1f-a928-4d88abc19468"
+        },
+        "numeric_value": 0.283,
+        "quality_factor": 0.532,
+        "explanation": "Entities share community C0 with combined centrality 0.077; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0769,
+          "degree_centrality_tgt": 0.0769,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.0449,
+          "pagerank_tgt": 0.0449,
+          "eigenvector_src": 0.3536,
+          "eigenvector_tgt": 0.3536,
+          "same_community": true,
+          "community_id": 0,
+          "articulation_point": false,
+          "bridge_edge": false
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "b54be5ee-8330-4014-b88b-56f8d2d537ef",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+          "target": "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0"
+        },
+        "numeric_value": 0.283,
+        "quality_factor": 0.532,
+        "explanation": "Entities share community C0 with combined centrality 0.077; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0769,
+          "degree_centrality_tgt": 0.0769,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.0449,
+          "pagerank_tgt": 0.0449,
+          "eigenvector_src": 0.3536,
+          "eigenvector_tgt": 0.3536,
+          "same_community": true,
+          "community_id": 0,
+          "articulation_point": false,
+          "bridge_edge": false
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      }
+    ]
+  },
+  "timeline": {
+    "items": [
+      {
+        "id": "28c11a31-9bfd-47d5-970c-fd12bcc0c8f5",
+        "event_type": "cctv_sighting",
+        "start_time": "2026-08-21T02:40:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-21T02:40:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "CAM-BLR-PEENYA-01",
+          "KA-53-M-1102"
+        ],
+        "participant_ids": [
+          "3df4fa0a-e904-4822-acd9-88f628f448c5",
+          "d04d1015-bf2a-4061-944b-24a8c7c2c735"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "CARGO-ANPR-PEENYA-002",
+          "camera_id": "CAM-BLR-PEENYA-01",
+          "location": "Peenya 2nd Stage Logistics Hub Chokepoint",
+          "lat": 13.0315,
+          "lon": 77.5188,
+          "timestamp": "2026-08-21T02:40:00",
+          "detected_vehicle_class": "tempo",
+          "vehicle_plate": "KA-53-M-1102",
+          "hsrp_security_laser_code": "TAMPERED_FALSE_PLATE",
+          "speed_kmh": 41.0,
+          "confidence": 0.94,
+          "dataset_source": "UVH-26 (IISc Bengaluru) 14 Vehicle Classes"
+        },
+        "source_record_id": "2473a0da-e362-4211-bebc-edcc78390273"
+      },
+      {
+        "id": "ebcea711-a994-468c-a7a4-86bce39eb8b5",
+        "event_type": "call",
+        "start_time": "2026-08-21T02:45:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-21T02:45:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "+919845881122",
+          "+919844773344",
+          "TOWER-KA-BLR-PEENYA-01"
+        ],
+        "participant_ids": [
+          "e7b68821-e750-49d3-a866-f9e8dd0255de",
+          "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+          "b6bd4184-d5dc-4486-b1cf-23e7ce9906ea"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "CARGO-COMM-CONVOY-007",
+          "caller_id": "+919845881122",
+          "callee_id": "+919844773344",
+          "start_time": "2026-08-21T02:45:00",
+          "duration_seconds": 160,
+          "tower_id": "TOWER-KA-BLR-PEENYA-01",
+          "dataset_source": "TRAI Telecom Mobility & Naamapadam",
+          "call_transcript": "Gate se nikal gaye hain, tum Ring Road par aage lead karo, police patrolling check karo.",
+          "threat_indicator": "NIGHT_OWL_BURGLARY_COORDINATION"
+        },
+        "source_record_id": "ba05fb4f-fa0a-41b0-ab85-7e6049c8ab94"
+      },
+      {
+        "id": "9dd49b61-4b95-4689-a21d-f5675b02f8dd",
+        "event_type": "legal_document",
+        "start_time": "2026-08-21T03:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-21T03:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "KA-53-M-1102",
+          "Peenya Police Station, Bengaluru City"
+        ],
+        "participant_ids": [
+          "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+          "c68a0e41-34bf-40f9-813b-d471819bebd8"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "CARGO-THEFT-FIR-001",
+          "document_type": "FIRST_INFORMATION_REPORT",
+          "fir_number": "FIR/2026/0892",
+          "police_station": "Peenya Police Station, Bengaluru City",
+          "jurisdiction_state": "Karnataka",
+          "date_filed": "2026-08-21T03:00:00",
+          "complainant": "Blr LogiTech Supply Chain Solutions Ltd",
+          "cargo_manifest": "High-value GPU servers and telecom transceivers (\u20b985 Lakh)",
+          "vehicle_plate": "KA-53-M-1102",
+          "vehicle_class": "tempo",
+          "dataset_source": "NCRB Crime in India (Auto Theft) & InLegalNER",
+          "ncrb_crime_head": "Interstate Commercial Cargo Theft (Category 8.1)",
+          "summary": "Commercial cargo tempo stolen from Peenya warehouse loading bay under forged gate pass"
+        },
+        "source_record_id": "7b54183a-6ed0-4e58-810a-0a15e8b98acc"
+      },
+      {
+        "id": "739bb3a6-221c-44b5-940e-8769dce0d518",
+        "event_type": "cctv_sighting",
+        "start_time": "2026-08-21T03:10:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-21T03:10:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "CAM-BLR-HEBBAL-02",
+          "KA-53-M-1102",
+          "TN-02-AK-9812"
+        ],
+        "participant_ids": [
+          "01786a49-190d-4035-8ba1-b812ef82603c",
+          "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+          "dfe7b986-da07-43a5-b1a7-07000c509cea"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "CARGO-ANPR-HEBBAL-003",
+          "camera_id": "CAM-BLR-HEBBAL-02",
+          "location": "Hebbal Outer Ring Road Junction",
+          "lat": 13.0358,
+          "lon": 77.597,
+          "timestamp": "2026-08-21T03:10:00",
+          "detected_vehicle_class": "tempo",
+          "vehicle_plate": "KA-53-M-1102",
+          "linked_convoy_plate": "TN-02-AK-9812",
+          "speed_kmh": 58.0,
+          "confidence": 0.95,
+          "dataset_source": "UVH-26 & Bangalore City Traffic Dataset"
+        },
+        "source_record_id": "374e9d0a-92d8-4c1f-9be9-89efb72290fd"
+      },
+      {
+        "id": "4ea1cd6b-8e91-46c8-8d91-874145c66155",
+        "event_type": "call",
+        "start_time": "2026-08-21T03:15:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-21T03:15:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "+919844773344",
+          "+919845881122",
+          "TOWER-KA-BLR-HEBBAL-02"
+        ],
+        "participant_ids": [
+          "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+          "e7b68821-e750-49d3-a866-f9e8dd0255de",
+          "57e39111-bf10-4e51-a163-70d65c42bc50"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "CARGO-COMM-CONVOY-008",
+          "caller_id": "+919844773344",
+          "callee_id": "+919845881122",
+          "start_time": "2026-08-21T03:15:00",
+          "duration_seconds": 190,
+          "tower_id": "TOWER-KA-BLR-HEBBAL-02",
+          "dataset_source": "TRAI Telecom Mobility & Naamapadam",
+          "call_transcript": "Hebbal clear hai, direct Silk Board flyover pakdo, speed 60 ke aas-paas rakho.",
+          "threat_indicator": "NIGHT_OWL_CONVOY_ESCORT"
+        },
+        "source_record_id": "a6762d6a-e45b-4feb-845f-49c124cada7f"
+      },
+      {
+        "id": "eacbe69e-1fa8-4340-a771-70f8567db58c",
+        "event_type": "cctv_sighting",
+        "start_time": "2026-08-21T03:35:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-21T03:35:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "CAM-BLR-SILKBOARD-03",
+          "TN-02-AK-9812",
+          "KA-53-M-1102"
+        ],
+        "participant_ids": [
+          "94dda80f-3b39-42a5-ae85-773096b287fd",
+          "dfe7b986-da07-43a5-b1a7-07000c509cea",
+          "d04d1015-bf2a-4061-944b-24a8c7c2c735"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "CARGO-ANPR-SILKBOARD-004",
+          "camera_id": "CAM-BLR-SILKBOARD-03",
+          "location": "Central Silk Board Junction Flyover",
+          "lat": 12.9176,
+          "lon": 77.6238,
+          "timestamp": "2026-08-21T03:35:00",
+          "detected_vehicle_class": "truck",
+          "vehicle_plate": "TN-02-AK-9812",
+          "linked_convoy_plate": "KA-53-M-1102",
+          "speed_kmh": 52.0,
+          "confidence": 0.96,
+          "dataset_source": "UVH-26 (IISc Bengaluru)"
+        },
+        "source_record_id": "c324a57d-7471-4a9b-b254-1d4881b39b01"
+      },
+      {
+        "id": "e7a02446-ac54-44d2-b669-50c9ca8cd18b",
+        "event_type": "call",
+        "start_time": "2026-08-21T03:40:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-21T03:40:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "+919845881122",
+          "+919844773344",
+          "TOWER-KA-BLR-SILKBOARD-03"
+        ],
+        "participant_ids": [
+          "e7b68821-e750-49d3-a866-f9e8dd0255de",
+          "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+          "e6d412b0-088c-47d0-aaa6-ae3fbe202ab2"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "CARGO-COMM-CONVOY-009",
+          "caller_id": "+919845881122",
+          "callee_id": "+919844773344",
+          "start_time": "2026-08-21T03:40:00",
+          "duration_seconds": 130,
+          "tower_id": "TOWER-KA-BLR-SILKBOARD-03",
+          "dataset_source": "TRAI Telecom Mobility & Naamapadam",
+          "call_transcript": "Silk Board crossed. Electronic city toll par fastag auto debit hoga, tum Attibele checkpost pe wait karo.",
+          "threat_indicator": "NIGHT_OWL_CONVOY_ESCORT"
+        },
+        "source_record_id": "b3b8febf-d2d6-4e7b-8742-2c7d80ca45e1"
+      },
+      {
+        "id": "5b4f3c49-74e3-44c0-944d-39b60bb994a7",
+        "event_type": "cctv_sighting",
+        "start_time": "2026-08-21T03:52:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-21T03:52:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "CAM-BLR-ECITY-04",
+          "KA-53-M-1102"
+        ],
+        "participant_ids": [
+          "e51f444c-72a5-4d96-b9a0-c97ebd1a5fa0",
+          "d04d1015-bf2a-4061-944b-24a8c7c2c735"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "CARGO-ANPR-ECITY-005",
+          "camera_id": "CAM-BLR-ECITY-04",
+          "location": "Electronic City Elevated Tollway Exit",
+          "lat": 12.8452,
+          "lon": 77.6602,
+          "timestamp": "2026-08-21T03:52:00",
+          "detected_vehicle_class": "tempo",
+          "vehicle_plate": "KA-53-M-1102",
+          "speed_kmh": 66.0,
+          "confidence": 0.97,
+          "dataset_source": "UVH-26 (IISc Bengaluru) & Bangalore City Traffic"
+        },
+        "source_record_id": "78e5de57-4d75-4f49-aae1-a4f0de49277c"
+      },
+      {
+        "id": "58cedbf5-2815-4c6b-b55a-19d2703e3dea",
+        "event_type": "call",
+        "start_time": "2026-08-21T04:05:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-21T04:05:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "+919844773344",
+          "+919845881122",
+          "TOWER-KA-BLR-ATTIBELE-05"
+        ],
+        "participant_ids": [
+          "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+          "e7b68821-e750-49d3-a866-f9e8dd0255de",
+          "7bf442ba-6e9b-4b26-b5aa-5bb0d7d27a99"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "CARGO-COMM-CONVOY-010",
+          "caller_id": "+919844773344",
+          "callee_id": "+919845881122",
+          "start_time": "2026-08-21T04:05:00",
+          "duration_seconds": 210,
+          "tower_id": "TOWER-KA-BLR-ATTIBELE-05",
+          "dataset_source": "TRAI Telecom Mobility & Naamapadam",
+          "call_transcript": "Attibele checkpost par police checking chal rahi hai, gaadi side route Hosur industrial bypass mod lo!",
+          "threat_indicator": "ACTIVE_EVASION_CALL"
+        },
+        "source_record_id": "f83bb40b-7503-4491-b0e1-440b8073a625"
+      },
+      {
+        "id": "07d75156-ff15-4a71-81bc-8a68f62f7b0e",
+        "event_type": "cctv_sighting",
+        "start_time": "2026-08-21T04:10:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-21T04:10:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "CAM-NH44-HOSUR-BORDER-05",
+          "KA-53-M-1102",
+          "TN-02-AK-9812"
+        ],
+        "participant_ids": [
+          "4f7ab032-b51a-4c1f-a928-4d88abc19468",
+          "d04d1015-bf2a-4061-944b-24a8c7c2c735",
+          "dfe7b986-da07-43a5-b1a7-07000c509cea"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "CARGO-ANPR-HOSUR-006",
+          "camera_id": "CAM-NH44-HOSUR-BORDER-05",
+          "location": "NH-44 Attibele / Hosur Karnataka-Tamil Nadu Border",
+          "lat": 12.7825,
+          "lon": 77.7812,
+          "timestamp": "2026-08-21T04:10:00",
+          "detected_vehicle_class": "tempo",
+          "vehicle_plate": "KA-53-M-1102",
+          "linked_convoy_plate": "TN-02-AK-9812",
+          "speed_kmh": 62.0,
+          "confidence": 0.98,
+          "dataset_source": "UVH-26 & Bangalore City Traffic Dataset",
+          "intercept_alert": "Border RTO Checkpost QRT Intercept Deployed"
+        },
+        "source_record_id": "32370357-4124-42d4-a503-a061a68507e0"
+      }
+    ],
+    "total": 10,
+    "page": 1,
+    "page_size": 500
+  },
+  "workspace_summary": {
+    "case": {
+      "id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "title": "Operation Vahan-Chor - Interstate Stolen Vehicle & Cargo Tracking Racket",
+      "case_code": "IND-2026-013",
+      "description": "Interstate commercial truck/tempo syndicate stealing high-value electronics and transporting them via NH-44 using cloned HSRP number plates and toll plaza chokepoint evasion.",
+      "status": "active",
+      "is_synthetic": false,
+      "created_by": "5aefa310-2f5f-4ba8-bf37-fcf969fa8f55",
+      "created_at": "2026-09-22T07:43:55.631251",
+      "updated_at": "2026-09-22T07:43:55.631251",
+      "entity_count": 14,
+      "event_count": 10,
+      "evidence_count": 1,
+      "hypothesis_count": 38,
+      "relationship_count": 9
+    },
+    "evidence_processing": {
+      "total_files": 1,
+      "awaiting_upload_status": 0,
+      "ready": 1,
+      "failed": 0
+    },
+    "entity_count": 14,
+    "relationship_count": 9,
+    "event_count": 10,
+    "signal_count": 14,
+    "hypothesis_count": 38,
+    "open_contradictions": 0,
+    "open_leads": 0,
+    "open_gaps": 8,
+    "open_actions": 0,
+    "findings_awaiting_review": 38,
+    "recent_evidence": [
+      {
+        "id": "73f15de9-07f5-4c98-9dae-3dec9bcf6327",
+        "original_filename": "case_ind_batch16_stolen_vehicles.json",
+        "source_type": "CCTV",
+        "status": "imported",
+        "byte_size": 4436,
+        "created_at": "2026-09-22T07:43:55.654061",
+        "accepted_count": 10,
+        "rejected_count": 0
+      }
+    ],
+    "recent_activity": [],
+    "latest_run": {
+      "id": "2acb881c-f28c-4e94-943f-46a9a5b08d5b",
+      "version": 1,
+      "status": "completed",
+      "started_at": "2026-09-22T07:43:55.792023",
+      "completed_at": "2026-09-22T07:43:55.904512",
+      "failure_details": null,
+      "signal_count": 14,
+      "hypothesis_count": 38
+    },
+    "analysis_stale": false,
+    "analysis_stale_reason": null
+  },
+  "leads": [],
+  "contradictions": [],
+  "gaps": [
+    {
+      "id": "47148a79-8a4a-42fe-81f7-1702f62eee94",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "lead_id": null,
+      "title": "Data gap: communication, writing_style for social_network",
+      "description": "Families communication, writing_style carry no supportive evidence for social_network between 94dda80f-3b39-42a5-ae85-773096b287fd, dfe7b986-da07-43a5-b1a7-07000c509cea. Hypothesis: Unusual or operationally significant social network concentration. Strength 15.6/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "94dda80f-3b39-42a5-ae85-773096b287fd",
+        "dfe7b986-da07-43a5-b1a7-07000c509cea"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:55.931751",
+      "updated_at": "2026-09-22T07:43:56.022904"
+    },
+    {
+      "id": "13f92aa8-a607-4192-8e03-e24f30dfac6a",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "lead_id": null,
+      "title": "Data gap: communication, spatial_temporal for terror_link",
+      "description": "Families communication, spatial_temporal carry no supportive evidence for terror_link between 94dda80f-3b39-42a5-ae85-773096b287fd, dfe7b986-da07-43a5-b1a7-07000c509cea. Hypothesis: Possible nexus to proscribed entity. Strength 15.6/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "94dda80f-3b39-42a5-ae85-773096b287fd",
+        "dfe7b986-da07-43a5-b1a7-07000c509cea"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:55.928730",
+      "updated_at": "2026-09-22T07:43:56.020878"
+    },
+    {
+      "id": "cf9b3e95-3dc4-4c82-932d-81ca1f57d5de",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "lead_id": null,
+      "title": "Data gap: communication, device_sim for subversive_activity",
+      "description": "Families communication, device_sim carry no supportive evidence for subversive_activity between 94dda80f-3b39-42a5-ae85-773096b287fd, dfe7b986-da07-43a5-b1a7-07000c509cea. Hypothesis: Subversive or unlawful activity indicated. Strength 15.6/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "94dda80f-3b39-42a5-ae85-773096b287fd",
+        "dfe7b986-da07-43a5-b1a7-07000c509cea"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:55.926627",
+      "updated_at": "2026-09-22T07:43:56.018881"
+    },
+    {
+      "id": "2bd38c07-52bf-4d42-a4b7-b70f03cdd261",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "lead_id": null,
+      "title": "Data gap: financial for financial_anomaly",
+      "description": "Families financial carry no supportive evidence for financial_anomaly between 8be16c72-0dd6-4e48-b50b-dc59bee6127f, e7b68821-e750-49d3-a866-f9e8dd0255de. Hypothesis: Financial transaction pattern anomaly detected. Strength 22.4/100 (Low Plausibility).  Data gaps: financial. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+        "e7b68821-e750-49d3-a866-f9e8dd0255de"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:55.922663",
+      "updated_at": "2026-09-22T07:43:55.922663"
+    },
+    {
+      "id": "74f63820-67e1-45fe-9742-5fc5449f8664",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "lead_id": null,
+      "title": "Data gap: writing_style for credential_inconsistency",
+      "description": "Families writing_style carry no supportive evidence for credential_inconsistency between 8be16c72-0dd6-4e48-b50b-dc59bee6127f, e7b68821-e750-49d3-a866-f9e8dd0255de. Hypothesis: Alias/credential data inconsistency requiring further verification. Strength 22.4/100 (Low Plausibility).  Data gaps: writing_style. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+        "e7b68821-e750-49d3-a866-f9e8dd0255de"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:55.920667",
+      "updated_at": "2026-09-22T07:43:55.920667"
+    },
+    {
+      "id": "c5a0321b-1c31-4fac-9eb6-07f7e0fc5918",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "lead_id": null,
+      "title": "Data gap: writing_style for social_network",
+      "description": "Families writing_style carry no supportive evidence for social_network between 8be16c72-0dd6-4e48-b50b-dc59bee6127f, e7b68821-e750-49d3-a866-f9e8dd0255de. Hypothesis: Unusual or operationally significant social network concentration. Strength 25.9/100 (Low Plausibility).  Data gaps: writing_style. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20), network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+        "e7b68821-e750-49d3-a866-f9e8dd0255de"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:55.917672",
+      "updated_at": "2026-09-22T07:43:55.917672"
+    },
+    {
+      "id": "d00d0d9f-3e48-4e26-b8bd-22947dc5efb8",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "lead_id": null,
+      "title": "Data gap: spatial_temporal for terror_link",
+      "description": "Families spatial_temporal carry no supportive evidence for terror_link between 8be16c72-0dd6-4e48-b50b-dc59bee6127f, e7b68821-e750-49d3-a866-f9e8dd0255de. Hypothesis: Possible nexus to proscribed entity. Strength 25.9/100 (Low Plausibility).  Data gaps: spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20), network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+        "e7b68821-e750-49d3-a866-f9e8dd0255de"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:55.913190",
+      "updated_at": "2026-09-22T07:43:55.913190"
+    },
+    {
+      "id": "dc65ff1d-3b1e-4978-bb0f-580d2c1dcd04",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "lead_id": null,
+      "title": "Data gap: device_sim for subversive_activity",
+      "description": "Families device_sim carry no supportive evidence for subversive_activity between 8be16c72-0dd6-4e48-b50b-dc59bee6127f, e7b68821-e750-49d3-a866-f9e8dd0255de. Hypothesis: Subversive or unlawful activity indicated. Strength 25.9/100 (Low Plausibility).  Data gaps: device_sim. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20), network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "8be16c72-0dd6-4e48-b50b-dc59bee6127f",
+        "e7b68821-e750-49d3-a866-f9e8dd0255de"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:55.910035",
+      "updated_at": "2026-09-22T07:43:55.910035"
+    }
+  ],
+  "actions": [],
+  "cctv": [
+    {
+      "id": "CCTV-73F15DE9",
+      "case_id": "332b4a9f-8090-4b94-bb37-2761a8755ca2",
+      "camera_id": "CAM-BLR-PEENYA-01",
+      "location": "Peenya 2nd Stage Logistics Hub Chokepoint",
+      "lat": 13.0315,
+      "lon": 77.5188,
+      "timestamp": "2026-08-21T02:40:00",
+      "frame_reference": "FRAME-20260922-074355-73f1",
+      "signals": {
+        "appearance": 0.72,
+        "telecom": 0.65,
+        "temporal": 0.91
+      },
+      "confidence": "MEDIUM",
+      "status": "inferred \u2014 not confirmed",
+      "contributing_signals": 3,
+      "created_at": "2026-09-22T07:43:55.654061",
+      "updated_at": "2026-09-22T07:43:55.654061"
+    }
+  ],
+  "files": [
+    {
+      "id": "73f15de9-07f5-4c98-9dae-3dec9bcf6327",
+      "original_filename": "case_ind_batch16_stolen_vehicles.json",
+      "media_type": "application/json",
+      "byte_size": 4436,
+      "status": "imported",
+      "created_at": "2026-09-22T07:43:55.654061",
+      "source_type": "CCTV",
+      "source_description": "Peenya Logistics ANPR & NH-44 Border Chokepoint Transit (Datasets 9, 18, 19)",
+      "sha256": "747928140ff6a74bde51a2584fbfbcfe82e2fda28ccf4c5530bb3ae5901fd296",
+      "accepted_count": 10
+    }
+  ],
+  "imports": [
+    {
+      "id": "b11e3ab9-65de-45df-b099-4b385ea0de2a",
+      "evidence_file_id": "73f15de9-07f5-4c98-9dae-3dec9bcf6327",
+      "status": "completed",
+      "accepted_count": 10,
+      "rejected_count": 0,
+      "created_at": "2026-09-22T07:43:55.657644"
+    }
+  ],
+  "merge_suggestions": [],
+  "reports": []
+}

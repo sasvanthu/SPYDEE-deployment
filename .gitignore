@@ -2,8 +2,12 @@ __pycache__/
 *.pyc
 *.pyo
 .env
-.env.prod
-.env.prod.local
+.env.*
+!.env.example
+!.env.prod.example
+data/uploads/
+venv/
+services/worker/venv/
 node_modules/
 dist/
 .vite/

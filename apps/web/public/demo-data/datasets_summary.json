@@ -1,0 +1,23 @@
+{
+  "total_datasets": 25,
+  "active_in_prototype": 25,
+  "by_priority": {
+    "P1": 11,
+    "P2": 9,
+    "P3": 5
+  },
+  "by_category_count": 24,
+  "primary_sponsors": [
+    "IISc Bengaluru",
+    "AI4Bharat IIT Madras",
+    "Law-AI IIT Kharagpur",
+    "IIT Kanpur",
+    "IIIT Hyderabad",
+    "IIIT Delhi",
+    "NPCI / RBI",
+    "TRAI",
+    "NCRB",
+    "IBM Research",
+    "Elliptic"
+  ]
+}

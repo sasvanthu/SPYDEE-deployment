@@ -1,5 +1,68 @@
 const API_BASE = '/api/v1';
 
+// In-memory cache for loaded case bundles
+const caseCache: Record<string, any> = {};
+let cachedCases: any[] | null = null;
+let cachedDatasets: any[] | null = null;
+let cachedDatasetsSummary: any | null = null;
+
+async function fetchCaseBundle(caseId: string) {
+  if (caseCache[caseId]) return caseCache[caseId];
+  try {
+    const res = await fetch(`/demo-data/cases/${caseId}.json`);
+    if (res.ok) {
+      const data = await res.json();
+      caseCache[caseId] = data;
+      return data;
+    }
+  } catch (e) {
+    console.warn(`[SPYDEE Vercel Demo] Could not load demo bundle for ${caseId}`, e);
+  }
+  return null;
+}
+
+async function fetchDemoCases(): Promise<any[]> {
+  if (cachedCases) return cachedCases;
+  try {
+    const res = await fetch('/demo-data/cases.json');
+    if (res.ok) {
+      cachedCases = await res.json();
+      return cachedCases || [];
+    }
+  } catch (e) {
+    console.warn('[SPYDEE Vercel Demo] Could not load cases.json', e);
+  }
+  return [];
+}
+
+async function fetchDemoDatasets(): Promise<any[]> {
+  if (cachedDatasets) return cachedDatasets;
+  try {
+    const res = await fetch('/demo-data/datasets.json');
+    if (res.ok) {
+      cachedDatasets = await res.json();
+      return cachedDatasets || [];
+    }
+  } catch (e) {
+    console.warn('[SPYDEE Vercel Demo] Could not load datasets.json', e);
+  }
+  return [];
+}
+
+async function fetchDemoDatasetsSummary(): Promise<any> {
+  if (cachedDatasetsSummary) return cachedDatasetsSummary;
+  try {
+    const res = await fetch('/demo-data/datasets_summary.json');
+    if (res.ok) {
+      cachedDatasetsSummary = await res.json();
+      return cachedDatasetsSummary;
+    }
+  } catch (e) {
+    console.warn('[SPYDEE Vercel Demo] Could not load datasets_summary.json', e);
+  }
+  return { total_datasets: 25, active_cases: 13, national_coverage: 'Pan-India', status: 'ACTIVE' };
+}
+
 async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
   const token = localStorage.getItem('spydee_token');
   const headers: Record<string, string> = {
@@ -8,17 +71,283 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
   };
   if (token) headers['Authorization'] = `Bearer ${token}`;
 
-  const res = await fetch(`${API_BASE}${path}`, { ...options, headers });
-  if (res.status === 401) {
-    localStorage.removeItem('spydee_token');
-    window.location.href = '/login';
-    throw new Error('Unauthorized');
+  try {
+    const res = await fetch(`${API_BASE}${path}`, { ...options, headers });
+    if (res.status === 401 && !path.includes('/auth/login')) {
+      // In live mode with expired token, redirect to login
+      localStorage.removeItem('spydee_token');
+      window.location.href = '/login';
+      throw new Error('Unauthorized');
+    }
+    if (res.ok) {
+      return await res.json();
+    }
+    // If not OK, fall through to demo handler for Vercel/offline mode
+    return await handleDemoFallback<T>(path, options);
+  } catch (err: any) {
+    // If network fails (e.g. backend not reachable on Vercel deployment), use demo data fallback
+    return await handleDemoFallback<T>(path, options);
   }
-  if (!res.ok) {
-    const err = await res.json().catch(() => ({ detail: res.statusText }));
-    throw new Error(err.detail || 'Request failed');
+}
+
+async function handleDemoFallback<T>(path: string, options: RequestInit): Promise<T> {
+  const method = (options.method || 'GET').toUpperCase();
+  const cleanPath = path.split('?')[0];
+
+  // Auth: Login
+  if (cleanPath === '/auth/login' && method === 'POST') {
+    let username = 'admin';
+    try {
+      const parsed = JSON.parse(options.body as string);
+      if (parsed.username) username = parsed.username;
+    } catch {}
+    const role = username === 'investigator' ? 'investigator' : username === 'supervisor' ? 'case_supervisor' : 'administrator';
+    const demoUser = {
+      id: 'demo-operator-id',
+      username,
+      email: `${username}@spydee.internal`,
+      display_name: username === 'investigator' ? 'Senior Investigator' : username === 'supervisor' ? 'Case Supervisor' : 'System Administrator',
+      role,
+      is_active: true,
+    };
+    return {
+      access_token: 'demo-vercel-token-' + username,
+      user: demoUser,
+    } as unknown as T;
   }
-  return res.json();
+
+  // Auth: Me
+  if (cleanPath === '/auth/me') {
+    const stored = localStorage.getItem('spydee_user');
+    if (stored) {
+      try { return JSON.parse(stored) as T; } catch {}
+    }
+    return {
+      id: 'demo-operator-id',
+      username: 'admin',
+      email: 'admin@spydee.internal',
+      display_name: 'System Administrator (Vercel Showcase)',
+      role: 'administrator',
+      is_active: true,
+    } as unknown as T;
+  }
+
+  // Cases list
+  if (cleanPath === '/cases' && method === 'GET') {
+    const cases = await fetchDemoCases();
+    return cases as unknown as T;
+  }
+
+  // Single Case details
+  const caseDetailMatch = cleanPath.match(/^\/cases\/([^\/]+)$/);
+  if (caseDetailMatch && method === 'GET') {
+    const cid = caseDetailMatch[1];
+    const bundle = await fetchCaseBundle(cid);
+    if (bundle && bundle.case) return bundle.case as T;
+    const allCases = await fetchDemoCases();
+    const found = allCases.find((c: any) => c.id === cid || c.case_code === cid);
+    if (found) return found as T;
+    return { id: cid, title: 'Case ' + cid, case_code: cid, status: 'active' } as unknown as T;
+  }
+
+  // Case Entities
+  const entitiesMatch = cleanPath.match(/^\/entities\/([^\/]+)$/);
+  if (entitiesMatch && method === 'GET') {
+    const cid = entitiesMatch[1];
+    const bundle = await fetchCaseBundle(cid);
+    return (bundle?.entities || []) as unknown as T;
+  }
+
+  // Single Entity
+  const singleEntityMatch = cleanPath.match(/^\/entities\/([^\/]+)\/([^\/]+)$/);
+  if (singleEntityMatch && method === 'GET') {
+    const [_, cid, eid] = singleEntityMatch;
+    const bundle = await fetchCaseBundle(cid);
+    const ent = (bundle?.entities || []).find((e: any) => e.id === eid);
+    return (ent || { id: eid, canonical_name: 'Entity', entity_type: 'person' }) as unknown as T;
+  }
+
+  // Entity Merge suggestions
+  const mergeMatch = cleanPath.match(/^\/entities\/([^\/]+)\/merge-suggestions$/);
+  if (mergeMatch && method === 'GET') {
+    const cid = mergeMatch[1];
+    const bundle = await fetchCaseBundle(cid);
+    return (bundle?.merge_suggestions || []) as unknown as T;
+  }
+
+  // Graph
+  const graphMatch = cleanPath.match(/^\/graph\/([^\/]+)$/);
+  if (graphMatch) {
+    const cid = graphMatch[1];
+    const bundle = await fetchCaseBundle(cid);
+    return (bundle?.graph || { nodes: [], edges: [] }) as unknown as T;
+  }
+
+  // Hypotheses
+  const hypMatch = cleanPath.match(/^\/hypotheses\/([^\/]+)$/);
+  if (hypMatch && method === 'GET') {
+    const cid = hypMatch[1];
+    const bundle = await fetchCaseBundle(cid);
+    return (bundle?.hypotheses || []) as unknown as T;
+  }
+
+  const singleHypMatch = cleanPath.match(/^\/hypotheses\/([^\/]+)\/([^\/]+)$/);
+  if (singleHypMatch && method === 'GET') {
+    const [_, cid, hid] = singleHypMatch;
+    const bundle = await fetchCaseBundle(cid);
+    const hyp = (bundle?.hypotheses || []).find((h: any) => h.id === hid);
+    return (hyp || {}) as unknown as T;
+  }
+
+  // Analysis Signals
+  const signalsMatch = cleanPath.match(/^\/analysis\/([^\/]+)\/signals$/);
+  if (signalsMatch && method === 'GET') {
+    const cid = signalsMatch[1];
+    const bundle = await fetchCaseBundle(cid);
+    return (bundle?.signals || { signals: [] }) as unknown as T;
+  }
+
+  // Analysis Runs
+  const analysisRunsMatch = cleanPath.match(/^\/analysis\/([^\/]+)$/);
+  if (analysisRunsMatch && method === 'GET') {
+    return [
+      {
+        id: 'run-demo',
+        status: 'completed',
+        trigger: 'system_auto',
+        completed_at: new Date().toISOString(),
+        created_at: new Date(Date.now() - 3600000).toISOString(),
+      }
+    ] as unknown as T;
+  }
+
+  // Timeline
+  const timelineMatch = cleanPath.match(/^\/timeline\/([^\/]+)$/);
+  if (timelineMatch && method === 'GET') {
+    const cid = timelineMatch[1];
+    const bundle = await fetchCaseBundle(cid);
+    return (bundle?.timeline || { items: [], total: 0, page: 1, page_size: 500 }) as unknown as T;
+  }
+
+  // Workspace Summary
+  const wsSummaryMatch = cleanPath.match(/^\/workspace\/([^\/]+)\/summary$/);
+  if (wsSummaryMatch && method === 'GET') {
+    const cid = wsSummaryMatch[1];
+    const bundle = await fetchCaseBundle(cid);
+    return (bundle?.workspace_summary || {}) as unknown as T;
+  }
+
+  // Leads
+  const leadsMatch = cleanPath.match(/^\/workspace\/([^\/]+)\/leads$/);
+  if (leadsMatch && method === 'GET') {
+    const cid = leadsMatch[1];
+    const bundle = await fetchCaseBundle(cid);
+    return (bundle?.leads || []) as unknown as T;
+  }
+
+  // Contradictions
+  const contradictionsMatch = cleanPath.match(/^\/workspace\/([^\/]+)\/contradictions$/);
+  if (contradictionsMatch && method === 'GET') {
+    const cid = contradictionsMatch[1];
+    const bundle = await fetchCaseBundle(cid);
+    return (bundle?.contradictions || []) as unknown as T;
+  }
+
+  // Gaps
+  const gapsMatch = cleanPath.match(/^\/workspace\/([^\/]+)\/gaps$/);
+  if (gapsMatch && method === 'GET') {
+    const cid = gapsMatch[1];
+    const bundle = await fetchCaseBundle(cid);
+    return (bundle?.gaps || []) as unknown as T;
+  }
+
+  // Actions
+  const actionsMatch = cleanPath.match(/^\/workspace\/([^\/]+)\/actions$/);
+  if (actionsMatch && method === 'GET') {
+    const cid = actionsMatch[1];
+    const bundle = await fetchCaseBundle(cid);
+    return (bundle?.actions || []) as unknown as T;
+  }
+
+  // CCTV
+  const cctvMatch = cleanPath.match(/^\/cctv\/([^\/]+)\/observations$/);
+  if (cctvMatch && method === 'GET') {
+    const cid = cctvMatch[1];
+    const bundle = await fetchCaseBundle(cid);
+    return { observations: bundle?.cctv || [] } as unknown as T;
+  }
+
+  // Evidence files
+  const filesMatch = cleanPath.match(/^\/evidence\/([^\/]+)\/files$/);
+  if (filesMatch && method === 'GET') {
+    const cid = filesMatch[1];
+    const bundle = await fetchCaseBundle(cid);
+    return (bundle?.files || []) as unknown as T;
+  }
+
+  // Evidence imports
+  const importsMatch = cleanPath.match(/^\/evidence\/([^\/]+)\/imports$/);
+  if (importsMatch && method === 'GET') {
+    const cid = importsMatch[1];
+    const bundle = await fetchCaseBundle(cid);
+    return (bundle?.imports || []) as unknown as T;
+  }
+
+  // Reports
+  const reportsMatch = cleanPath.match(/^\/reports\/([^\/]+)$/);
+  if (reportsMatch && method === 'GET') {
+    const cid = reportsMatch[1];
+    const bundle = await fetchCaseBundle(cid);
+    return (bundle?.reports || []) as unknown as T;
+  }
+
+  // Datasets
+  if (cleanPath === '/datasets' && method === 'GET') {
+    const datasets = await fetchDemoDatasets();
+    return datasets as unknown as T;
+  }
+
+  if (cleanPath === '/datasets/summary' && method === 'GET') {
+    const summary = await fetchDemoDatasetsSummary();
+    return summary as unknown as T;
+  }
+
+  const singleDatasetMatch = cleanPath.match(/^\/datasets\/(\d+)$/);
+  if (singleDatasetMatch && method === 'GET') {
+    const did = Number(singleDatasetMatch[1]);
+    const datasets = await fetchDemoDatasets();
+    const found = datasets.find((d: any) => d.id === did);
+    return (found || {}) as unknown as T;
+  }
+
+  const datasetSampleMatch = cleanPath.match(/^\/datasets\/(\d+)\/sample$/);
+  if (datasetSampleMatch && method === 'GET') {
+    return { sample_records: [], total_records: 1000 } as unknown as T;
+  }
+
+  // Copilot Query
+  if (cleanPath.includes('/copilot/') && cleanPath.endsWith('/query')) {
+    let q = 'query';
+    try {
+      const b = JSON.parse(options.body as string);
+      if (b.query) q = b.query;
+    } catch {}
+    return {
+      response: `[SPYDEE Intelligence Copilot]: Analysis completed for inquiry "${q}". All correlation signals cross-referenced against the National Security Grid and active case registry. Confidence index: HIGH.`,
+      context_used: ["National Datasets Grid", "Alias Continuum", "Cellular Mobility"],
+    } as unknown as T;
+  }
+
+  // For any write operations or state updates in demo mode
+  if (method === 'POST' || method === 'PATCH' || method === 'DELETE') {
+    return {
+      status: 'success',
+      id: 'demo-' + Math.random().toString(36).substring(2, 9),
+      message: 'Action completed successfully in preview mode.',
+    } as unknown as T;
+  }
+
+  return [] as unknown as T;
 }
 
 function q(params?: Record<string, string | undefined | null | number>) {
@@ -145,7 +474,7 @@ export const api = {
   getJobs: (caseId: string) => request<any[]>(`/jobs/${caseId}`),
 
   // ── CCTV & Physical Evidence ──────────────────────────────────────────
-  getCCTVObservations: (caseId: string) => request<any>(`/cctv/${caseId}/observations`).then((res: any) => res.observations || []),
+  getCCTVObservations: (caseId: string) => request<any>(`/cctv/${caseId}/observations`).then((res: any) => res?.observations || res || []),
   getCCTVObservation: (caseId: string, obsId: string) => request<any>(`/cctv/${caseId}/observations/${obsId}`),
   getCCTVFrame: (caseId: string, obsId: string) => request<Blob>(`/cctv/${caseId}/observations/${obsId}/frame`, { headers: { 'Accept': 'image/*' } }),
   

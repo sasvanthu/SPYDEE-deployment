@@ -1,0 +1,1404 @@
+{
+  "case": {
+    "id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+    "title": "Operation Mukti-Bhang - Remand & Pre-Trial Bail Opposition Precedents",
+    "case_code": "IND-2026-015",
+    "description": "Prosecutorial strategy against syndicate kingpins applying for regular/anticipatory bail, leveraging 1,200 structured bail orders, ILDC Supreme Court CJPE precedents, and Section 65B electronic evidence admissibility.",
+    "status": "active",
+    "is_synthetic": false,
+    "created_by": "5aefa310-2f5f-4ba8-bf37-fcf969fa8f55",
+    "created_at": "2026-09-22T07:43:56.482725",
+    "updated_at": "2026-09-22T07:43:56.482725",
+    "entity_count": 13,
+    "event_count": 3,
+    "evidence_count": 1,
+    "hypothesis_count": 17,
+    "relationship_count": 6
+  },
+  "entities": [
+    {
+      "id": "8affda1d-58e8-4234-8316-4ad8f64db502",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "entity_type": "phone_sim",
+      "label": "+919820011223",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:56.514486",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "b7d1a24d-1236-4262-b369-04922bcd07a6",
+          "id_type": "phone",
+          "id_value": "+919820011223",
+          "normalized_value": "9820011223",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "90181c98-f46a-4d10-b99b-230d3be29a65",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "entity_type": "phone_sim",
+      "label": "+919820077889",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:56.518576",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "07cea73e-4c03-4874-9769-422707bc6706",
+          "id_type": "phone",
+          "id_value": "+919820077889",
+          "normalized_value": "9820077889",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "e5b495f2-7040-43a6-849a-83d4f2050ec7",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "entity_type": "person",
+      "label": "Sanjay Deshmukh",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:56.522571",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "520657fe-cecf-494a-a849-8cadb903af4b",
+          "id_type": "name",
+          "id_value": "Sanjay Deshmukh",
+          "normalized_value": "sanjay deshmukh",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "770fd641-abbe-41fc-a668-59470ce81534",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "entity_type": "alias",
+      "label": "Sanju BKC",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:56.527140",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "f0b6ba2d-02c1-4150-ac4f-bf85f60d1f6b",
+          "id_type": "alias",
+          "id_value": "Sanju BKC",
+          "normalized_value": "sanju bkc",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "7eda3050-c6fd-47cc-9e81-63648e9f3141",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "entity_type": "organization",
+      "label": "Hon'ble Special Court for PMLA / CBI, Bengaluru",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:56.532159",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "5f6080ac-32e5-4f56-9fc1-3f29a583c198",
+          "id_type": "organization",
+          "id_value": "Hon'ble Special Court for PMLA / CBI, Bengaluru",
+          "normalized_value": "HON'BLE SPECIAL COURT FOR PMLA / CBI, BENGALURU",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "1906e0c7-0a44-4bee-a4ef-65bc21262cc7",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "entity_type": "organization",
+      "label": "High Court of Judicature at Bombay",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:56.540217",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "0a07aea4-1952-4253-852c-ca914a8fb2a7",
+          "id_type": "organization",
+          "id_value": "High Court of Judicature at Bombay",
+          "normalized_value": "HIGH COURT OF JUDICATURE AT BOMBAY",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "319b058c-78bc-463a-93da-4bd419d74960",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "entity_type": "organization",
+      "label": "Supreme Court of India, New Delhi",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:56.546465",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "4a915467-6ffb-437f-aa54-9a94582cdd29",
+          "id_type": "organization",
+          "id_value": "Supreme Court of India, New Delhi",
+          "normalized_value": "SUPREME COURT OF INDIA, NEW DELHI",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "f5d9b6ec-6c7e-40fa-8c0a-2b8b5598b4f5",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "entity_type": "organization",
+      "label": "Directorate of Enforcement (ED)",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:56.552164",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "ccd6a1f3-b6b3-4f4f-b364-3046b8b6c985",
+          "id_type": "organization",
+          "id_value": "Directorate of Enforcement (ED)",
+          "normalized_value": "DIRECTORATE OF ENFORCEMENT (ED)",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "2e8e21a7-2d39-4e8e-b284-536f1710e818",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "entity_type": "organization",
+      "label": "Apex Global Traders & Sanjay Deshmukh",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:56.556230",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "d5cbe302-5d89-49cd-ad0c-08eb50e56b2a",
+          "id_type": "organization",
+          "id_value": "Apex Global Traders & Sanjay Deshmukh",
+          "normalized_value": "APEX GLOBAL TRADERS & SANJAY DESHMUKH",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "0ce17648-72a8-48c4-939f-cc9510ac7d8d",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "entity_type": "person",
+      "label": "Vikram Malhotra",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:56.563099",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "8ea69a27-b9a7-4927-9db4-fa67fba3d1c6",
+          "id_type": "name",
+          "id_value": "Vikram Malhotra",
+          "normalized_value": "vikram malhotra",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "abd26a5e-84e6-4392-8d61-f7415b517737",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "entity_type": "location",
+      "label": "TOWER-MH-MUMBAI-BKC-04",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:56.572127",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "1cee3c77-1249-4469-8774-47301f0ebd0c",
+          "id_type": "tower",
+          "id_value": "TOWER-MH-MUMBAI-BKC-04",
+          "normalized_value": "TOWER-MH-MUMBAI-BKC-04",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "43cc1f21-d56e-411c-8d44-78c354901370",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "entity_type": "account",
+      "label": "ACCT-DESHMUKH-01",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:56.591271",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "d18aab39-9cdb-4093-93ca-0bedbf1d9c66",
+          "id_type": "account",
+          "id_value": "ACCT-DESHMUKH-01",
+          "normalized_value": "acct-deshmukh-01",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "4202f97e-bd76-49dc-8994-03f890386738",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "entity_type": "account",
+      "label": "ACCT-LEGAL-RETAINER-01",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:56.594787",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "8de872ea-28dc-4611-9f2f-ac3b010b6453",
+          "id_type": "account",
+          "id_value": "ACCT-LEGAL-RETAINER-01",
+          "normalized_value": "acct-legal-retainer-01",
+          "review_state": "new"
+        }
+      ]
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": "8affda1d-58e8-4234-8316-4ad8f64db502",
+        "label": "+919820011223",
+        "entity_type": "phone_sim",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      },
+      {
+        "id": "90181c98-f46a-4d10-b99b-230d3be29a65",
+        "label": "+919820077889",
+        "entity_type": "phone_sim",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      },
+      {
+        "id": "e5b495f2-7040-43a6-849a-83d4f2050ec7",
+        "label": "Sanjay Deshmukh",
+        "entity_type": "person",
+        "review_state": "new",
+        "properties": {
+          "degree": 2
+        }
+      },
+      {
+        "id": "770fd641-abbe-41fc-a668-59470ce81534",
+        "label": "Sanju BKC",
+        "entity_type": "alias",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      },
+      {
+        "id": "7eda3050-c6fd-47cc-9e81-63648e9f3141",
+        "label": "Hon'ble Special Court for PMLA / CBI, Bengaluru",
+        "entity_type": "organization",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "1906e0c7-0a44-4bee-a4ef-65bc21262cc7",
+        "label": "High Court of Judicature at Bombay",
+        "entity_type": "organization",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "319b058c-78bc-463a-93da-4bd419d74960",
+        "label": "Supreme Court of India, New Delhi",
+        "entity_type": "organization",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "f5d9b6ec-6c7e-40fa-8c0a-2b8b5598b4f5",
+        "label": "Directorate of Enforcement (ED)",
+        "entity_type": "organization",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "2e8e21a7-2d39-4e8e-b284-536f1710e818",
+        "label": "Apex Global Traders & Sanjay Deshmukh",
+        "entity_type": "organization",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "0ce17648-72a8-48c4-939f-cc9510ac7d8d",
+        "label": "Vikram Malhotra",
+        "entity_type": "person",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      },
+      {
+        "id": "abd26a5e-84e6-4392-8d61-f7415b517737",
+        "label": "TOWER-MH-MUMBAI-BKC-04",
+        "entity_type": "location",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "43cc1f21-d56e-411c-8d44-78c354901370",
+        "label": "ACCT-DESHMUKH-01",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      },
+      {
+        "id": "4202f97e-bd76-49dc-8994-03f890386738",
+        "label": "ACCT-LEGAL-RETAINER-01",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 1
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "70f2cad2-0181-4374-ace1-324f62e30a79",
+        "source": "8affda1d-58e8-4234-8316-4ad8f64db502",
+        "target": "90181c98-f46a-4d10-b99b-230d3be29a65",
+        "relationship_type": "CALLED",
+        "classification": "observed",
+        "label": "Called",
+        "properties": {
+          "valid_from": null,
+          "valid_to": null,
+          "evidence_count": 3,
+          "review_state": "new"
+        }
+      },
+      {
+        "id": "c0887d21-0b50-4301-9c2f-991ca73503f6",
+        "source": "e5b495f2-7040-43a6-849a-83d4f2050ec7",
+        "target": "770fd641-abbe-41fc-a668-59470ce81534",
+        "relationship_type": "USES_ALIAS",
+        "classification": "observed",
+        "label": "Uses Alias",
+        "properties": {
+          "valid_from": null,
+          "valid_to": null,
+          "evidence_count": 1,
+          "review_state": "new"
+        }
+      },
+      {
+        "id": "672a0578-92a6-4b32-9829-32c3960e7e4f",
+        "source": "e5b495f2-7040-43a6-849a-83d4f2050ec7",
+        "target": "0ce17648-72a8-48c4-939f-cc9510ac7d8d",
+        "relationship_type": "CO_CONSPIRATOR",
+        "classification": "inferred",
+        "label": "Co Conspirator",
+        "properties": {
+          "valid_from": null,
+          "valid_to": null,
+          "evidence_count": 1,
+          "review_state": "new"
+        }
+      },
+      {
+        "id": "03d1785d-bb92-452a-8845-8d7cc2354c86",
+        "source": "43cc1f21-d56e-411c-8d44-78c354901370",
+        "target": "4202f97e-bd76-49dc-8994-03f890386738",
+        "relationship_type": "TRANSFERRED",
+        "classification": "observed",
+        "label": "Transferred",
+        "properties": {
+          "valid_from": null,
+          "valid_to": null,
+          "evidence_count": 1,
+          "review_state": "new"
+        }
+      }
+    ],
+    "truncated": false,
+    "total_nodes": 13,
+    "total_edges": 4
+  },
+  "hypotheses": [
+    {
+      "id": "5aa103a6-4121-5e4a-b1b5-a5d457540f61",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "5aa103a6-4121-5e4a-b1b5-a5d457540f61",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "770fd641-abbe-41fc-a668-59470ce81534",
+        "target": "e5b495f2-7040-43a6-849a-83d4f2050ec7",
+        "types": {
+          "source": "alias",
+          "target": "person"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 34.4/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.62"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 34.4,
+      "quality_factor": 0.5531,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    },
+    {
+      "id": "b9c9ea7e-3a87-5a1b-89f4-d613f4200428",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "b9c9ea7e-3a87-5a1b-89f4-d613f4200428",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "770fd641-abbe-41fc-a668-59470ce81534",
+        "target": "e5b495f2-7040-43a6-849a-83d4f2050ec7",
+        "types": {
+          "source": "alias",
+          "target": "person"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 34.4/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.62"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 34.4,
+      "quality_factor": 0.5531,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    },
+    {
+      "id": "9ddd434a-f80b-5f50-8739-c4be25645f21",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "9ddd434a-f80b-5f50-8739-c4be25645f21",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "0ce17648-72a8-48c4-939f-cc9510ac7d8d",
+        "target": "e5b495f2-7040-43a6-849a-83d4f2050ec7",
+        "types": {
+          "source": "person",
+          "target": "person"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 34.4/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.62"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 34.4,
+      "quality_factor": 0.5531,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    },
+    {
+      "id": "4c1ffc79-19c0-5f6d-a856-3d53e5067070",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "4c1ffc79-19c0-5f6d-a856-3d53e5067070",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "0ce17648-72a8-48c4-939f-cc9510ac7d8d",
+        "target": "e5b495f2-7040-43a6-849a-83d4f2050ec7",
+        "types": {
+          "source": "person",
+          "target": "person"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 34.4/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.62"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 34.4,
+      "quality_factor": 0.5531,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    },
+    {
+      "id": "f2ac8f60-a9b8-51f2-b0aa-d3e225fbbc74",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "f2ac8f60-a9b8-51f2-b0aa-d3e225fbbc74",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "0ce17648-72a8-48c4-939f-cc9510ac7d8d",
+        "target": "e5b495f2-7040-43a6-849a-83d4f2050ec7",
+        "types": {
+          "source": "person",
+          "target": "person"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 34.4/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.62"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 34.4,
+      "quality_factor": 0.5531,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    },
+    {
+      "id": "088dfd30-f391-527a-b15a-ca70ce177465",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "088dfd30-f391-527a-b15a-ca70ce177465",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "770fd641-abbe-41fc-a668-59470ce81534",
+        "target": "e5b495f2-7040-43a6-849a-83d4f2050ec7",
+        "types": {
+          "source": "alias",
+          "target": "person"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 34.4/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.62"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 34.4,
+      "quality_factor": 0.5531,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    },
+    {
+      "id": "07966430-57aa-540a-8122-1eb233e30417",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "07966430-57aa-540a-8122-1eb233e30417",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "4202f97e-bd76-49dc-8994-03f890386738",
+        "target": "43cc1f21-d56e-411c-8d44-78c354901370",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 18.9/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.35"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 18.9,
+      "quality_factor": 0.5433,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    },
+    {
+      "id": "0850b616-ffd2-5054-bc98-e11fb8515d37",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "0850b616-ffd2-5054-bc98-e11fb8515d37",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "0ce17648-72a8-48c4-939f-cc9510ac7d8d",
+        "target": "770fd641-abbe-41fc-a668-59470ce81534",
+        "types": {
+          "source": "person",
+          "target": "alias"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 18.9/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.35"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 18.9,
+      "quality_factor": 0.5433,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    },
+    {
+      "id": "b69dae41-e49c-5cb3-ba3a-acc9bfc491cf",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "b69dae41-e49c-5cb3-ba3a-acc9bfc491cf",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "0ce17648-72a8-48c4-939f-cc9510ac7d8d",
+        "target": "770fd641-abbe-41fc-a668-59470ce81534",
+        "types": {
+          "source": "person",
+          "target": "alias"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 18.9/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.35"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 18.9,
+      "quality_factor": 0.5433,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    },
+    {
+      "id": "60e40a31-8df7-542f-906a-1bc8f72ded57",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "60e40a31-8df7-542f-906a-1bc8f72ded57",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "0ce17648-72a8-48c4-939f-cc9510ac7d8d",
+        "target": "770fd641-abbe-41fc-a668-59470ce81534",
+        "types": {
+          "source": "person",
+          "target": "alias"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 18.9/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.35"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 18.9,
+      "quality_factor": 0.5433,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    },
+    {
+      "id": "6ec53a5f-1b34-5ad3-b9bb-62c09ed0757e",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "6ec53a5f-1b34-5ad3-b9bb-62c09ed0757e",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "4202f97e-bd76-49dc-8994-03f890386738",
+        "target": "43cc1f21-d56e-411c-8d44-78c354901370",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 18.9/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.35"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 18.9,
+      "quality_factor": 0.5433,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    },
+    {
+      "id": "045bbd73-22db-509d-a2df-aad6adc6433d",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "045bbd73-22db-509d-a2df-aad6adc6433d",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "4202f97e-bd76-49dc-8994-03f890386738",
+        "target": "43cc1f21-d56e-411c-8d44-78c354901370",
+        "types": {
+          "source": "account",
+          "target": "account"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 18.9/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "network_topology@0.35"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 18.9,
+      "quality_factor": 0.5433,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    },
+    {
+      "id": "1640f663-27cf-5e8a-9c79-099d5186dade",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "1640f663-27cf-5e8a-9c79-099d5186dade",
+      "hypothesis_type": "social_network",
+      "entity_pair": {
+        "source": "8affda1d-58e8-4234-8316-4ad8f64db502",
+        "target": "90181c98-f46a-4d10-b99b-230d3be29a65",
+        "types": {
+          "source": "phone_sim",
+          "target": "phone_sim"
+        }
+      },
+      "notes": "Unusual or operationally significant social network concentration. Strength 14.3/100 (Low Plausibility).  Data gaps: writing_style. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20), network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "communication@0.18",
+        "network_topology@0.35"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 14.3,
+      "quality_factor": 0.5967,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    },
+    {
+      "id": "68d71069-eb75-558e-95df-95371bb643fa",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "68d71069-eb75-558e-95df-95371bb643fa",
+      "hypothesis_type": "terror_link",
+      "entity_pair": {
+        "source": "8affda1d-58e8-4234-8316-4ad8f64db502",
+        "target": "90181c98-f46a-4d10-b99b-230d3be29a65",
+        "types": {
+          "source": "phone_sim",
+          "target": "phone_sim"
+        }
+      },
+      "notes": "Possible nexus to proscribed entity. Strength 14.3/100 (Low Plausibility).  Data gaps: spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20), network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "communication@0.18",
+        "network_topology@0.35"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 14.3,
+      "quality_factor": 0.5967,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    },
+    {
+      "id": "6a9b9c80-ced4-5710-bce0-7ccd52bd6369",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "6a9b9c80-ced4-5710-bce0-7ccd52bd6369",
+      "hypothesis_type": "subversive_activity",
+      "entity_pair": {
+        "source": "8affda1d-58e8-4234-8316-4ad8f64db502",
+        "target": "90181c98-f46a-4d10-b99b-230d3be29a65",
+        "types": {
+          "source": "phone_sim",
+          "target": "phone_sim"
+        }
+      },
+      "notes": "Subversive or unlawful activity indicated. Strength 14.3/100 (Low Plausibility).  Data gaps: device_sim. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20), network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "communication@0.18",
+        "network_topology@0.35"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 14.3,
+      "quality_factor": 0.5967,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    },
+    {
+      "id": "bc3e318b-3b14-58a4-ba49-eb23964efb16",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "bc3e318b-3b14-58a4-ba49-eb23964efb16",
+      "hypothesis_type": "financial_anomaly",
+      "entity_pair": {
+        "source": "8affda1d-58e8-4234-8316-4ad8f64db502",
+        "target": "90181c98-f46a-4d10-b99b-230d3be29a65",
+        "types": {
+          "source": "phone_sim",
+          "target": "phone_sim"
+        }
+      },
+      "notes": "Financial transaction pattern anomaly detected. Strength 12.0/100 (Low Plausibility).  Data gaps: financial. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "communication@0.18"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 12.0,
+      "quality_factor": 0.65,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    },
+    {
+      "id": "94e1170a-4173-5dbe-9505-d4ccab9c671c",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "analysis_run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "stable_key": "94e1170a-4173-5dbe-9505-d4ccab9c671c",
+      "hypothesis_type": "credential_inconsistency",
+      "entity_pair": {
+        "source": "8affda1d-58e8-4234-8316-4ad8f64db502",
+        "target": "90181c98-f46a-4d10-b99b-230d3be29a65",
+        "types": {
+          "source": "phone_sim",
+          "target": "phone_sim"
+        }
+      },
+      "notes": "Alias/credential data inconsistency requiring further verification. Strength 12.0/100 (Low Plausibility).  Data gaps: writing_style. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "timestamp_hypothesis_generated": null,
+      "contributing_signal_highlights": [
+        "communication@0.18"
+      ],
+      "state": "candidate",
+      "review_state": "new",
+      "numeric_value": 12.0,
+      "quality_factor": 0.65,
+      "engine_version": "v2.0",
+      "created_at": "2026-09-22T07:43:56.672236"
+    }
+  ],
+  "signals": {
+    "run_id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+    "run_version": 1,
+    "status": "completed",
+    "counts_by_family": {
+      "communication": 1,
+      "network_topology": 5
+    },
+    "signals": [
+      {
+        "id": "988dbac3-0a16-472f-8be4-bce87f734946",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "0ce17648-72a8-48c4-939f-cc9510ac7d8d",
+          "target": "e5b495f2-7040-43a6-849a-83d4f2050ec7"
+        },
+        "numeric_value": 0.6225,
+        "quality_factor": 0.5531,
+        "explanation": "Entities share community C1 with combined centrality 0.125; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0833,
+          "degree_centrality_tgt": 0.1667,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.0916,
+          "pagerank_tgt": 0.0643,
+          "eigenvector_src": 0.5,
+          "eigenvector_tgt": 0.7071,
+          "same_community": true,
+          "community_id": 1,
+          "articulation_point": true,
+          "bridge_edge": true
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "ece16ca6-f33d-4870-8aff-8c29fac3ac80",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "770fd641-abbe-41fc-a668-59470ce81534",
+          "target": "e5b495f2-7040-43a6-849a-83d4f2050ec7"
+        },
+        "numeric_value": 0.6225,
+        "quality_factor": 0.5531,
+        "explanation": "Entities share community C1 with combined centrality 0.125; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0833,
+          "degree_centrality_tgt": 0.1667,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.0916,
+          "pagerank_tgt": 0.0643,
+          "eigenvector_src": 0.5,
+          "eigenvector_tgt": 0.7071,
+          "same_community": true,
+          "community_id": 1,
+          "articulation_point": true,
+          "bridge_edge": true
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "bc8b61f6-eb9b-4bc3-b317-52644eccea57",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "8affda1d-58e8-4234-8316-4ad8f64db502",
+          "target": "90181c98-f46a-4d10-b99b-230d3be29a65"
+        },
+        "numeric_value": 0.3479,
+        "quality_factor": 0.5433,
+        "explanation": "Entities share community C0 with combined centrality 0.083; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0833,
+          "degree_centrality_tgt": 0.0833,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.119,
+          "pagerank_tgt": 0.0643,
+          "eigenvector_src": 0.0,
+          "eigenvector_tgt": 0.0,
+          "same_community": true,
+          "community_id": 0,
+          "articulation_point": false,
+          "bridge_edge": true
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "c55008ca-dd66-4516-960c-64b7231774d2",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "0ce17648-72a8-48c4-939f-cc9510ac7d8d",
+          "target": "770fd641-abbe-41fc-a668-59470ce81534"
+        },
+        "numeric_value": 0.3479,
+        "quality_factor": 0.5433,
+        "explanation": "Entities share community C1 with combined centrality 0.083; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0833,
+          "degree_centrality_tgt": 0.0833,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.0916,
+          "pagerank_tgt": 0.0916,
+          "eigenvector_src": 0.5,
+          "eigenvector_tgt": 0.5,
+          "same_community": true,
+          "community_id": 1,
+          "articulation_point": false,
+          "bridge_edge": false
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "f4a3fdcc-0573-4861-9c70-d7013da5102f",
+        "engine_name": "graph_structure",
+        "engine_version": "v2.1",
+        "family": "network_topology",
+        "entity_pair": {
+          "source": "4202f97e-bd76-49dc-8994-03f890386738",
+          "target": "43cc1f21-d56e-411c-8d44-78c354901370"
+        },
+        "numeric_value": 0.3479,
+        "quality_factor": 0.5433,
+        "explanation": "Entities share community C8 with combined centrality 0.083; structural signal 'strong' if connector/bridge present.",
+        "contributing_record_count": 0,
+        "feature_details": {
+          "degree_centrality_src": 0.0833,
+          "degree_centrality_tgt": 0.0833,
+          "betweenness_src": 0.0,
+          "betweenness_tgt": 0.0,
+          "pagerank_src": 0.0643,
+          "pagerank_tgt": 0.119,
+          "eigenvector_src": 0.0,
+          "eigenvector_tgt": 0.0,
+          "same_community": true,
+          "community_id": 8,
+          "articulation_point": false,
+          "bridge_edge": true
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      },
+      {
+        "id": "37c6951e-c979-4ba4-bb7f-3169cc35f56a",
+        "engine_name": "communication",
+        "engine_version": "v2.1",
+        "family": "communication",
+        "entity_pair": {
+          "source": "8affda1d-58e8-4234-8316-4ad8f64db502",
+          "target": "90181c98-f46a-4d10-b99b-230d3be29a65"
+        },
+        "numeric_value": 0.1842,
+        "quality_factor": 0.65,
+        "explanation": "Pair contacted 3 times (570s total). Peak burst 1/2h, 0 night calls.",
+        "contributing_record_count": 3,
+        "feature_details": {
+          "call_count": 3,
+          "total_duration_seconds": 570.0,
+          "max_burst_in_2h": 1,
+          "night_call_count": 0,
+          "long_call_count": 2,
+          "burner_lifecycle": false
+        },
+        "contradiction": false,
+        "contradiction_reason": null
+      }
+    ]
+  },
+  "timeline": {
+    "items": [
+      {
+        "id": "5a1d0fea-1c05-47e1-a584-386afab607e4",
+        "event_type": "call",
+        "start_time": "2026-08-22T14:30:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-22T14:30:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "+919820011223",
+          "+919820077889",
+          "TOWER-MH-MUMBAI-BKC-04"
+        ],
+        "participant_ids": [
+          "8affda1d-58e8-4234-8316-4ad8f64db502",
+          "90181c98-f46a-4d10-b99b-230d3be29a65",
+          "abd26a5e-84e6-4392-8d61-f7415b517737"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "BAIL-COMM-INTERCEPT-006",
+          "caller_id": "+919820011223",
+          "callee_id": "+919820077889",
+          "start_time": "2026-08-22T14:30:00",
+          "duration_seconds": 260,
+          "tower_id": "TOWER-MH-MUMBAI-BKC-04",
+          "dataset_source": "TRAI Telecom Mobility & InLegalNER",
+          "summary": "Sanjay Deshmukh strategizing with advocate regarding urgent hearing before vacation bench"
+        },
+        "source_record_id": "6424f4ba-546b-47e1-94c9-5074729d3037"
+      },
+      {
+        "id": "f6160184-d4f6-412b-8826-449e6da98888",
+        "event_type": "call",
+        "start_time": "2026-08-22T17:15:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-22T17:15:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "+919820011223",
+          "+919820077889",
+          "TOWER-MH-MUMBAI-BKC-04"
+        ],
+        "participant_ids": [
+          "8affda1d-58e8-4234-8316-4ad8f64db502",
+          "90181c98-f46a-4d10-b99b-230d3be29a65",
+          "abd26a5e-84e6-4392-8d61-f7415b517737"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "BAIL-COMM-INTERCEPT-007",
+          "caller_id": "+919820011223",
+          "callee_id": "+919820077889",
+          "start_time": "2026-08-22T17:15:00",
+          "duration_seconds": 310,
+          "tower_id": "TOWER-MH-MUMBAI-BKC-04",
+          "dataset_source": "TRAI Telecom Mobility & InLegalNER",
+          "summary": "Advocate informing accused that Section 45 PMLA twin conditions pose strict statutory hurdle"
+        },
+        "source_record_id": "ef856900-ce1a-424d-ac36-2330f485e0a4"
+      },
+      {
+        "id": "00d30aaf-37c4-4e06-af82-652d9749e3c5",
+        "event_type": "transaction",
+        "start_time": "2026-08-22T18:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-22T18:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-DESHMUKH-01",
+          "ACCT-LEGAL-RETAINER-01"
+        ],
+        "participant_ids": [
+          "43cc1f21-d56e-411c-8d44-78c354901370",
+          "4202f97e-bd76-49dc-8994-03f890386738"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "BAIL-LEGAL-FEE-TXN-008",
+          "from_account_id": "ACCT-DESHMUKH-01",
+          "to_account_id": "ACCT-LEGAL-RETAINER-01",
+          "amount": 500000.0,
+          "currency": "INR",
+          "timestamp": "2026-08-22T18:00:00",
+          "dataset_source": "UPI Payment Transactions India",
+          "narration": "Senior legal counsel retainer fee for High Court bail appeal"
+        },
+        "source_record_id": "b42d7312-3cb8-4009-89e4-55a986c74b0b"
+      }
+    ],
+    "total": 3,
+    "page": 1,
+    "page_size": 500
+  },
+  "workspace_summary": {
+    "case": {
+      "id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "title": "Operation Mukti-Bhang - Remand & Pre-Trial Bail Opposition Precedents",
+      "case_code": "IND-2026-015",
+      "description": "Prosecutorial strategy against syndicate kingpins applying for regular/anticipatory bail, leveraging 1,200 structured bail orders, ILDC Supreme Court CJPE precedents, and Section 65B electronic evidence admissibility.",
+      "status": "active",
+      "is_synthetic": false,
+      "created_by": "5aefa310-2f5f-4ba8-bf37-fcf969fa8f55",
+      "created_at": "2026-09-22T07:43:56.482725",
+      "updated_at": "2026-09-22T07:43:56.482725",
+      "entity_count": 13,
+      "event_count": 3,
+      "evidence_count": 1,
+      "hypothesis_count": 17,
+      "relationship_count": 6
+    },
+    "evidence_processing": {
+      "total_files": 1,
+      "awaiting_upload_status": 0,
+      "ready": 1,
+      "failed": 0
+    },
+    "entity_count": 13,
+    "relationship_count": 6,
+    "event_count": 3,
+    "signal_count": 6,
+    "hypothesis_count": 17,
+    "open_contradictions": 0,
+    "open_leads": 0,
+    "open_gaps": 8,
+    "open_actions": 0,
+    "findings_awaiting_review": 17,
+    "recent_evidence": [
+      {
+        "id": "9e624b9c-c84d-4753-b4cf-b69921f2724b",
+        "original_filename": "case_ind_batch18_bail_opposition.json",
+        "source_type": "messages",
+        "status": "imported",
+        "byte_size": 4403,
+        "created_at": "2026-09-22T07:43:56.507959",
+        "accepted_count": 8,
+        "rejected_count": 0
+      }
+    ],
+    "recent_activity": [],
+    "latest_run": {
+      "id": "86b4f739-2fde-4a5d-807c-1940b3c66cc9",
+      "version": 1,
+      "status": "completed",
+      "started_at": "2026-09-22T07:43:56.621669",
+      "completed_at": "2026-09-22T07:43:56.685935",
+      "failure_details": null,
+      "signal_count": 6,
+      "hypothesis_count": 17
+    },
+    "analysis_stale": false,
+    "analysis_stale_reason": null
+  },
+  "leads": [],
+  "contradictions": [],
+  "gaps": [
+    {
+      "id": "0dc984f0-a0c5-4673-bccf-5d8c226ecbe6",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "lead_id": null,
+      "title": "Data gap: communication, writing_style for social_network",
+      "description": "Families communication, writing_style carry no supportive evidence for social_network between 4202f97e-bd76-49dc-8994-03f890386738, 43cc1f21-d56e-411c-8d44-78c354901370. Hypothesis: Unusual or operationally significant social network concentration. Strength 18.9/100 (Low Plausibility).  Data gaps: communication, writing_style. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "4202f97e-bd76-49dc-8994-03f890386738",
+        "43cc1f21-d56e-411c-8d44-78c354901370"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:56.753428",
+      "updated_at": "2026-09-22T07:43:56.794943"
+    },
+    {
+      "id": "d39dee97-61a1-46aa-ac76-8712f130d44f",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "lead_id": null,
+      "title": "Data gap: communication, spatial_temporal for terror_link",
+      "description": "Families communication, spatial_temporal carry no supportive evidence for terror_link between 4202f97e-bd76-49dc-8994-03f890386738, 43cc1f21-d56e-411c-8d44-78c354901370. Hypothesis: Possible nexus to proscribed entity. Strength 18.9/100 (Low Plausibility).  Data gaps: communication, spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "4202f97e-bd76-49dc-8994-03f890386738",
+        "43cc1f21-d56e-411c-8d44-78c354901370"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:56.720464",
+      "updated_at": "2026-09-22T07:43:56.791893"
+    },
+    {
+      "id": "c059d849-4ac4-44ea-a335-5d10a05236aa",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "lead_id": null,
+      "title": "Data gap: communication, device_sim for subversive_activity",
+      "description": "Families communication, device_sim carry no supportive evidence for subversive_activity between 4202f97e-bd76-49dc-8994-03f890386738, 43cc1f21-d56e-411c-8d44-78c354901370. Hypothesis: Subversive or unlawful activity indicated. Strength 18.9/100 (Low Plausibility).  Data gaps: communication, device_sim. Fusion: strength = weighted mean of family evidence scores using [network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "4202f97e-bd76-49dc-8994-03f890386738",
+        "43cc1f21-d56e-411c-8d44-78c354901370"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:56.708259",
+      "updated_at": "2026-09-22T07:43:56.787894"
+    },
+    {
+      "id": "5f42f393-78ae-41f3-8b32-90a12545de91",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "lead_id": null,
+      "title": "Data gap: financial for financial_anomaly",
+      "description": "Families financial carry no supportive evidence for financial_anomaly between 8affda1d-58e8-4234-8316-4ad8f64db502, 90181c98-f46a-4d10-b99b-230d3be29a65. Hypothesis: Financial transaction pattern anomaly detected. Strength 12.0/100 (Low Plausibility).  Data gaps: financial. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "8affda1d-58e8-4234-8316-4ad8f64db502",
+        "90181c98-f46a-4d10-b99b-230d3be29a65"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:56.702559",
+      "updated_at": "2026-09-22T07:43:56.702559"
+    },
+    {
+      "id": "7c0dfd2f-b192-435b-a133-0c7fc90db5d2",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "lead_id": null,
+      "title": "Data gap: writing_style for credential_inconsistency",
+      "description": "Families writing_style carry no supportive evidence for credential_inconsistency between 8affda1d-58e8-4234-8316-4ad8f64db502, 90181c98-f46a-4d10-b99b-230d3be29a65. Hypothesis: Alias/credential data inconsistency requiring further verification. Strength 12.0/100 (Low Plausibility).  Data gaps: writing_style. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "8affda1d-58e8-4234-8316-4ad8f64db502",
+        "90181c98-f46a-4d10-b99b-230d3be29a65"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:56.699542",
+      "updated_at": "2026-09-22T07:43:56.699542"
+    },
+    {
+      "id": "b7bffb33-c7f9-4998-a01a-67a286f57554",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "lead_id": null,
+      "title": "Data gap: writing_style for social_network",
+      "description": "Families writing_style carry no supportive evidence for social_network between 8affda1d-58e8-4234-8316-4ad8f64db502, 90181c98-f46a-4d10-b99b-230d3be29a65. Hypothesis: Unusual or operationally significant social network concentration. Strength 14.3/100 (Low Plausibility).  Data gaps: writing_style. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20), network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "8affda1d-58e8-4234-8316-4ad8f64db502",
+        "90181c98-f46a-4d10-b99b-230d3be29a65"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:56.695552",
+      "updated_at": "2026-09-22T07:43:56.695552"
+    },
+    {
+      "id": "84370fd9-426e-417e-801d-4e0201606ac7",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "lead_id": null,
+      "title": "Data gap: spatial_temporal for terror_link",
+      "description": "Families spatial_temporal carry no supportive evidence for terror_link between 8affda1d-58e8-4234-8316-4ad8f64db502, 90181c98-f46a-4d10-b99b-230d3be29a65. Hypothesis: Possible nexus to proscribed entity. Strength 14.3/100 (Low Plausibility).  Data gaps: spatial_temporal. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20), network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "8affda1d-58e8-4234-8316-4ad8f64db502",
+        "90181c98-f46a-4d10-b99b-230d3be29a65"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:56.692493",
+      "updated_at": "2026-09-22T07:43:56.692493"
+    },
+    {
+      "id": "99fbbe2f-5e0b-4119-ad64-2a18d37c89d3",
+      "case_id": "18657b98-d88c-431e-82fc-41a37281bf6e",
+      "lead_id": null,
+      "title": "Data gap: device_sim for subversive_activity",
+      "description": "Families device_sim carry no supportive evidence for subversive_activity between 8affda1d-58e8-4234-8316-4ad8f64db502, 90181c98-f46a-4d10-b99b-230d3be29a65. Hypothesis: Subversive or unlawful activity indicated. Strength 14.3/100 (Low Plausibility).  Data gaps: device_sim. Fusion: strength = weighted mean of family evidence scores using [communication (w=0.20), network_topology (w=0.10)]; scores are uncalibrated evidence scores, not probabilities. Weak signal set; does not establish a link.",
+      "related_entity_ids": [
+        "8affda1d-58e8-4234-8316-4ad8f64db502",
+        "90181c98-f46a-4d10-b99b-230d3be29a65"
+      ],
+      "related_evidence_refs": [],
+      "status": "OPEN",
+      "resolution_note": null,
+      "created_at": "2026-09-22T07:43:56.690464",
+      "updated_at": "2026-09-22T07:43:56.690464"
+    }
+  ],
+  "actions": [],
+  "cctv": [],
+  "files": [
+    {
+      "id": "9e624b9c-c84d-4753-b4cf-b69921f2724b",
+      "original_filename": "case_ind_batch18_bail_opposition.json",
+      "media_type": "application/json",
+      "byte_size": 4403,
+      "status": "imported",
+      "created_at": "2026-09-22T07:43:56.507959",
+      "source_type": "messages",
+      "source_description": "Special PMLA Court Bail Opposition Memo & Flight Risk Citations (Datasets 3, 4, 5, 6, 8)",
+      "sha256": "9b605b04ce07bf6eb7a91f92be2084099775285db1bd86af637cfeae68162fa5",
+      "accepted_count": 8
+    }
+  ],
+  "imports": [
+    {
+      "id": "fe41d726-b527-4e54-aeea-494ac8458877",
+      "evidence_file_id": "9e624b9c-c84d-4753-b4cf-b69921f2724b",
+      "status": "completed",
+      "accepted_count": 8,
+      "rejected_count": 0,
+      "created_at": "2026-09-22T07:43:56.509967"
+    }
+  ],
+  "merge_suggestions": [],
+  "reports": []
+}

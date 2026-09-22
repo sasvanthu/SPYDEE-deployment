@@ -1,0 +1,38 @@
+{
+  "admin": {
+    "access_token": "demo-admin-token-vercel",
+    "token_type": "bearer",
+    "user": {
+      "id": "5aefa310-2f5f-4ba8-bf37-fcf969fa8f55",
+      "username": "admin",
+      "email": "admin@spydee.example",
+      "display_name": "System Administrator",
+      "role": "administrator",
+      "is_active": true
+    }
+  },
+  "investigator": {
+    "access_token": "demo-investigator-token-vercel",
+    "token_type": "bearer",
+    "user": {
+      "id": "11111111-2f5f-4ba8-bf37-fcf969fa8f55",
+      "username": "investigator",
+      "email": "investigator@spydee.example",
+      "display_name": "Senior Investigator",
+      "role": "investigator",
+      "is_active": true
+    }
+  },
+  "supervisor": {
+    "access_token": "demo-supervisor-token-vercel",
+    "token_type": "bearer",
+    "user": {
+      "id": "22222222-2f5f-4ba8-bf37-fcf969fa8f55",
+      "username": "supervisor",
+      "email": "supervisor@spydee.example",
+      "display_name": "Case Supervisor",
+      "role": "case_supervisor",
+      "is_active": true
+    }
+  }
+}

@@ -1,0 +1,3999 @@
+{
+  "case": {
+    "id": "06de6c4a-f197-4fb7-96fd-81c8d3a103cf",
+    "title": "Harbor Ledger - Financial Network Analysis",
+    "case_code": "HBR-2026-002",
+    "description": "Transaction paths and infrastructure relationships. Synthetic demonstration case.",
+    "status": "active",
+    "is_synthetic": true,
+    "created_by": "5aefa310-2f5f-4ba8-bf37-fcf969fa8f55",
+    "created_at": "2026-09-22T07:43:27.761477",
+    "updated_at": "2026-09-22T07:43:27.761477",
+    "entity_count": 10,
+    "event_count": 118,
+    "evidence_count": 2,
+    "hypothesis_count": 0,
+    "relationship_count": 0
+  },
+  "entities": [
+    {
+      "id": "794ce117-ada5-4618-9b3d-73175a31ee83",
+      "case_id": "06de6c4a-f197-4fb7-96fd-81c8d3a103cf",
+      "entity_type": "account",
+      "label": "ACCT-44815",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:34.991992",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "06583035-238b-4575-a20f-66c3880b5a48",
+          "id_type": "account",
+          "id_value": "ACCT-44815",
+          "normalized_value": "acct-44815",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "70d72fce-45d2-41e1-8f81-48c76f913b4b",
+      "case_id": "06de6c4a-f197-4fb7-96fd-81c8d3a103cf",
+      "entity_type": "account",
+      "label": "ACCT-20802",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:34.995077",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "a4b07763-0c90-43af-8fc5-2fe0c960c3b8",
+          "id_type": "account",
+          "id_value": "ACCT-20802",
+          "normalized_value": "acct-20802",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "b2a8736d-7933-485c-98f5-508088b30e6d",
+      "case_id": "06de6c4a-f197-4fb7-96fd-81c8d3a103cf",
+      "entity_type": "account",
+      "label": "ACCT-40643",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:35.003425",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "630ea82a-091f-4c7f-85a9-97df6f07f2fb",
+          "id_type": "account",
+          "id_value": "ACCT-40643",
+          "normalized_value": "acct-40643",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+      "case_id": "06de6c4a-f197-4fb7-96fd-81c8d3a103cf",
+      "entity_type": "account",
+      "label": "ACCT-94587",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:35.011030",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "259c5e57-8383-4443-a6d5-d715eea94676",
+          "id_type": "account",
+          "id_value": "ACCT-94587",
+          "normalized_value": "acct-94587",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "ffb8862b-5fa5-4f28-98b7-57b173258f63",
+      "case_id": "06de6c4a-f197-4fb7-96fd-81c8d3a103cf",
+      "entity_type": "account",
+      "label": "ACCT-48603",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:35.017596",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "317346cd-df75-4310-b76e-3f52446e1337",
+          "id_type": "account",
+          "id_value": "ACCT-48603",
+          "normalized_value": "acct-48603",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "b026f136-c755-40fd-936c-d79851a6dc1b",
+      "case_id": "06de6c4a-f197-4fb7-96fd-81c8d3a103cf",
+      "entity_type": "account",
+      "label": "ACCT-57067",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:35.025880",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "7e655102-b6d4-4100-8278-eba71b133e19",
+          "id_type": "account",
+          "id_value": "ACCT-57067",
+          "normalized_value": "acct-57067",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+      "case_id": "06de6c4a-f197-4fb7-96fd-81c8d3a103cf",
+      "entity_type": "account",
+      "label": "ACCT-67892",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:35.042204",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "a92af0d2-b2de-4b8c-aa2e-c4dd06548d01",
+          "id_type": "account",
+          "id_value": "ACCT-67892",
+          "normalized_value": "acct-67892",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "8005114a-56a9-41cb-b881-065b824bec9e",
+      "case_id": "06de6c4a-f197-4fb7-96fd-81c8d3a103cf",
+      "entity_type": "account",
+      "label": "ACCT-19946",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:35.066463",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "50caed04-eb57-4e9a-b08a-54818c6008b4",
+          "id_type": "account",
+          "id_value": "ACCT-19946",
+          "normalized_value": "acct-19946",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "4e685247-5164-4eb0-a85f-392dfd6d272c",
+      "case_id": "06de6c4a-f197-4fb7-96fd-81c8d3a103cf",
+      "entity_type": "device",
+      "label": "ACCT-12345",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:35.625828",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "1dd67659-d678-43a6-9646-3b0acc6a6b82",
+          "id_type": "device",
+          "id_value": "ACCT-12345",
+          "normalized_value": "acct-12345",
+          "review_state": "new"
+        }
+      ]
+    },
+    {
+      "id": "30880b73-fc15-4bbc-a6e9-4bb9907ba05f",
+      "case_id": "06de6c4a-f197-4fb7-96fd-81c8d3a103cf",
+      "entity_type": "device",
+      "label": "ACCT-67890",
+      "description": null,
+      "review_state": "new",
+      "created_at": "2026-09-22T07:43:35.634898",
+      "attributes": null,
+      "identifiers": [
+        {
+          "id": "d2eb1689-ff97-41c6-afcb-d2d3b8ba3cc2",
+          "id_type": "device",
+          "id_value": "ACCT-67890",
+          "normalized_value": "acct-67890",
+          "review_state": "new"
+        }
+      ]
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": "794ce117-ada5-4618-9b3d-73175a31ee83",
+        "label": "ACCT-44815",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "70d72fce-45d2-41e1-8f81-48c76f913b4b",
+        "label": "ACCT-20802",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "b2a8736d-7933-485c-98f5-508088b30e6d",
+        "label": "ACCT-40643",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+        "label": "ACCT-94587",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "ffb8862b-5fa5-4f28-98b7-57b173258f63",
+        "label": "ACCT-48603",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "b026f136-c755-40fd-936c-d79851a6dc1b",
+        "label": "ACCT-57067",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+        "label": "ACCT-67892",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "8005114a-56a9-41cb-b881-065b824bec9e",
+        "label": "ACCT-19946",
+        "entity_type": "account",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "4e685247-5164-4eb0-a85f-392dfd6d272c",
+        "label": "ACCT-12345",
+        "entity_type": "device",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      },
+      {
+        "id": "30880b73-fc15-4bbc-a6e9-4bb9907ba05f",
+        "label": "ACCT-67890",
+        "entity_type": "device",
+        "review_state": "new",
+        "properties": {
+          "degree": 0
+        }
+      }
+    ],
+    "edges": [],
+    "truncated": false,
+    "total_nodes": 10,
+    "total_edges": 0
+  },
+  "hypotheses": [],
+  "signals": {
+    "run_id": "37105504-f279-48db-afe3-2139b1ceb09e",
+    "run_version": 0,
+    "status": "none",
+    "counts_by_family": {},
+    "signals": []
+  },
+  "timeline": {
+    "items": [
+      {
+        "id": "b0dbb69d-b32f-45af-bb5f-a294c9273ad1",
+        "event_type": "transaction",
+        "start_time": "2026-08-01T20:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-01T20:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4717",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-01T20:00:00",
+          "amount": 47969.39,
+          "currency": "INR",
+          "reference": "REF-77610"
+        },
+        "source_record_id": "101bca7d-593d-406b-8cfd-14a1ff9f6b0d"
+      },
+      {
+        "id": "285632e3-808c-4592-a483-cea2289eea0b",
+        "event_type": "transaction",
+        "start_time": "2026-08-01T21:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-01T21:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-1139",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-01T21:00:00",
+          "amount": 28902.68,
+          "currency": "INR",
+          "reference": "REF-55433"
+        },
+        "source_record_id": "46aa052b-2297-468c-ac0d-7a2732b1c87f"
+      },
+      {
+        "id": "43aa664c-786b-4e0d-b4be-7c1ecf4bfd5e",
+        "event_type": "transaction",
+        "start_time": "2026-08-01T21:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-01T21:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-5959",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-01T21:00:00",
+          "amount": 19873.6,
+          "currency": "INR",
+          "reference": "REF-89171"
+        },
+        "source_record_id": "16dd9b95-cf4e-41d9-9bb9-fc8e7a6b08ee"
+      },
+      {
+        "id": "e0f8a5bd-ba4d-40e2-a397-01c99c41526c",
+        "event_type": "transaction",
+        "start_time": "2026-08-02T00:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-02T00:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-1194",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-02T00:00:00",
+          "amount": 65755.01,
+          "currency": "INR",
+          "reference": "REF-29566"
+        },
+        "source_record_id": "520a79b9-90b5-4a27-aa5f-256620a086dd"
+      },
+      {
+        "id": "86d17699-c2a5-45f5-9d43-9bae52293619",
+        "event_type": "transaction",
+        "start_time": "2026-08-02T18:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-02T18:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-6581",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-02T18:00:00",
+          "amount": 31994.41,
+          "currency": "INR",
+          "reference": "REF-34621"
+        },
+        "source_record_id": "d510d283-3187-425e-af92-02328e21b8f4"
+      },
+      {
+        "id": "bd61a1ce-271f-4a9c-ad1d-1072bb1bb2b2",
+        "event_type": "transaction",
+        "start_time": "2026-08-02T22:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-02T22:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-6810",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-02T22:00:00",
+          "amount": 23323.57,
+          "currency": "INR",
+          "reference": "REF-65799"
+        },
+        "source_record_id": "47b892aa-95ee-43e8-9eae-7510bacbfd97"
+      },
+      {
+        "id": "e1857df5-6864-4313-97a4-34f71af6cf63",
+        "event_type": "transaction",
+        "start_time": "2026-08-02T23:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-02T23:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4345",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-02T23:00:00",
+          "amount": 7307.22,
+          "currency": "INR",
+          "reference": "REF-60650"
+        },
+        "source_record_id": "01801727-4650-4292-809e-e9e81bed1348"
+      },
+      {
+        "id": "ddbe90a4-13c7-4e46-94ae-165f3e6a033a",
+        "event_type": "transaction",
+        "start_time": "2026-08-03T00:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-03T00:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4433",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-03T00:00:00",
+          "amount": 45547.22,
+          "currency": "INR",
+          "reference": "REF-83196"
+        },
+        "source_record_id": "8a093e65-0786-46c8-94e1-6be979181b84"
+      },
+      {
+        "id": "147537a5-3202-48ca-aa1d-f947ce570022",
+        "event_type": "transaction",
+        "start_time": "2026-08-03T02:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-03T02:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-6410",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-03T02:00:00",
+          "amount": 63354.09,
+          "currency": "INR",
+          "reference": "REF-89036"
+        },
+        "source_record_id": "dbc029c9-4233-4f43-98e7-f8f816e58d51"
+      },
+      {
+        "id": "467f7882-0d74-412d-a540-e8efe83005c9",
+        "event_type": "transaction",
+        "start_time": "2026-08-03T02:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-03T02:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-6342",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-03T02:00:00",
+          "amount": 3300.74,
+          "currency": "INR",
+          "reference": "REF-14221"
+        },
+        "source_record_id": "addad2b0-50e8-4324-bea0-f8fcac7eda8d"
+      },
+      {
+        "id": "4c49e4e9-915a-4cc0-9be9-05f3b7c4a6b0",
+        "event_type": "transaction",
+        "start_time": "2026-08-03T02:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-03T02:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-3276",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-03T02:00:00",
+          "amount": 87501.27,
+          "currency": "INR",
+          "reference": "REF-50051"
+        },
+        "source_record_id": "384e622e-7490-413a-9144-4a8a1633b865"
+      },
+      {
+        "id": "64c73e78-e915-413e-a4fa-cfbad68a96ed",
+        "event_type": "transaction",
+        "start_time": "2026-08-03T18:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-03T18:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-3808",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-03T18:00:00",
+          "amount": 67813.67,
+          "currency": "INR",
+          "reference": "REF-33283"
+        },
+        "source_record_id": "6b1116c2-8b26-409a-b20e-b942f9eb49cb"
+      },
+      {
+        "id": "73b652b4-ee92-4016-b5e7-bdfcd875d163",
+        "event_type": "transaction",
+        "start_time": "2026-08-03T19:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-03T19:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-1439",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-03T19:00:00",
+          "amount": 20700.87,
+          "currency": "INR",
+          "reference": "REF-60579"
+        },
+        "source_record_id": "e9923a43-0fb5-4e7a-a4f7-f0a6f751ea27"
+      },
+      {
+        "id": "f8ed4138-2db9-4eb2-a0f1-b71d209e686e",
+        "event_type": "transaction",
+        "start_time": "2026-08-03T21:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-03T21:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4818",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-03T21:00:00",
+          "amount": 66297.42,
+          "currency": "INR",
+          "reference": "REF-19172"
+        },
+        "source_record_id": "a40aa6df-5bc0-4151-a0f5-54c71286031a"
+      },
+      {
+        "id": "352de85f-bf74-4a5a-916a-399f09343451",
+        "event_type": "transaction",
+        "start_time": "2026-08-04T02:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-04T02:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-6387",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-04T02:00:00",
+          "amount": 96231.88,
+          "currency": "INR",
+          "reference": "REF-93755"
+        },
+        "source_record_id": "d139284a-547c-4d4b-994e-3cbcb381b97a"
+      },
+      {
+        "id": "e73c7784-9399-45cb-b569-ef3b1b352710",
+        "event_type": "transaction",
+        "start_time": "2026-08-04T17:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-04T17:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-9495",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-04T17:00:00",
+          "amount": 18010.75,
+          "currency": "INR",
+          "reference": "REF-63852"
+        },
+        "source_record_id": "1006c657-5ca3-4d43-bfc0-7c2c22491972"
+      },
+      {
+        "id": "5ffb2cf9-fa22-44a8-aa05-1b1ac3f359e7",
+        "event_type": "transaction",
+        "start_time": "2026-08-04T19:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-04T19:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4382",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-04T19:00:00",
+          "amount": 87174.46,
+          "currency": "INR",
+          "reference": "REF-50600"
+        },
+        "source_record_id": "5aba4c1b-a9ee-41da-8746-c740bacb5929"
+      },
+      {
+        "id": "1053f13a-0160-4e5b-b195-429b7d169efd",
+        "event_type": "transaction",
+        "start_time": "2026-08-04T19:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-04T19:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-2814",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-04T19:00:00",
+          "amount": 54108.85,
+          "currency": "INR",
+          "reference": "REF-72685"
+        },
+        "source_record_id": "d05b1b36-9ab0-43fe-975f-5f5856841b6e"
+      },
+      {
+        "id": "f48e2c0d-b556-421e-a038-ebfc35edfcc2",
+        "event_type": "transaction",
+        "start_time": "2026-08-04T20:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-04T20:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-5512",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-04T20:00:00",
+          "amount": 1736.89,
+          "currency": "INR",
+          "reference": "REF-28702"
+        },
+        "source_record_id": "b93dc20c-dcb6-4ac5-84af-1bc6cb74beba"
+      },
+      {
+        "id": "0e3b1919-4758-47cf-90ce-9d4aca97b698",
+        "event_type": "transaction",
+        "start_time": "2026-08-05T02:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-05T02:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-7541",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-05T02:00:00",
+          "amount": 80949.02,
+          "currency": "INR",
+          "reference": "REF-78925"
+        },
+        "source_record_id": "1b329bd5-8d2c-4280-af7f-4afc827a74d9"
+      },
+      {
+        "id": "b0e5f528-5938-4f9a-9b91-05f2d91e2daa",
+        "event_type": "transaction",
+        "start_time": "2026-08-05T02:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-05T02:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-3601",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-05T02:00:00",
+          "amount": 57934.05,
+          "currency": "INR",
+          "reference": "REF-50673"
+        },
+        "source_record_id": "5f6513bc-7597-48cc-bb15-8323b72ba5ba"
+      },
+      {
+        "id": "2115b337-ea52-41a6-998a-5c749942ec15",
+        "event_type": "transaction",
+        "start_time": "2026-08-05T21:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-05T21:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-6681",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-05T21:00:00",
+          "amount": 39717.95,
+          "currency": "INR",
+          "reference": "REF-32954"
+        },
+        "source_record_id": "b87bed3c-b0f0-4bcb-b413-05ce99ae41c2"
+      },
+      {
+        "id": "bbffb82a-199b-4b15-a116-de5f3df00285",
+        "event_type": "transaction",
+        "start_time": "2026-08-05T23:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-05T23:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-2565",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-05T23:00:00",
+          "amount": 70165.83,
+          "currency": "INR",
+          "reference": "REF-15723"
+        },
+        "source_record_id": "2bd1a185-481e-432f-95c0-5223e3504d90"
+      },
+      {
+        "id": "1e709d23-9684-456d-944e-2efacea78a93",
+        "event_type": "transaction",
+        "start_time": "2026-08-06T01:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-06T01:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-5485",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-06T01:00:00",
+          "amount": 29897.07,
+          "currency": "INR",
+          "reference": "REF-18748"
+        },
+        "source_record_id": "613bd4ee-f3f9-489b-82a9-e51ef5a535cc"
+      },
+      {
+        "id": "f1af7a2f-482f-4db4-aba8-4a47d93eb026",
+        "event_type": "transaction",
+        "start_time": "2026-08-06T02:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-06T02:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-3942",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-06T02:00:00",
+          "amount": 73591.15,
+          "currency": "INR",
+          "reference": "REF-70008"
+        },
+        "source_record_id": "a2229dfc-8ae7-49be-874d-231bebb84eb4"
+      },
+      {
+        "id": "f8cad32c-a0b1-4932-b161-5d650e8c6c9b",
+        "event_type": "transaction",
+        "start_time": "2026-08-06T02:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-06T02:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-8580",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-06T02:00:00",
+          "amount": 4869.39,
+          "currency": "INR",
+          "reference": "REF-21941"
+        },
+        "source_record_id": "368702c6-c090-4915-b969-ab386db7cec2"
+      },
+      {
+        "id": "3e528bb1-0c68-4516-8491-739b27276ac0",
+        "event_type": "transaction",
+        "start_time": "2026-08-06T17:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-06T17:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-9291",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-06T17:00:00",
+          "amount": 46754.58,
+          "currency": "INR",
+          "reference": "REF-19593"
+        },
+        "source_record_id": "bec81547-451b-49d6-abf9-895847226d3a"
+      },
+      {
+        "id": "ed37a1eb-9a58-444f-acd2-cca6d25f50d4",
+        "event_type": "transaction",
+        "start_time": "2026-08-06T18:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-06T18:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-5105",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-06T18:00:00",
+          "amount": 71200.86,
+          "currency": "INR",
+          "reference": "REF-27888"
+        },
+        "source_record_id": "3e1f2bcc-1e99-43ba-bda0-33a7b49db4a7"
+      },
+      {
+        "id": "fb42a72e-6709-4770-919a-7ef40e8e3463",
+        "event_type": "transaction",
+        "start_time": "2026-08-06T19:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-06T19:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-2646",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-06T19:00:00",
+          "amount": 30120.32,
+          "currency": "INR",
+          "reference": "REF-80078"
+        },
+        "source_record_id": "337701f8-3f58-4580-a8d2-02af4e28fff4"
+      },
+      {
+        "id": "75bea82a-fe02-4520-bc48-d8e3f078b2d2",
+        "event_type": "transaction",
+        "start_time": "2026-08-06T22:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-06T22:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-9264",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-06T22:00:00",
+          "amount": 41599.51,
+          "currency": "INR",
+          "reference": "REF-31605"
+        },
+        "source_record_id": "b7405487-3be8-47fc-8b28-891f9454c736"
+      },
+      {
+        "id": "174fc423-c165-4897-b6ca-f2cf312c6d90",
+        "event_type": "transaction",
+        "start_time": "2026-08-06T23:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-06T23:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-6630",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-06T23:00:00",
+          "amount": 85721.54,
+          "currency": "INR",
+          "reference": "REF-61992"
+        },
+        "source_record_id": "cd13c9d0-1619-4ef4-ab84-6a49cf7bc2d2"
+      },
+      {
+        "id": "eff6c840-31ea-40e2-b16f-af9d56faa606",
+        "event_type": "transaction",
+        "start_time": "2026-08-07T00:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-07T00:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-3297",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-07T00:00:00",
+          "amount": 82222.24,
+          "currency": "INR",
+          "reference": "REF-31150"
+        },
+        "source_record_id": "72df769b-0d8a-48de-97f2-2ec6b5156350"
+      },
+      {
+        "id": "7b636474-e7c6-45ef-b0c4-a52d67694962",
+        "event_type": "transaction",
+        "start_time": "2026-08-07T00:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-07T00:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-8942",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-07T00:00:00",
+          "amount": 7755.48,
+          "currency": "INR",
+          "reference": "REF-81883"
+        },
+        "source_record_id": "ecdee70c-b912-401a-9ae6-e08a59b64ecf"
+      },
+      {
+        "id": "932f02c8-90ea-44ef-9164-8fd579d3e2dc",
+        "event_type": "transaction",
+        "start_time": "2026-08-07T01:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-07T01:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-7738",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-07T01:00:00",
+          "amount": 13001.83,
+          "currency": "INR",
+          "reference": "REF-58330"
+        },
+        "source_record_id": "a00fbed3-68fc-45cb-8eab-effcc104fc75"
+      },
+      {
+        "id": "3bbc52a8-4b62-46ca-9f17-f8e8ee98a7a5",
+        "event_type": "transaction",
+        "start_time": "2026-08-07T17:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-07T17:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-2271",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-07T17:00:00",
+          "amount": 68060.93,
+          "currency": "INR",
+          "reference": "REF-30119"
+        },
+        "source_record_id": "c8cc61fd-a1fe-412a-9768-6da0c4275d93"
+      },
+      {
+        "id": "03a35ead-120f-4b23-a87a-06a266b1f7b3",
+        "event_type": "transaction",
+        "start_time": "2026-08-07T20:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-07T20:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-2035",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-07T20:00:00",
+          "amount": 95915.78,
+          "currency": "INR",
+          "reference": "REF-22661"
+        },
+        "source_record_id": "1e8f00c3-50ab-477d-b754-3cac9c710321"
+      },
+      {
+        "id": "a7deaf27-531a-4802-9ddb-aee9a16836f1",
+        "event_type": "transaction",
+        "start_time": "2026-08-07T20:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-07T20:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4305",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-07T20:00:00",
+          "amount": 38089.83,
+          "currency": "INR",
+          "reference": "REF-41265"
+        },
+        "source_record_id": "0460bfd5-1486-45b2-93a6-f306cf8f185c"
+      },
+      {
+        "id": "2bd11b5b-d613-4bad-9dce-ca0a19caca36",
+        "event_type": "transaction",
+        "start_time": "2026-08-07T20:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-07T20:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-3915",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-07T20:00:00",
+          "amount": 71726.81,
+          "currency": "INR",
+          "reference": "REF-98479"
+        },
+        "source_record_id": "5bb9e609-f5e3-4206-ae43-a38a7eef1405"
+      },
+      {
+        "id": "bce9bf06-ff8b-43e9-9bda-5191b833d52d",
+        "event_type": "transaction",
+        "start_time": "2026-08-07T23:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-07T23:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-1721",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-07T23:00:00",
+          "amount": 51737.51,
+          "currency": "INR",
+          "reference": "REF-52879"
+        },
+        "source_record_id": "c5907952-e579-4e26-83e5-95da32b0ace6"
+      },
+      {
+        "id": "b7933d0c-c4ca-4498-943b-b36147c828ea",
+        "event_type": "transaction",
+        "start_time": "2026-08-07T23:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-07T23:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-1262",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-07T23:00:00",
+          "amount": 3766.47,
+          "currency": "INR",
+          "reference": "REF-11908"
+        },
+        "source_record_id": "7fb2fc90-f554-4daa-8f20-5e119af1061d"
+      },
+      {
+        "id": "d868c164-d1ba-4a88-9c98-1d1c957a8dc9",
+        "event_type": "transaction",
+        "start_time": "2026-08-08T00:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-08T00:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-6051",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-08T00:00:00",
+          "amount": 6189.11,
+          "currency": "INR",
+          "reference": "REF-10611"
+        },
+        "source_record_id": "2e381691-6420-4a18-a3c6-77a97cd9cd5a"
+      },
+      {
+        "id": "b3373b8e-3ac5-48df-9848-97c2c5fc2b0d",
+        "event_type": "transaction",
+        "start_time": "2026-08-08T01:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-08T01:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-1782",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-08T01:00:00",
+          "amount": 64460.21,
+          "currency": "INR",
+          "reference": "REF-96512"
+        },
+        "source_record_id": "7e12113d-ef72-4b76-9372-2dc79e253167"
+      },
+      {
+        "id": "d6c46544-0d36-4361-b4f8-d4f0f9456b93",
+        "event_type": "transaction",
+        "start_time": "2026-08-08T17:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-08T17:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-7045",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-08T17:00:00",
+          "amount": 7665.8,
+          "currency": "INR",
+          "reference": "REF-38647"
+        },
+        "source_record_id": "cda0b44c-87e6-4d49-8025-ede9b3426d2f"
+      },
+      {
+        "id": "9f549e99-a88e-47f5-a925-5c112942e552",
+        "event_type": "transaction",
+        "start_time": "2026-08-08T18:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-08T18:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-9185",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-08T18:00:00",
+          "amount": 71540.58,
+          "currency": "INR",
+          "reference": "REF-84606"
+        },
+        "source_record_id": "9405d06f-758b-44c6-90de-2dc85ab87f13"
+      },
+      {
+        "id": "2b22331b-de55-4044-8795-6a9637787b82",
+        "event_type": "transaction",
+        "start_time": "2026-08-08T22:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-08T22:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-2734",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-08T22:00:00",
+          "amount": 33013.41,
+          "currency": "INR",
+          "reference": "REF-11965"
+        },
+        "source_record_id": "f7547c83-f14f-4c39-a776-d35833467e62"
+      },
+      {
+        "id": "f9a57da5-1c43-4ac7-b8d1-7531d2706f29",
+        "event_type": "transaction",
+        "start_time": "2026-08-08T23:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-08T23:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-1196",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-08T23:00:00",
+          "amount": 22064.03,
+          "currency": "INR",
+          "reference": "REF-38848"
+        },
+        "source_record_id": "0eb8ac68-d2dc-4d0f-8f29-32402cbd928b"
+      },
+      {
+        "id": "9f0e3418-d182-44f8-8b74-0ce479645b7d",
+        "event_type": "transaction",
+        "start_time": "2026-08-08T23:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-08T23:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-9875",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-08T23:00:00",
+          "amount": 93953.4,
+          "currency": "INR",
+          "reference": "REF-25834"
+        },
+        "source_record_id": "d876b562-10df-439a-85a1-40f8fca58c70"
+      },
+      {
+        "id": "f163e8c5-2b40-4ce9-9fbc-1e3f4115f954",
+        "event_type": "transaction",
+        "start_time": "2026-08-09T20:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-09T20:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-9372",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-09T20:00:00",
+          "amount": 50838.58,
+          "currency": "INR",
+          "reference": "REF-11742"
+        },
+        "source_record_id": "4c166c90-ca5c-43ae-af84-2360b33ec81d"
+      },
+      {
+        "id": "18f3f11f-72a3-43ac-ac1e-abff3b0ae285",
+        "event_type": "transaction",
+        "start_time": "2026-08-09T21:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-09T21:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-3032",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-09T21:00:00",
+          "amount": 24403.24,
+          "currency": "INR",
+          "reference": "REF-66164"
+        },
+        "source_record_id": "242bdaf6-35f0-4fa9-adca-acc188d35046"
+      },
+      {
+        "id": "cfd387c1-b0c6-469c-9140-460b3dde02bb",
+        "event_type": "transaction",
+        "start_time": "2026-08-09T23:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-09T23:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-6314",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-09T23:00:00",
+          "amount": 68112.15,
+          "currency": "INR",
+          "reference": "REF-27423"
+        },
+        "source_record_id": "c7984dbb-b1aa-4dbc-9495-da28e9eeda05"
+      },
+      {
+        "id": "4e1c5ba3-4d69-49b5-821f-141d914fe431",
+        "event_type": "transaction",
+        "start_time": "2026-08-10T00:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-10T00:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-6209",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-10T00:00:00",
+          "amount": 7683.83,
+          "currency": "INR",
+          "reference": "REF-12313"
+        },
+        "source_record_id": "4f0278a1-8570-4022-88c9-5592795b0239"
+      },
+      {
+        "id": "51192daf-34dd-4b26-ba40-aba377ac4281",
+        "event_type": "observation",
+        "start_time": "2026-08-10T06:30:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-10T06:30:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-12345"
+        ],
+        "participant_ids": [
+          "4e685247-5164-4eb0-a85f-392dfd6d272c"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "CCTV-OBS-101",
+          "camera_id": "CAM-PORT-001",
+          "location": "Harbor Gate 1",
+          "lat": 19.076,
+          "lon": 72.8777,
+          "timestamp": "2026-08-10T06:30:00",
+          "entity_or_device_id": "ACCT-12345",
+          "confidence": 0.88,
+          "appearance_match": 0.75,
+          "telecom_correlation": 0.82,
+          "temporal_consistency": 0.9
+        },
+        "source_record_id": "174e7672-5778-458f-b2f4-a401f0f90c0d"
+      },
+      {
+        "id": "2399f54d-6947-46a3-815d-289198cbc431",
+        "event_type": "transaction",
+        "start_time": "2026-08-10T17:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-10T17:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4348",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-10T17:00:00",
+          "amount": 24568.33,
+          "currency": "INR",
+          "reference": "REF-88390"
+        },
+        "source_record_id": "b06689b0-501b-4efd-8f7a-938238cf4556"
+      },
+      {
+        "id": "bd06fdf9-3a03-4ee9-9ee2-75621f5d2d00",
+        "event_type": "transaction",
+        "start_time": "2026-08-10T20:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-10T20:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-1388",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-10T20:00:00",
+          "amount": 84846.55,
+          "currency": "INR",
+          "reference": "REF-53420"
+        },
+        "source_record_id": "7aa8f48d-a459-4753-8725-ac709bed2399"
+      },
+      {
+        "id": "0540d6d3-9715-4bcd-bd2f-50b2f0b72c30",
+        "event_type": "transaction",
+        "start_time": "2026-08-10T21:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-10T21:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-3199",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-10T21:00:00",
+          "amount": 32436.33,
+          "currency": "INR",
+          "reference": "REF-15191"
+        },
+        "source_record_id": "bfb18fc1-fc19-4060-9b36-3e244148fed0"
+      },
+      {
+        "id": "04c1137e-fd6d-4dd6-873e-f94581a76603",
+        "event_type": "transaction",
+        "start_time": "2026-08-10T22:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-10T22:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-3253",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-10T22:00:00",
+          "amount": 50373.92,
+          "currency": "INR",
+          "reference": "REF-36478"
+        },
+        "source_record_id": "4add66ea-c3cc-4b79-a51f-e6bc05116157"
+      },
+      {
+        "id": "8711f520-749d-43e0-bd1e-00c114affbd6",
+        "event_type": "observation",
+        "start_time": "2026-08-11T14:20:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-11T14:20:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67890"
+        ],
+        "participant_ids": [
+          "30880b73-fc15-4bbc-a6e9-4bb9907ba05f"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "CCTV-OBS-102",
+          "camera_id": "CAM-PORT-005",
+          "location": "Warehouse District Camera 5",
+          "lat": 19.0823,
+          "lon": 72.8841,
+          "timestamp": "2026-08-11T14:20:00",
+          "entity_or_device_id": "ACCT-67890",
+          "confidence": 0.82,
+          "appearance_match": 0.68,
+          "telecom_correlation": 0.78,
+          "temporal_consistency": 0.85
+        },
+        "source_record_id": "6978bcff-9aaf-4c84-aa44-743b39515c56"
+      },
+      {
+        "id": "aba91b6e-2b79-49d8-8fb7-b481e62f4423",
+        "event_type": "transaction",
+        "start_time": "2026-08-11T17:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-11T17:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-9836",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-11T17:00:00",
+          "amount": 90756.57,
+          "currency": "INR",
+          "reference": "REF-97163"
+        },
+        "source_record_id": "712b1573-0920-4741-a0f2-8fe08be9381e"
+      },
+      {
+        "id": "89aa4fec-372a-4f04-b365-6fcdcd7241fc",
+        "event_type": "transaction",
+        "start_time": "2026-08-11T18:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-11T18:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-9313",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-11T18:00:00",
+          "amount": 43197.74,
+          "currency": "INR",
+          "reference": "REF-71220"
+        },
+        "source_record_id": "742a1b43-2a9e-4e6c-8f10-a2603c4be166"
+      },
+      {
+        "id": "10811eae-e316-4b87-b020-fc679b4ea1f5",
+        "event_type": "transaction",
+        "start_time": "2026-08-11T18:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-11T18:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-3057",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-11T18:00:00",
+          "amount": 18193.91,
+          "currency": "INR",
+          "reference": "REF-81938"
+        },
+        "source_record_id": "aba6d2b7-50db-42c2-aae8-e2dc4841652e"
+      },
+      {
+        "id": "ad6d68e8-c60a-472e-97e0-66179bde1a0f",
+        "event_type": "transaction",
+        "start_time": "2026-08-11T18:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-11T18:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-9055",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-11T18:00:00",
+          "amount": 95412.46,
+          "currency": "INR",
+          "reference": "REF-16829"
+        },
+        "source_record_id": "2ed680f6-e149-4669-b4e2-7dcb2520345a"
+      },
+      {
+        "id": "6d1a637c-75af-4da5-9bc4-a5b13e488a1c",
+        "event_type": "transaction",
+        "start_time": "2026-08-12T01:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-12T01:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-7250",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-12T01:00:00",
+          "amount": 32842.06,
+          "currency": "INR",
+          "reference": "REF-67981"
+        },
+        "source_record_id": "c49a42e5-ec33-4c96-8e9b-1f73633d7d24"
+      },
+      {
+        "id": "a7126fff-0afb-4cbc-98d6-04328d42c567",
+        "event_type": "transaction",
+        "start_time": "2026-08-12T20:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-12T20:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-8344",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-12T20:00:00",
+          "amount": 27914.22,
+          "currency": "INR",
+          "reference": "REF-73068"
+        },
+        "source_record_id": "ca9a9a45-ccf8-491a-9fe3-528b0ae1a177"
+      },
+      {
+        "id": "a0136ee9-cd29-4df1-b6f2-f1e5d9f366b8",
+        "event_type": "transaction",
+        "start_time": "2026-08-12T23:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-12T23:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-7524",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-12T23:00:00",
+          "amount": 17608.84,
+          "currency": "INR",
+          "reference": "REF-67852"
+        },
+        "source_record_id": "bca1ddea-3133-4adc-8246-2595f4fbbd08"
+      },
+      {
+        "id": "d1f7bd63-7707-47de-a987-f557b986aad5",
+        "event_type": "transaction",
+        "start_time": "2026-08-12T23:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-12T23:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-5012",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-12T23:00:00",
+          "amount": 18467.11,
+          "currency": "INR",
+          "reference": "REF-42632"
+        },
+        "source_record_id": "01cfb81d-f9fc-4f1b-a534-f3c256115fdf"
+      },
+      {
+        "id": "e26d03aa-6357-48d7-93ad-4c7e1d65008c",
+        "event_type": "transaction",
+        "start_time": "2026-08-13T00:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-13T00:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-3553",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-13T00:00:00",
+          "amount": 2961.3,
+          "currency": "INR",
+          "reference": "REF-59993"
+        },
+        "source_record_id": "89913929-47b1-47e1-9c67-fd0ab6db3774"
+      },
+      {
+        "id": "465e651c-3743-4786-85fa-d8d942bb36b2",
+        "event_type": "transaction",
+        "start_time": "2026-08-13T02:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-13T02:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-5918",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-13T02:00:00",
+          "amount": 54182.57,
+          "currency": "INR",
+          "reference": "REF-82463"
+        },
+        "source_record_id": "07c3d48b-55f3-4a1f-8e4f-8a551baf8234"
+      },
+      {
+        "id": "64bf0940-3f95-47e3-a706-ed55f82e98e4",
+        "event_type": "transaction",
+        "start_time": "2026-08-13T17:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-13T17:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-8827",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-13T17:00:00",
+          "amount": 92225.39,
+          "currency": "INR",
+          "reference": "REF-57371"
+        },
+        "source_record_id": "8aff3a5a-2fc7-47b7-9f4c-0e07d94c6907"
+      },
+      {
+        "id": "f9d5c615-790f-4087-a1dd-3c14bb5632f8",
+        "event_type": "transaction",
+        "start_time": "2026-08-13T17:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-13T17:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-7032",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-13T17:00:00",
+          "amount": 65439.73,
+          "currency": "INR",
+          "reference": "REF-65579"
+        },
+        "source_record_id": "7384d5eb-de7c-49f1-ac6e-6bed9081f96e"
+      },
+      {
+        "id": "2dc7a7bf-04e8-42c9-9f29-6ff6ed42442f",
+        "event_type": "transaction",
+        "start_time": "2026-08-13T17:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-13T17:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4106",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-13T17:00:00",
+          "amount": 2270.59,
+          "currency": "INR",
+          "reference": "REF-75627"
+        },
+        "source_record_id": "d5e69ce4-f08e-48ec-8838-7233d4de2cc4"
+      },
+      {
+        "id": "48688849-84c1-4596-b6cd-c3e774e49cff",
+        "event_type": "transaction",
+        "start_time": "2026-08-13T20:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-13T20:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-3660",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-13T20:00:00",
+          "amount": 76532.13,
+          "currency": "INR",
+          "reference": "REF-43457"
+        },
+        "source_record_id": "a3827861-e50b-441a-9f8b-20fe8b301b52"
+      },
+      {
+        "id": "d254f874-0938-4980-8abd-7e38420c6c2e",
+        "event_type": "transaction",
+        "start_time": "2026-08-13T22:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-13T22:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-2178",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-13T22:00:00",
+          "amount": 14528.98,
+          "currency": "INR",
+          "reference": "REF-71506"
+        },
+        "source_record_id": "d5d101c7-30e3-467c-bd95-94646954cdc7"
+      },
+      {
+        "id": "a6c2f6f0-b1e8-48d1-8fbe-8c2061128d5d",
+        "event_type": "transaction",
+        "start_time": "2026-08-13T23:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-13T23:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-7628",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-13T23:00:00",
+          "amount": 94088.21,
+          "currency": "INR",
+          "reference": "REF-58908"
+        },
+        "source_record_id": "1e3c4461-cd32-46d4-8160-ea0fdb6a4901"
+      },
+      {
+        "id": "db7853a2-7390-4603-9f5a-e1ca7138e19b",
+        "event_type": "transaction",
+        "start_time": "2026-08-14T00:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-14T00:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-7233",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-14T00:00:00",
+          "amount": 31278.88,
+          "currency": "INR",
+          "reference": "REF-47122"
+        },
+        "source_record_id": "cf547316-294f-4dba-91cd-018b4337096a"
+      },
+      {
+        "id": "61e695f0-61cd-4d60-9b12-8243a3d7d121",
+        "event_type": "transaction",
+        "start_time": "2026-08-14T02:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-14T02:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-6043",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-14T02:00:00",
+          "amount": 8052.2,
+          "currency": "INR",
+          "reference": "REF-15089"
+        },
+        "source_record_id": "4ffc9242-28a5-4493-b5b3-79fc0a4331c3"
+      },
+      {
+        "id": "34f1e616-4b8a-4068-bb1a-95ddee1bfe76",
+        "event_type": "transaction",
+        "start_time": "2026-08-14T18:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-14T18:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-7743",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-14T18:00:00",
+          "amount": 11818.13,
+          "currency": "INR",
+          "reference": "REF-85053"
+        },
+        "source_record_id": "9254664c-372b-4183-8c82-b750afd695ea"
+      },
+      {
+        "id": "f250624c-afff-4367-8321-71da4e53301a",
+        "event_type": "transaction",
+        "start_time": "2026-08-14T18:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-14T18:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-2912",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-14T18:00:00",
+          "amount": 64795.34,
+          "currency": "INR",
+          "reference": "REF-60377"
+        },
+        "source_record_id": "0b4ade8f-abce-48b1-b589-7e693cc98dae"
+      },
+      {
+        "id": "ee2425b7-4cd0-443d-a313-2fa2d854f5d1",
+        "event_type": "transaction",
+        "start_time": "2026-08-14T20:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-14T20:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-5407",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-14T20:00:00",
+          "amount": 93071.67,
+          "currency": "INR",
+          "reference": "REF-62162"
+        },
+        "source_record_id": "344e14f9-c2ae-4f1a-aab3-a0fcb52f7ba3"
+      },
+      {
+        "id": "2cb942a5-8704-4f92-8164-a9f15e258f80",
+        "event_type": "transaction",
+        "start_time": "2026-08-14T20:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-14T20:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-9495",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-14T20:00:00",
+          "amount": 87724.61,
+          "currency": "INR",
+          "reference": "REF-31734"
+        },
+        "source_record_id": "d05fb155-e6a0-4e9a-87f6-52bd525721f8"
+      },
+      {
+        "id": "3c403a6f-3d9d-4582-a891-7db9b90ae36a",
+        "event_type": "transaction",
+        "start_time": "2026-08-15T00:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-15T00:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-3759",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-15T00:00:00",
+          "amount": 1156.28,
+          "currency": "INR",
+          "reference": "REF-19154"
+        },
+        "source_record_id": "f306a795-74cb-4e25-bef0-0caff3fd2149"
+      },
+      {
+        "id": "86f457af-4f9f-4a6c-95cb-87a62bd20077",
+        "event_type": "transaction",
+        "start_time": "2026-08-15T01:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-15T01:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-5951",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-15T01:00:00",
+          "amount": 96800.66,
+          "currency": "INR",
+          "reference": "REF-96309"
+        },
+        "source_record_id": "673b488b-d366-4d4c-83f9-ccf15f00ee16"
+      },
+      {
+        "id": "0c7a7b27-3187-4bbd-88ae-90a673378ced",
+        "event_type": "transaction",
+        "start_time": "2026-08-15T02:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-15T02:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-5053",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-15T02:00:00",
+          "amount": 58255.84,
+          "currency": "INR",
+          "reference": "REF-96848"
+        },
+        "source_record_id": "4eee9ca3-6c9d-40c8-80b2-80ba5efe251b"
+      },
+      {
+        "id": "a7cbc17f-0f0c-4e22-a9a0-a0aeb4271533",
+        "event_type": "transaction",
+        "start_time": "2026-08-15T02:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-15T02:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-5281",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-15T02:00:00",
+          "amount": 46091.61,
+          "currency": "INR",
+          "reference": "REF-99268"
+        },
+        "source_record_id": "9e092639-1076-4690-b21b-f88ec58f9630"
+      },
+      {
+        "id": "46f18da7-aaff-400c-b0d4-c0b0ffcaffef",
+        "event_type": "transaction",
+        "start_time": "2026-08-15T17:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-15T17:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-1155",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-15T17:00:00",
+          "amount": 27341.99,
+          "currency": "INR",
+          "reference": "REF-10947"
+        },
+        "source_record_id": "29170ec8-090b-476a-a0d9-4c96b3677252"
+      },
+      {
+        "id": "f85d6762-2d55-49b6-8162-ed27b6e03d2d",
+        "event_type": "transaction",
+        "start_time": "2026-08-15T17:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-15T17:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-6605",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-15T17:00:00",
+          "amount": 58978.99,
+          "currency": "INR",
+          "reference": "REF-72638"
+        },
+        "source_record_id": "8f5818cd-029b-4cca-8d5a-ab6c6b92bc97"
+      },
+      {
+        "id": "b2f1d6c3-617b-489e-befa-19e7028c29d4",
+        "event_type": "transaction",
+        "start_time": "2026-08-15T20:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-15T20:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4041",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-15T20:00:00",
+          "amount": 6839.22,
+          "currency": "INR",
+          "reference": "REF-33950"
+        },
+        "source_record_id": "4439f468-0cfa-4bef-bb00-5588819cb92d"
+      },
+      {
+        "id": "e88fb6d6-9eec-48b7-b6bf-0b7206ba7750",
+        "event_type": "transaction",
+        "start_time": "2026-08-15T21:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-15T21:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-2307",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-15T21:00:00",
+          "amount": 9485.0,
+          "currency": "INR",
+          "reference": "REF-26342"
+        },
+        "source_record_id": "f00633a6-216f-47c2-913c-037ca60c0535"
+      },
+      {
+        "id": "902d0223-63d9-4d74-ae76-eb45ab13336e",
+        "event_type": "transaction",
+        "start_time": "2026-08-15T23:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-15T23:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-5724",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-15T23:00:00",
+          "amount": 17892.79,
+          "currency": "INR",
+          "reference": "REF-59106"
+        },
+        "source_record_id": "c94b93fc-1bf7-4f78-829b-3d240777b177"
+      },
+      {
+        "id": "0abe7dd6-8ae0-4ba4-bb8f-f8bd8a9f36b3",
+        "event_type": "transaction",
+        "start_time": "2026-08-16T00:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-16T00:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-7697",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-16T00:00:00",
+          "amount": 63056.9,
+          "currency": "INR",
+          "reference": "REF-91844"
+        },
+        "source_record_id": "820f009e-7720-43d7-af7c-f81cd0c75ce0"
+      },
+      {
+        "id": "d17c146a-0c35-493d-abb1-a75cb7aeceb7",
+        "event_type": "transaction",
+        "start_time": "2026-08-16T00:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-16T00:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4244",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-16T00:00:00",
+          "amount": 19016.45,
+          "currency": "INR",
+          "reference": "REF-24449"
+        },
+        "source_record_id": "468be7e4-5236-4b06-b175-b64ed4d7cb2c"
+      },
+      {
+        "id": "b6c4f33b-8264-4239-8beb-c275bd803ece",
+        "event_type": "transaction",
+        "start_time": "2026-08-16T01:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-16T01:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4458",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-16T01:00:00",
+          "amount": 79386.87,
+          "currency": "INR",
+          "reference": "REF-59239"
+        },
+        "source_record_id": "cbe82620-d32c-4a5a-b94a-d614117ba5a8"
+      },
+      {
+        "id": "cb603939-2262-45f9-9bad-ba63b331b400",
+        "event_type": "transaction",
+        "start_time": "2026-08-16T17:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-16T17:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4079",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-16T17:00:00",
+          "amount": 98631.96,
+          "currency": "INR",
+          "reference": "REF-52229"
+        },
+        "source_record_id": "fd19ffec-991a-4ac2-a460-7f30e99f55e3"
+      },
+      {
+        "id": "54c0ad27-2d0d-4723-a6bb-ae2bd290ef8c",
+        "event_type": "transaction",
+        "start_time": "2026-08-16T19:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-16T19:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-7583",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-16T19:00:00",
+          "amount": 3542.36,
+          "currency": "INR",
+          "reference": "REF-26108"
+        },
+        "source_record_id": "799bac98-c1a6-49ad-890f-7ba9e883d0fb"
+      },
+      {
+        "id": "6d038f1c-08f7-49d6-8168-baa0bc412280",
+        "event_type": "transaction",
+        "start_time": "2026-08-16T20:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-16T20:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-6164",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-16T20:00:00",
+          "amount": 94158.11,
+          "currency": "INR",
+          "reference": "REF-97173"
+        },
+        "source_record_id": "547d8498-34d3-4fe1-ac47-9ae919d58a56"
+      },
+      {
+        "id": "ab476211-e75b-49ae-a651-eea59b4a35fa",
+        "event_type": "transaction",
+        "start_time": "2026-08-16T22:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-16T22:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-1749",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-16T22:00:00",
+          "amount": 68115.01,
+          "currency": "INR",
+          "reference": "REF-40612"
+        },
+        "source_record_id": "57939f51-2b7b-483c-9e86-bc84c0a6693c"
+      },
+      {
+        "id": "e6442360-655d-4653-9524-fe2bc0feeaa5",
+        "event_type": "transaction",
+        "start_time": "2026-08-16T22:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-16T22:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-1937",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-16T22:00:00",
+          "amount": 87434.67,
+          "currency": "INR",
+          "reference": "REF-23130"
+        },
+        "source_record_id": "aa0d6c1e-31a8-4a08-93bb-99254abea0b0"
+      },
+      {
+        "id": "66d9fb72-7121-477a-8ce9-456e23dac465",
+        "event_type": "transaction",
+        "start_time": "2026-08-16T22:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-16T22:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-8753",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-16T22:00:00",
+          "amount": 60832.78,
+          "currency": "INR",
+          "reference": "REF-54112"
+        },
+        "source_record_id": "b8ba0ea4-8d91-4f2d-b07b-3e487138934b"
+      },
+      {
+        "id": "5b36c3b8-5e60-467e-b874-093353788011",
+        "event_type": "transaction",
+        "start_time": "2026-08-17T00:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-17T00:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-7036",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-17T00:00:00",
+          "amount": 62216.82,
+          "currency": "INR",
+          "reference": "REF-96360"
+        },
+        "source_record_id": "d58cecd5-35e8-488f-bb36-445e493c7420"
+      },
+      {
+        "id": "7398c8cf-9079-4f03-8d17-985ddc4e9141",
+        "event_type": "transaction",
+        "start_time": "2026-08-17T17:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-17T17:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-8125",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-17T17:00:00",
+          "amount": 16863.29,
+          "currency": "INR",
+          "reference": "REF-52795"
+        },
+        "source_record_id": "e335e41e-411e-4ce8-90d8-392b5d717512"
+      },
+      {
+        "id": "d55f197c-0932-46ea-86f6-65badc806a64",
+        "event_type": "transaction",
+        "start_time": "2026-08-17T18:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-17T18:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-8311",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-17T18:00:00",
+          "amount": 48734.69,
+          "currency": "INR",
+          "reference": "REF-80866"
+        },
+        "source_record_id": "4ec22b38-2402-43ad-8ecc-1a15b687309b"
+      },
+      {
+        "id": "52897352-1728-44b6-8f04-9000d05df5ee",
+        "event_type": "transaction",
+        "start_time": "2026-08-17T18:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-17T18:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-9158",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-17T18:00:00",
+          "amount": 30833.48,
+          "currency": "INR",
+          "reference": "REF-98219"
+        },
+        "source_record_id": "e3a6c4ff-8518-4d2d-9303-7e5146492f75"
+      },
+      {
+        "id": "1db1b65a-2613-4391-bcf2-d3bf64ac0104",
+        "event_type": "transaction",
+        "start_time": "2026-08-17T19:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-17T19:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4467",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-17T19:00:00",
+          "amount": 75572.0,
+          "currency": "INR",
+          "reference": "REF-96474"
+        },
+        "source_record_id": "1944eea2-2bbb-4d41-bb0c-f7a3d9127be2"
+      },
+      {
+        "id": "57607ebe-9a55-48bf-83eb-ba458649981f",
+        "event_type": "transaction",
+        "start_time": "2026-08-17T21:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-17T21:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4610",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-17T21:00:00",
+          "amount": 66927.34,
+          "currency": "INR",
+          "reference": "REF-97897"
+        },
+        "source_record_id": "9f7f9854-75dc-4e8d-b2db-3ce0b51bca7a"
+      },
+      {
+        "id": "1542b5f6-171d-4018-92ad-9a5fd9797c36",
+        "event_type": "transaction",
+        "start_time": "2026-08-17T22:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-17T22:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-2333",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-17T22:00:00",
+          "amount": 43363.71,
+          "currency": "INR",
+          "reference": "REF-72406"
+        },
+        "source_record_id": "a6956395-91bf-420e-9df6-53bfa2a6ad26"
+      },
+      {
+        "id": "134e5487-fd02-4e91-998d-d6cac208bba8",
+        "event_type": "transaction",
+        "start_time": "2026-08-18T02:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-18T02:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-5814",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-18T02:00:00",
+          "amount": 20312.62,
+          "currency": "INR",
+          "reference": "REF-28764"
+        },
+        "source_record_id": "38d13eed-fb84-4bd1-8f43-74434a077469"
+      },
+      {
+        "id": "d0e0c609-3e84-4f47-bb3a-0d1bac5033e7",
+        "event_type": "transaction",
+        "start_time": "2026-08-18T21:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-18T21:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-94587",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "7ccd91b7-b5bc-4433-be74-2a8d1521a7a6",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4662",
+          "from_account_id": "ACCT-94587",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-18T21:00:00",
+          "amount": 12453.31,
+          "currency": "INR",
+          "reference": "REF-21492"
+        },
+        "source_record_id": "83502236-20e8-4298-9268-a418e0411af0"
+      },
+      {
+        "id": "961678a1-360e-4d21-83a1-888588b5e795",
+        "event_type": "transaction",
+        "start_time": "2026-08-18T22:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-18T22:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-2481",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-18T22:00:00",
+          "amount": 87322.12,
+          "currency": "INR",
+          "reference": "REF-85493"
+        },
+        "source_record_id": "ec3f3a61-01ac-4755-b43c-e534a20b1382"
+      },
+      {
+        "id": "6bb66141-6315-4c13-855a-235c5082e104",
+        "event_type": "transaction",
+        "start_time": "2026-08-18T23:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-18T23:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-7176",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-18T23:00:00",
+          "amount": 65738.05,
+          "currency": "INR",
+          "reference": "REF-83649"
+        },
+        "source_record_id": "31c5b419-aceb-4360-bbd3-d3194fb97849"
+      },
+      {
+        "id": "4eaa3288-398b-4cbb-b5b0-1553e50644d4",
+        "event_type": "transaction",
+        "start_time": "2026-08-19T18:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-19T18:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4082",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-19T18:00:00",
+          "amount": 57711.06,
+          "currency": "INR",
+          "reference": "REF-26700"
+        },
+        "source_record_id": "9761eb37-a5bf-4aa5-9112-c157a7703911"
+      },
+      {
+        "id": "bcdf48de-94c5-4f92-82af-02299c12ddde",
+        "event_type": "transaction",
+        "start_time": "2026-08-19T21:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-19T21:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-1027",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-19T21:00:00",
+          "amount": 7126.61,
+          "currency": "INR",
+          "reference": "REF-80202"
+        },
+        "source_record_id": "237acb14-d049-44ec-8727-9175333285de"
+      },
+      {
+        "id": "1ccc432b-a67d-4509-8de3-b12c96b3b69b",
+        "event_type": "transaction",
+        "start_time": "2026-08-19T22:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-19T22:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-7941",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-19T22:00:00",
+          "amount": 77356.81,
+          "currency": "INR",
+          "reference": "REF-99037"
+        },
+        "source_record_id": "96e1466a-d0eb-4b48-a498-1f22f3733ca6"
+      },
+      {
+        "id": "9ee87959-92e3-4c54-83fb-d9d4477f800e",
+        "event_type": "transaction",
+        "start_time": "2026-08-20T17:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-20T17:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-3389",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-20T17:00:00",
+          "amount": 60289.15,
+          "currency": "INR",
+          "reference": "REF-50487"
+        },
+        "source_record_id": "7e771f2f-6973-4b01-9e95-16fa4a1ab084"
+      },
+      {
+        "id": "ecacdc70-7f85-44e6-8a81-561b07abcb6d",
+        "event_type": "transaction",
+        "start_time": "2026-08-20T17:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-20T17:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-7476",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-20T17:00:00",
+          "amount": 54291.0,
+          "currency": "INR",
+          "reference": "REF-70372"
+        },
+        "source_record_id": "b65ad57f-c9c6-4f1b-813d-8b9086f59714"
+      },
+      {
+        "id": "3b895f7a-23a0-42f0-93cc-13d9884c1437",
+        "event_type": "transaction",
+        "start_time": "2026-08-20T20:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-20T20:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-67892",
+          "ACCT-20802"
+        ],
+        "participant_ids": [
+          "6e96170d-f934-4f4d-9ad4-5b0e1bc26229",
+          "70d72fce-45d2-41e1-8f81-48c76f913b4b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-8836",
+          "from_account_id": "ACCT-67892",
+          "to_account_id": "ACCT-20802",
+          "timestamp": "2026-08-20T20:00:00",
+          "amount": 50007.53,
+          "currency": "INR",
+          "reference": "REF-59375"
+        },
+        "source_record_id": "55c206fe-b333-436c-ad8d-a6a95a57a142"
+      },
+      {
+        "id": "53e81350-f18b-44b1-bf29-1b3a1b24e5d4",
+        "event_type": "transaction",
+        "start_time": "2026-08-20T20:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-20T20:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-5863",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-20T20:00:00",
+          "amount": 50483.43,
+          "currency": "INR",
+          "reference": "REF-69740"
+        },
+        "source_record_id": "e98f1dcf-bf34-4dc9-a458-362a331ff48f"
+      },
+      {
+        "id": "66772fce-f7f2-40a6-adb7-dba6a1bb25d6",
+        "event_type": "transaction",
+        "start_time": "2026-08-21T20:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-21T20:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-44815",
+          "ACCT-57067"
+        ],
+        "participant_ids": [
+          "794ce117-ada5-4618-9b3d-73175a31ee83",
+          "b026f136-c755-40fd-936c-d79851a6dc1b"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-4450",
+          "from_account_id": "ACCT-44815",
+          "to_account_id": "ACCT-57067",
+          "timestamp": "2026-08-21T20:00:00",
+          "amount": 70340.33,
+          "currency": "INR",
+          "reference": "REF-16889"
+        },
+        "source_record_id": "76f89e14-0856-487b-a36e-d927869e88af"
+      },
+      {
+        "id": "429b217e-b891-4084-82a6-6dbc6c47fe1f",
+        "event_type": "transaction",
+        "start_time": "2026-08-21T21:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-21T21:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-48603"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "ffb8862b-5fa5-4f28-98b7-57b173258f63"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-7419",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-48603",
+          "timestamp": "2026-08-21T21:00:00",
+          "amount": 98454.56,
+          "currency": "INR",
+          "reference": "REF-96409"
+        },
+        "source_record_id": "b876e5d3-649c-4786-9a3f-25afb3a1995c"
+      },
+      {
+        "id": "35a6d4d5-1702-41e0-a0bc-65e0c3527ad7",
+        "event_type": "transaction",
+        "start_time": "2026-08-21T23:00:00",
+        "end_time": null,
+        "original_timestamp": "2026-08-21T23:00:00",
+        "source_timezone": null,
+        "time_precision": null,
+        "is_manual": false,
+        "participants": [
+          "ACCT-40643",
+          "ACCT-19946"
+        ],
+        "participant_ids": [
+          "b2a8736d-7933-485c-98f5-508088b30e6d",
+          "8005114a-56a9-41cb-b881-065b824bec9e"
+        ],
+        "location": null,
+        "location_id": null,
+        "details": {
+          "record_id": "TXN-9977",
+          "from_account_id": "ACCT-40643",
+          "to_account_id": "ACCT-19946",
+          "timestamp": "2026-08-21T23:00:00",
+          "amount": 34403.6,
+          "currency": "INR",
+          "reference": "REF-98853"
+        },
+        "source_record_id": "00248cf8-bafb-4ea8-8109-a5222c03fc4d"
+      }
+    ],
+    "total": 118,
+    "page": 1,
+    "page_size": 500
+  },
+  "workspace_summary": {
+    "case": {
+      "id": "06de6c4a-f197-4fb7-96fd-81c8d3a103cf",
+      "title": "Harbor Ledger - Financial Network Analysis",
+      "case_code": "HBR-2026-002",
+      "description": "Transaction paths and infrastructure relationships. Synthetic demonstration case.",
+      "status": "active",
+      "is_synthetic": true,
+      "created_by": "5aefa310-2f5f-4ba8-bf37-fcf969fa8f55",
+      "created_at": "2026-09-22T07:43:27.761477",
+      "updated_at": "2026-09-22T07:43:27.761477",
+      "entity_count": 10,
+      "event_count": 118,
+      "evidence_count": 2,
+      "hypothesis_count": 0,
+      "relationship_count": 0
+    },
+    "evidence_processing": {
+      "total_files": 2,
+      "awaiting_upload_status": 0,
+      "ready": 2,
+      "failed": 0
+    },
+    "entity_count": 10,
+    "relationship_count": 0,
+    "event_count": 118,
+    "signal_count": 0,
+    "hypothesis_count": 0,
+    "open_contradictions": 0,
+    "open_leads": 0,
+    "open_gaps": 0,
+    "open_actions": 0,
+    "findings_awaiting_review": 0,
+    "recent_evidence": [
+      {
+        "id": "bbc668b1-9ff1-4302-96dc-2bb758257767",
+        "original_filename": "case_b_cctv.json",
+        "source_type": "CCTV",
+        "status": "imported",
+        "byte_size": 610,
+        "created_at": "2026-09-22T07:43:35.620203",
+        "accepted_count": 2,
+        "rejected_count": 0
+      },
+      {
+        "id": "b738f549-2227-4c4c-baf6-23ba6824ca51",
+        "original_filename": "case_b_harbor_ledger.json",
+        "source_type": "transactions",
+        "status": "imported",
+        "byte_size": 25304,
+        "created_at": "2026-09-22T07:43:34.986465",
+        "accepted_count": 126,
+        "rejected_count": 0
+      }
+    ],
+    "recent_activity": [],
+    "latest_run": null,
+    "analysis_stale": true,
+    "analysis_stale_reason": "No analysis run has been completed for this case yet."
+  },
+  "leads": [],
+  "contradictions": [],
+  "gaps": [],
+  "actions": [],
+  "cctv": [
+    {
+      "id": "CCTV-BBC668B1",
+      "case_id": "06de6c4a-f197-4fb7-96fd-81c8d3a103cf",
+      "camera_id": "CAM-PORT-001",
+      "location": "Harbor Gate 1",
+      "lat": 19.076,
+      "lon": 72.8777,
+      "timestamp": "2026-08-10T06:30:00",
+      "frame_reference": "FRAME-20260922-074335-bbc6",
+      "signals": {
+        "appearance": 0.72,
+        "telecom": 0.65,
+        "temporal": 0.91
+      },
+      "confidence": "MEDIUM",
+      "status": "inferred \u2014 not confirmed",
+      "contributing_signals": 3,
+      "created_at": "2026-09-22T07:43:35.620203",
+      "updated_at": "2026-09-22T07:43:35.620203"
+    }
+  ],
+  "files": [
+    {
+      "id": "bbc668b1-9ff1-4302-96dc-2bb758257767",
+      "original_filename": "case_b_cctv.json",
+      "media_type": "application/json",
+      "byte_size": 610,
+      "status": "imported",
+      "created_at": "2026-09-22T07:43:35.620203",
+      "source_type": "CCTV",
+      "source_description": "Harbor area CCTV observations",
+      "sha256": "06946fca943a85a1e1019a716486d61c19ad073524cc0f89bb21ae9a0b48cdf8",
+      "accepted_count": 2
+    },
+    {
+      "id": "b738f549-2227-4c4c-baf6-23ba6824ca51",
+      "original_filename": "case_b_harbor_ledger.json",
+      "media_type": "application/json",
+      "byte_size": 25304,
+      "status": "imported",
+      "created_at": "2026-09-22T07:43:34.986465",
+      "source_type": "transactions",
+      "source_description": "Financial and infrastructure records",
+      "sha256": "b51a89b8e4cee07cee16a7ac20f6bc183fcf05fcb2e9365801ec3855a75082ac",
+      "accepted_count": 126
+    }
+  ],
+  "imports": [
+    {
+      "id": "eb2b4f34-f83c-4255-9c50-6c6b8103ba01",
+      "evidence_file_id": "bbc668b1-9ff1-4302-96dc-2bb758257767",
+      "status": "completed",
+      "accepted_count": 2,
+      "rejected_count": 0,
+      "created_at": "2026-09-22T07:43:35.622743"
+    },
+    {
+      "id": "42e9adbf-efd3-47c0-a793-6ad1ac315fec",
+      "evidence_file_id": "b738f549-2227-4c4c-baf6-23ba6824ca51",
+      "status": "completed",
+      "accepted_count": 126,
+      "rejected_count": 0,
+      "created_at": "2026-09-22T07:43:34.987995"
+    }
+  ],
+  "merge_suggestions": [],
+  "reports": []
+}

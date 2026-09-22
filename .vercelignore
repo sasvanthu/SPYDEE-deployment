@@ -1,0 +1,17 @@
+# Vercel Deployment Ignore
+# Prevents Vercel from detecting Python or running 'uv pip install' on backend dependencies.
+requirements.txt
+services/
+scripts/
+tests/
+analysis/
+demo/
+data/
+docker-compose*.yml
+Dockerfile*
+setup_db.py
+check_enum.py
+*.py
+.env*
+.git
+.github
